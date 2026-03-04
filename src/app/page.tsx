@@ -36,20 +36,18 @@ function Navbar() {
     <motion.nav
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-xl border border-white/10 border-b border-white/5"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-xl border-b border-white/5"
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-400 to-accent-pink flex items-center justify-center text-white font-bold text-sm">
             A
           </div>
-          <span className="text-lg font-bold tracking-tight">
-            The Agentcy
-          </span>
+          <span className="text-lg font-bold tracking-tight">The Agentcy</span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm text-white/60">
+          <a href="#services" className="hover:text-white transition-colors">Services</a>
           <a href="#how-it-works" className="hover:text-white transition-colors">How it Works</a>
-          <a href="#agents" className="hover:text-white transition-colors">Agents</a>
           <a href="#features" className="hover:text-white transition-colors">Features</a>
           <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
         </div>
@@ -64,18 +62,16 @@ function Navbar() {
   );
 }
 
-// ─── Hero ───
+// ─── Hero (from V1 with pipeline preview) ───
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-500/20 rounded-full blur-[128px]" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-pink/10 rounded-full blur-[128px]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-cyan/5 rounded-full blur-[128px]" />
       </div>
 
-      {/* Grid pattern */}
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -132,10 +128,10 @@ function Hero() {
             Get Early Access
           </a>
           <a
-            href="#how-it-works"
+            href="#services"
             className="px-8 py-4 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 text-white/80 font-medium text-lg"
           >
-            See How It Works →
+            Explore Services →
           </a>
         </motion.div>
 
@@ -196,42 +192,190 @@ function PipelinePreview() {
   );
 }
 
-// ─── How It Works ───
+// ─── Services (from V2) ───
+const serviceGroups = [
+  {
+    category: "Content Production",
+    gradient: "from-accent-pink to-brand-400",
+    services: [
+      {
+        icon: "📊",
+        title: "Slide Decks & Presentations",
+        desc: "AI-generated pitch decks, sales decks, and investor presentations with custom visual backgrounds.",
+        outputs: [".pptx with AI art", "Editable text layers", "Brand-consistent"],
+      },
+      {
+        icon: "🎬",
+        title: "Social Media Video",
+        desc: "Short-form video for Reels, TikTok, and YouTube Shorts — scripted, produced, and captioned.",
+        outputs: ["9:16, 1:1, 16:9 formats", "Captions & music", "Platform-optimized"],
+      },
+      {
+        icon: "📱",
+        title: "Social Media Posts",
+        desc: "Static posts, carousels, and stories auto-formatted per platform with copy and hashtags.",
+        outputs: ["Images + captions", "Multi-platform sizing", "Hashtag strategy"],
+      },
+      {
+        icon: "🎯",
+        title: "Ad Creatives",
+        desc: "Multiple ad variations from a single brief — ready for Meta, Google, and TikTok ad platforms.",
+        outputs: ["3-10 variations per brief", "A/B test ready", "Multi-format"],
+      },
+      {
+        icon: "🎥",
+        title: "Explainer Videos",
+        desc: "1-3 min videos with AI presenters, motion graphics, and professional voiceover.",
+        outputs: ["AI avatar optional", "Branded transitions", "Full audio mix"],
+      },
+    ],
+  },
+  {
+    category: "Strategy & Copy",
+    gradient: "from-accent-cyan to-brand-400",
+    services: [
+      {
+        icon: "📅",
+        title: "Content Strategy",
+        desc: "Monthly content plans with themes, posting schedules, and platform mix informed by competitor analysis.",
+        outputs: ["Content calendar", "Theme pillars", "Timing recommendations"],
+      },
+      {
+        icon: "✍️",
+        title: "Copywriting",
+        desc: "Blog posts, newsletters, website copy, and email sequences with consistent brand voice.",
+        outputs: ["Blog & newsletter", "Email sequences", "Website copy"],
+      },
+      {
+        icon: "🔍",
+        title: "SEO Content",
+        desc: "Keyword research, optimized articles, meta descriptions, and landing page copy.",
+        outputs: ["SEO-optimized articles", "Meta tags", "Internal linking"],
+      },
+    ],
+  },
+  {
+    category: "Audio",
+    gradient: "from-accent-orange to-brand-300",
+    services: [
+      {
+        icon: "🎙️",
+        title: "Podcast Production",
+        desc: "Full podcast episodes — multi-voice, with intro/outro, music, editing, and show notes.",
+        outputs: ["MP3/WAV master", "Show notes", "Transcript"],
+      },
+      {
+        icon: "🔊",
+        title: "Voiceovers",
+        desc: "Radio spots, podcast ads, IVR recordings, and product demo narration in any voice.",
+        outputs: ["Multiple formats", "Broadcast-ready", "Multi-language"],
+      },
+    ],
+  },
+  {
+    category: "Research",
+    gradient: "from-accent-green to-accent-cyan",
+    services: [
+      {
+        icon: "📈",
+        title: "Market Analysis",
+        desc: "Competitor research, market sizing, and trend analysis delivered as polished reports or decks.",
+        outputs: ["PDF reports", "Data visualizations", "Presentation decks"],
+      },
+      {
+        icon: "🏷️",
+        title: "Brand Audit",
+        desc: "Comprehensive analysis of social presence, content quality, and positioning vs. competitors.",
+        outputs: ["Audit scorecard", "Benchmarks", "Action items"],
+      },
+    ],
+  },
+];
+
+function Services() {
+  return (
+    <Section id="services">
+      <div className="max-w-6xl mx-auto">
+        <motion.div variants={fadeUp} className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Everything a Creative Agency Delivers,{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-300 via-accent-pink to-accent-cyan">
+              Powered by AI
+            </span>
+          </h2>
+          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+            Submit a brief. Get finished, publish-ready work. No freelancers, no waiting.
+          </p>
+        </motion.div>
+
+        <div className="space-y-16">
+          {serviceGroups.map((group) => (
+            <div key={group.category}>
+              <motion.div variants={fadeUp} className="mb-6">
+                <h3 className={`text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r ${group.gradient}`}>
+                  {group.category}
+                </h3>
+              </motion.div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {group.services.map((service) => (
+                  <motion.div
+                    key={service.title}
+                    variants={fadeUp}
+                    className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 rounded-2xl p-6 group"
+                  >
+                    <div className="text-3xl mb-3">{service.icon}</div>
+                    <h4 className="font-bold text-lg mb-2">{service.title}</h4>
+                    <p className="text-white/40 text-sm leading-relaxed mb-4">{service.desc}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {service.outputs.map((output) => (
+                        <span
+                          key={output}
+                          className="text-xs px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/50"
+                        >
+                          {output}
+                        </span>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+// ─── How It Works (V2's clean 3-step) ───
 function HowItWorks() {
   const steps = [
     {
       num: "01",
+      icon: "📋",
       title: "Submit Your Brief",
       desc: "Describe your campaign, product, or content needs in plain language. Upload brand assets if you have them.",
-      color: "brand-400",
       gradient: "from-brand-400 to-brand-600",
     },
     {
       num: "02",
+      icon: "⚡",
       title: "Agents Collaborate",
-      desc: "The Creative Director orchestrates the team. Strategy is crafted, visuals generated, voiceover produced — all in parallel.",
-      color: "accent-pink",
+      desc: "Seven AI agents work in parallel — strategy, visuals, copy, voice, video, QA — all orchestrated automatically.",
       gradient: "from-accent-pink to-brand-400",
     },
     {
       num: "03",
-      title: "Review & Refine",
-      desc: "QA catches issues before you do. Preview everything, request changes in natural language, and iterate instantly.",
-      color: "accent-cyan",
+      icon: "🚀",
+      title: "Review & Publish",
+      desc: "Preview everything, request changes in natural language, and publish to every platform with one click.",
       gradient: "from-accent-cyan to-accent-green",
-    },
-    {
-      num: "04",
-      title: "Publish Everywhere",
-      desc: "One click publishes to Instagram, TikTok, YouTube, X, LinkedIn — optimized for each platform automatically.",
-      color: "accent-green",
-      gradient: "from-accent-green to-brand-300",
     },
   ];
 
   return (
     <Section id="how-it-works">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <motion.div variants={fadeUp} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Brief to Published in{" "}
@@ -242,176 +386,19 @@ function HowItWorks() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {steps.map((step) => (
             <motion.div
               key={step.num}
               variants={fadeUp}
-              className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 rounded-2xl p-8 group"
-            >
-              <div className={`text-sm font-mono font-bold bg-clip-text text-transparent bg-gradient-to-r bg-gradient-to-r ${step.gradient} mb-4`}>
-                {step.num}
-              </div>
-              <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-              <p className="text-white/50 leading-relaxed">{step.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </Section>
-  );
-}
-
-// ─── Agents ───
-function Agents() {
-  const agents = [
-    {
-      emoji: "🎭",
-      name: "Creative Director",
-      role: "Orchestrator",
-      desc: "Interprets your brief, sets creative direction, and coordinates the entire team. The visionary.",
-      gradient: "from-brand-400 to-accent-pink",
-    },
-    {
-      emoji: "📊",
-      name: "Campaign Strategist",
-      role: "Planner",
-      desc: "Crafts the content strategy, defines messaging pillars, and plans the campaign calendar.",
-      gradient: "from-accent-cyan to-brand-400",
-    },
-    {
-      emoji: "🎨",
-      name: "Visual Producer",
-      role: "Artist",
-      desc: "Generates stunning images, graphics, and storyboards using WaveSpeed AI. Pixel-perfect every time.",
-      gradient: "from-accent-pink to-accent-orange",
-    },
-    {
-      emoji: "🎙️",
-      name: "Voice Producer",
-      role: "Narrator",
-      desc: "Creates professional voiceovers with ElevenLabs. Multiple voices, languages, and emotional tones.",
-      gradient: "from-accent-orange to-brand-300",
-    },
-    {
-      emoji: "🎬",
-      name: "Editor & Compositor",
-      role: "Filmmaker",
-      desc: "Assembles everything into polished video content using Remotion. Transitions, timing, music — handled.",
-      gradient: "from-brand-300 to-accent-cyan",
-    },
-    {
-      emoji: "✅",
-      name: "QA Reviewer",
-      role: "Perfectionist",
-      desc: "Checks brand consistency, quality, and compliance before anything goes live. Your safety net.",
-      gradient: "from-accent-green to-accent-cyan",
-    },
-    {
-      emoji: "📱",
-      name: "Social Media Manager",
-      role: "Publisher",
-      desc: "Formats and publishes to every platform. Optimal timing, hashtags, captions — all automated.",
-      gradient: "from-brand-400 to-accent-green",
-    },
-  ];
-
-  return (
-    <Section id="agents" className="overflow-hidden">
-      <div className="max-w-6xl mx-auto">
-        <motion.div variants={fadeUp} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Meet Your{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-pink to-brand-300">AI Team</span>
-          </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Seven specialized agents that work together like a world-class creative agency. Always on, never late.
-          </p>
-        </motion.div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {agents.map((agent) => (
-            <motion.div
-              key={agent.name}
-              variants={fadeUp}
-              className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 rounded-2xl p-6 group"
-            >
-              <div className="flex items-start gap-4">
-                <div className="text-3xl">{agent.emoji}</div>
-                <div>
-                  <h3 className="font-bold text-lg">{agent.name}</h3>
-                  <span className={`text-xs font-mono bg-clip-text text-transparent bg-gradient-to-r bg-gradient-to-r ${agent.gradient}`}>
-                    {agent.role}
-                  </span>
-                </div>
-              </div>
-              <p className="text-white/40 text-sm mt-4 leading-relaxed">{agent.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </Section>
-  );
-}
-
-// ─── Features ───
-function Features() {
-  const features = [
-    {
-      icon: "⚡",
-      title: "End-to-End Pipeline",
-      desc: "From creative brief to published content — no handoffs, no gaps, no waiting.",
-    },
-    {
-      icon: "🤝",
-      title: "Agent Collaboration",
-      desc: "Agents communicate and iterate autonomously, just like a real creative team.",
-    },
-    {
-      icon: "🌐",
-      title: "Multi-Platform Publishing",
-      desc: "Auto-format and publish to Instagram, TikTok, YouTube, X, LinkedIn simultaneously.",
-    },
-    {
-      icon: "💳",
-      title: "Credit-Based Pricing",
-      desc: "Pay for what you use. No retainers, no surprises. Scale up or down anytime.",
-    },
-    {
-      icon: "🔄",
-      title: "Natural Language Iteration",
-      desc: 'Say "make the logo bigger" or "try a warmer tone" — agents understand and adapt.',
-    },
-    {
-      icon: "🏎️",
-      title: "Minutes, Not Weeks",
-      desc: "What took your agency weeks now takes minutes. Same quality, 100x faster.",
-    },
-  ];
-
-  return (
-    <Section id="features">
-      <div className="max-w-6xl mx-auto">
-        <motion.div variants={fadeUp} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Why{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-300 to-accent-orange">The Agentcy</span>
-          </h2>
-          <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Built different. Built better. Built for the future of content creation.
-          </p>
-        </motion.div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((f) => (
-            <motion.div
-              key={f.title}
-              variants={fadeUp}
               className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 rounded-2xl p-8 text-center"
             >
-              <div className="text-4xl mb-4">{f.icon}</div>
-              <h3 className="font-bold text-lg mb-2">{f.title}</h3>
-              <p className="text-white/40 text-sm leading-relaxed">{f.desc}</p>
+              <div className="text-4xl mb-4">{step.icon}</div>
+              <div className={`text-sm font-mono font-bold bg-clip-text text-transparent bg-gradient-to-r ${step.gradient} mb-3`}>
+                Step {step.num}
+              </div>
+              <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+              <p className="text-white/50 leading-relaxed text-sm">{step.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -420,7 +407,7 @@ function Features() {
   );
 }
 
-// ─── Comparison ───
+// ─── Replace Your Entire Stack (from V1) ───
 function Comparison() {
   const tools = [
     { name: "Canva / Midjourney", for: "Visual Design", emoji: "🎨" },
@@ -465,7 +452,7 @@ function Comparison() {
             <p className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-300 to-accent-cyan">
               The Agentcy — One Platform
             </p>
-            <p className="text-white/40 text-sm mt-2">Starting at $29/month</p>
+            <p className="text-white/40 text-sm mt-2">Starting at $499/month</p>
           </div>
         </motion.div>
       </div>
@@ -473,42 +460,104 @@ function Comparison() {
   );
 }
 
-// ─── Pricing ───
+// ─── Why The Agentcy / Features (from V1) ───
+function Features() {
+  const features = [
+    {
+      icon: "⚡",
+      title: "End-to-End Pipeline",
+      desc: "From creative brief to published content — no handoffs, no gaps, no waiting.",
+    },
+    {
+      icon: "🤝",
+      title: "Agent Collaboration",
+      desc: "Agents communicate and iterate autonomously, just like a real creative team.",
+    },
+    {
+      icon: "🌐",
+      title: "Multi-Platform Publishing",
+      desc: "Auto-format and publish to Instagram, TikTok, YouTube, X, LinkedIn simultaneously.",
+    },
+    {
+      icon: "📈",
+      title: "Unlimited Scale",
+      desc: "10 briefs or 10,000 — the platform doesn't get tired, miss deadlines, or raise rates.",
+    },
+    {
+      icon: "🔄",
+      title: "Natural Language Iteration",
+      desc: "Say \"make the logo bigger\" or \"try a warmer tone\" — agents understand and adapt.",
+    },
+    {
+      icon: "🏎️",
+      title: "Minutes, Not Weeks",
+      desc: "What took your agency weeks now takes minutes. Same quality, 100x faster.",
+    },
+  ];
+
+  return (
+    <Section id="features">
+      <div className="max-w-6xl mx-auto">
+        <motion.div variants={fadeUp} className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Why{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-300 to-accent-orange">The Agentcy</span>
+          </h2>
+          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+            Built different. Built better. Built for the future of content creation.
+          </p>
+        </motion.div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((f) => (
+            <motion.div
+              key={f.title}
+              variants={fadeUp}
+              className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 rounded-2xl p-8 text-center"
+            >
+              <div className="text-4xl mb-4">{f.icon}</div>
+              <h3 className="font-bold text-lg mb-2">{f.title}</h3>
+              <p className="text-white/40 text-sm leading-relaxed">{f.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+// ─── Pricing (B2B from V2) ───
 function Pricing() {
   const plans = [
     {
       name: "Starter",
-      price: 29,
-      credits: "100",
-      desc: "Perfect for solopreneurs and side projects",
-      features: ["100 credits/month", "All 7 agents", "3 platforms", "720p video", "Email support"],
-      cta: "Start Creating",
+      price: 499,
+      desc: "For solopreneurs and small teams getting started",
+      features: ["50 deliverables/month", "All service categories", "All platforms", "720p video", "Email support"],
+      cta: "Get Early Access",
       highlighted: false,
     },
     {
       name: "Growth",
-      price: 99,
-      credits: "500",
-      desc: "For growing teams and serious creators",
-      features: ["500 credits/month", "All 7 agents", "All platforms", "1080p video", "Priority support", "Brand kit"],
+      price: 999,
+      desc: "For growing teams scaling their output",
+      features: ["150 deliverables/month", "All service categories", "All platforms", "1080p video", "Priority support", "Brand kit storage"],
       cta: "Get Early Access",
       highlighted: true,
     },
     {
       name: "Pro",
-      price: 249,
-      credits: "2,000",
+      price: 2499,
       desc: "For agencies and marketing teams",
-      features: ["2,000 credits/month", "All 7 agents", "All platforms", "4K video", "Dedicated support", "Custom voices", "API access"],
+      features: ["500 deliverables/month", "All service categories", "All platforms", "4K video", "Dedicated support", "Custom voices", "API access"],
       cta: "Get Early Access",
       highlighted: false,
     },
     {
       name: "Enterprise",
       price: null,
-      credits: "Custom",
       desc: "For large organizations",
-      features: ["Unlimited credits", "Custom agents", "White-label", "SLA", "On-prem option", "Dedicated CSM"],
+      features: ["Unlimited deliverables", "Custom integrations", "White-label platform", "SLA guarantee", "Dedicated CSM", "On-prem option"],
       cta: "Talk to Sales",
       highlighted: false,
     },
@@ -519,12 +568,11 @@ function Pricing() {
       <div className="max-w-6xl mx-auto">
         <motion.div variants={fadeUp} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Simple,{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-green to-accent-cyan">Credit-Based</span>{" "}
-            Pricing
+            Predictable{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-green to-accent-cyan">Pricing</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Pay for what you create. No per-seat pricing, no hidden fees.
+            Flat monthly plans. No per-seat fees. Scale your output without scaling your costs.
           </p>
         </motion.div>
 
@@ -540,18 +588,18 @@ function Pricing() {
               }`}
             >
               {plan.highlighted && (
-                <span className="text-xs font-bold text-brand-300 uppercase tracking-wider mb-2">
-                  Most Popular
-                </span>
+                <span className="text-xs font-bold text-brand-300 uppercase tracking-wider mb-2">Most Popular</span>
               )}
               <h3 className="text-xl font-bold">{plan.name}</h3>
               <div className="mt-3 mb-1">
                 {plan.price ? (
-                  <span className="text-4xl font-bold">${plan.price}</span>
+                  <>
+                    <span className="text-4xl font-bold">${plan.price.toLocaleString()}</span>
+                    <span className="text-white/40 text-sm">/mo</span>
+                  </>
                 ) : (
                   <span className="text-4xl font-bold">Custom</span>
                 )}
-                {plan.price && <span className="text-white/40 text-sm">/month</span>}
               </div>
               <p className="text-white/40 text-sm mb-6">{plan.desc}</p>
               <ul className="space-y-2 mb-8 flex-1">
@@ -567,7 +615,7 @@ function Pricing() {
                 className={`text-center py-3 rounded-xl font-medium text-sm transition-all ${
                   plan.highlighted
                     ? "bg-brand-500 hover:bg-brand-400 text-white"
-                    : "bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 text-white/80"
+                    : "bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 text-white/80"
                 }`}
               >
                 {plan.cta}
@@ -615,7 +663,7 @@ function Waitlist() {
                 placeholder="you@company.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 px-5 py-4 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 border border-white/10 bg-white/5 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-400/50 transition-colors"
+                className="flex-1 px-5 py-4 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-400/50 transition-colors"
                 required
               />
               <button
@@ -633,9 +681,7 @@ function Waitlist() {
             >
               <div className="text-4xl mb-3">🎉</div>
               <h3 className="text-xl font-bold mb-2">You&apos;re on the list!</h3>
-              <p className="text-white/50 text-sm">
-                We&apos;ll reach out soon with your early access invitation.
-              </p>
+              <p className="text-white/50 text-sm">We&apos;ll reach out soon with your early access invitation.</p>
             </motion.div>
           )}
         </motion.div>
@@ -659,7 +705,6 @@ function Footer() {
           </div>
           <span className="text-sm font-bold">The Agentcy</span>
         </div>
-
         <div className="flex items-center gap-6 text-sm text-white/30">
           <a href="#" className="hover:text-white/60 transition-colors">Privacy</a>
           <a href="#" className="hover:text-white/60 transition-colors">Terms</a>
@@ -667,7 +712,6 @@ function Footer() {
           <a href="#" className="hover:text-white/60 transition-colors">LinkedIn</a>
           <a href="#" className="hover:text-white/60 transition-colors">Discord</a>
         </div>
-
         <p className="text-white/20 text-sm">© 2026 The Agentcy. All rights reserved.</p>
       </div>
     </footer>
@@ -680,10 +724,10 @@ export default function Home() {
     <main className="relative">
       <Navbar />
       <Hero />
+      <Services />
       <HowItWorks />
-      <Agents />
-      <Features />
       <Comparison />
+      <Features />
       <Pricing />
       <Waitlist />
       <Footer />

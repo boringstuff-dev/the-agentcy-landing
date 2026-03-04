@@ -1,0 +1,692 @@
+"use client";
+
+import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
+
+// ─── Animation Helpers ───
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
+};
+
+const stagger = {
+  visible: { transition: { staggerChildren: 0.1 } },
+};
+
+function Section({ children, className = "", id }: { children: React.ReactNode; className?: string; id?: string }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  return (
+    <motion.section
+      id={id}
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={stagger}
+      className={`relative py-24 md:py-32 px-6 ${className}`}
+    >
+      {children}
+    </motion.section>
+  );
+}
+
+// ─── Navbar ───
+function Navbar() {
+  return (
+    <motion.nav
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-xl border border-white/10 border-b border-white/5"
+    >
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-400 to-accent-pink flex items-center justify-center text-white font-bold text-sm">
+            A
+          </div>
+          <span className="text-lg font-bold tracking-tight">
+            The Agentcy
+          </span>
+        </div>
+        <div className="hidden md:flex items-center gap-8 text-sm text-white/60">
+          <a href="#how-it-works" className="hover:text-white transition-colors">How it Works</a>
+          <a href="#agents" className="hover:text-white transition-colors">Agents</a>
+          <a href="#features" className="hover:text-white transition-colors">Features</a>
+          <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
+        </div>
+        <a
+          href="#waitlist"
+          className="px-4 py-2 rounded-full bg-brand-500 hover:bg-brand-400 text-white text-sm font-medium transition-all hover:shadow-lg hover:shadow-brand-500/25"
+        >
+          Get Early Access
+        </a>
+      </div>
+    </motion.nav>
+  );
+}
+
+// ─── Hero ───
+function Hero() {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      {/* Background effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-500/20 rounded-full blur-[128px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-pink/10 rounded-full blur-[128px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-cyan/5 rounded-full blur-[128px]" />
+      </div>
+
+      {/* Grid pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)`,
+          backgroundSize: "64px 64px",
+        }}
+      />
+
+      <div className="relative max-w-5xl mx-auto px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 text-sm text-white/70 mb-8"
+        >
+          <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
+          Now in Early Access
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] mb-6"
+        >
+          Your AI
+          <br />
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-300 via-accent-pink to-accent-cyan">
+            Creative Agency
+          </span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto mb-10 leading-relaxed"
+        >
+          From brief to published content in minutes, not weeks.
+          Seven AI agents collaborate like a world-class creative team —
+          strategy, visuals, voice, video, QA, and publishing. All automated.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <a
+            href="#waitlist"
+            className="px-8 py-4 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold text-lg hover:shadow-2xl hover:shadow-brand-500/30 transition-all hover:scale-105"
+          >
+            Get Early Access
+          </a>
+          <a
+            href="#how-it-works"
+            className="px-8 py-4 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 text-white/80 font-medium text-lg"
+          >
+            See How It Works →
+          </a>
+        </motion.div>
+
+        {/* Pipeline preview */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-20 relative"
+        >
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+            <PipelinePreview />
+          </div>
+          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-brand-500/20 blur-2xl rounded-full" />
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+function PipelinePreview() {
+  const steps = [
+    { icon: "📋", label: "Brief", color: "from-white/20 to-white/5" },
+    { icon: "🎯", label: "Strategy", color: "from-brand-400/30 to-brand-600/10" },
+    { icon: "🎨", label: "Visuals", color: "from-accent-pink/30 to-accent-pink/5" },
+    { icon: "🎙️", label: "Voice", color: "from-accent-orange/30 to-accent-orange/5" },
+    { icon: "🎬", label: "Compose", color: "from-accent-cyan/30 to-accent-cyan/5" },
+    { icon: "✅", label: "QA", color: "from-accent-green/30 to-accent-green/5" },
+    { icon: "🚀", label: "Publish", color: "from-brand-300/30 to-brand-500/5" },
+  ];
+
+  return (
+    <div className="flex flex-wrap justify-center items-center gap-3 md:gap-2">
+      {steps.map((step, i) => (
+        <div key={step.label} className="flex items-center gap-2 md:gap-2">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.8 + i * 0.1 }}
+            className={`flex flex-col items-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-b ${step.color} border border-white/10`}
+          >
+            <span className="text-2xl">{step.icon}</span>
+            <span className="text-xs font-medium text-white/70">{step.label}</span>
+          </motion.div>
+          {i < steps.length - 1 && (
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1 + i * 0.1 }}
+              className="text-white/20 hidden md:block"
+            >
+              →
+            </motion.span>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ─── How It Works ───
+function HowItWorks() {
+  const steps = [
+    {
+      num: "01",
+      title: "Submit Your Brief",
+      desc: "Describe your campaign, product, or content needs in plain language. Upload brand assets if you have them.",
+      color: "brand-400",
+      gradient: "from-brand-400 to-brand-600",
+    },
+    {
+      num: "02",
+      title: "Agents Collaborate",
+      desc: "The Creative Director orchestrates the team. Strategy is crafted, visuals generated, voiceover produced — all in parallel.",
+      color: "accent-pink",
+      gradient: "from-accent-pink to-brand-400",
+    },
+    {
+      num: "03",
+      title: "Review & Refine",
+      desc: "QA catches issues before you do. Preview everything, request changes in natural language, and iterate instantly.",
+      color: "accent-cyan",
+      gradient: "from-accent-cyan to-accent-green",
+    },
+    {
+      num: "04",
+      title: "Publish Everywhere",
+      desc: "One click publishes to Instagram, TikTok, YouTube, X, LinkedIn — optimized for each platform automatically.",
+      color: "accent-green",
+      gradient: "from-accent-green to-brand-300",
+    },
+  ];
+
+  return (
+    <Section id="how-it-works">
+      <div className="max-w-6xl mx-auto">
+        <motion.div variants={fadeUp} className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Brief to Published in{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-300 to-accent-cyan">Minutes</span>
+          </h2>
+          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+            No more juggling tools, freelancers, and timelines. One platform, one workflow, zero friction.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {steps.map((step) => (
+            <motion.div
+              key={step.num}
+              variants={fadeUp}
+              className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 rounded-2xl p-8 group"
+            >
+              <div className={`text-sm font-mono font-bold bg-clip-text text-transparent bg-gradient-to-r bg-gradient-to-r ${step.gradient} mb-4`}>
+                {step.num}
+              </div>
+              <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+              <p className="text-white/50 leading-relaxed">{step.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+// ─── Agents ───
+function Agents() {
+  const agents = [
+    {
+      emoji: "🎭",
+      name: "Creative Director",
+      role: "Orchestrator",
+      desc: "Interprets your brief, sets creative direction, and coordinates the entire team. The visionary.",
+      gradient: "from-brand-400 to-accent-pink",
+    },
+    {
+      emoji: "📊",
+      name: "Campaign Strategist",
+      role: "Planner",
+      desc: "Crafts the content strategy, defines messaging pillars, and plans the campaign calendar.",
+      gradient: "from-accent-cyan to-brand-400",
+    },
+    {
+      emoji: "🎨",
+      name: "Visual Producer",
+      role: "Artist",
+      desc: "Generates stunning images, graphics, and storyboards using WaveSpeed AI. Pixel-perfect every time.",
+      gradient: "from-accent-pink to-accent-orange",
+    },
+    {
+      emoji: "🎙️",
+      name: "Voice Producer",
+      role: "Narrator",
+      desc: "Creates professional voiceovers with ElevenLabs. Multiple voices, languages, and emotional tones.",
+      gradient: "from-accent-orange to-brand-300",
+    },
+    {
+      emoji: "🎬",
+      name: "Editor & Compositor",
+      role: "Filmmaker",
+      desc: "Assembles everything into polished video content using Remotion. Transitions, timing, music — handled.",
+      gradient: "from-brand-300 to-accent-cyan",
+    },
+    {
+      emoji: "✅",
+      name: "QA Reviewer",
+      role: "Perfectionist",
+      desc: "Checks brand consistency, quality, and compliance before anything goes live. Your safety net.",
+      gradient: "from-accent-green to-accent-cyan",
+    },
+    {
+      emoji: "📱",
+      name: "Social Media Manager",
+      role: "Publisher",
+      desc: "Formats and publishes to every platform. Optimal timing, hashtags, captions — all automated.",
+      gradient: "from-brand-400 to-accent-green",
+    },
+  ];
+
+  return (
+    <Section id="agents" className="overflow-hidden">
+      <div className="max-w-6xl mx-auto">
+        <motion.div variants={fadeUp} className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Meet Your{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-pink to-brand-300">AI Team</span>
+          </h2>
+          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+            Seven specialized agents that work together like a world-class creative agency. Always on, never late.
+          </p>
+        </motion.div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {agents.map((agent) => (
+            <motion.div
+              key={agent.name}
+              variants={fadeUp}
+              className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 rounded-2xl p-6 group"
+            >
+              <div className="flex items-start gap-4">
+                <div className="text-3xl">{agent.emoji}</div>
+                <div>
+                  <h3 className="font-bold text-lg">{agent.name}</h3>
+                  <span className={`text-xs font-mono bg-clip-text text-transparent bg-gradient-to-r bg-gradient-to-r ${agent.gradient}`}>
+                    {agent.role}
+                  </span>
+                </div>
+              </div>
+              <p className="text-white/40 text-sm mt-4 leading-relaxed">{agent.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+// ─── Features ───
+function Features() {
+  const features = [
+    {
+      icon: "⚡",
+      title: "End-to-End Pipeline",
+      desc: "From creative brief to published content — no handoffs, no gaps, no waiting.",
+    },
+    {
+      icon: "🤝",
+      title: "Agent Collaboration",
+      desc: "Agents communicate and iterate autonomously, just like a real creative team.",
+    },
+    {
+      icon: "🌐",
+      title: "Multi-Platform Publishing",
+      desc: "Auto-format and publish to Instagram, TikTok, YouTube, X, LinkedIn simultaneously.",
+    },
+    {
+      icon: "💳",
+      title: "Credit-Based Pricing",
+      desc: "Pay for what you use. No retainers, no surprises. Scale up or down anytime.",
+    },
+    {
+      icon: "🔄",
+      title: "Natural Language Iteration",
+      desc: 'Say "make the logo bigger" or "try a warmer tone" — agents understand and adapt.',
+    },
+    {
+      icon: "🏎️",
+      title: "Minutes, Not Weeks",
+      desc: "What took your agency weeks now takes minutes. Same quality, 100x faster.",
+    },
+  ];
+
+  return (
+    <Section id="features">
+      <div className="max-w-6xl mx-auto">
+        <motion.div variants={fadeUp} className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Why{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-300 to-accent-orange">The Agentcy</span>
+          </h2>
+          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+            Built different. Built better. Built for the future of content creation.
+          </p>
+        </motion.div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((f) => (
+            <motion.div
+              key={f.title}
+              variants={fadeUp}
+              className="bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 rounded-2xl p-8 text-center"
+            >
+              <div className="text-4xl mb-4">{f.icon}</div>
+              <h3 className="font-bold text-lg mb-2">{f.title}</h3>
+              <p className="text-white/40 text-sm leading-relaxed">{f.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+// ─── Comparison ───
+function Comparison() {
+  const tools = [
+    { name: "Canva / Midjourney", for: "Visual Design", emoji: "🎨" },
+    { name: "ElevenLabs", for: "Voiceover", emoji: "🎙️" },
+    { name: "Premiere / CapCut", for: "Video Editing", emoji: "🎬" },
+    { name: "ChatGPT / Jasper", for: "Copywriting", emoji: "✍️" },
+    { name: "Hootsuite / Buffer", for: "Social Publishing", emoji: "📱" },
+    { name: "Your Agency", for: "Strategy & QA", emoji: "🏢" },
+  ];
+
+  return (
+    <Section>
+      <div className="max-w-5xl mx-auto">
+        <motion.div variants={fadeUp} className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Replace{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-orange to-accent-pink">Your Entire Stack</span>
+          </h2>
+          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+            Stop paying for 6 tools that don&apos;t talk to each other.
+          </p>
+        </motion.div>
+
+        <motion.div variants={fadeUp} className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-12">
+          <div className="grid gap-4 mb-8">
+            {tools.map((tool) => (
+              <div key={tool.name} className="flex items-center justify-between py-3 border-b border-white/5 last:border-0">
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">{tool.emoji}</span>
+                  <div>
+                    <span className="text-white/80 font-medium">{tool.name}</span>
+                    <span className="text-white/30 text-sm ml-2">for {tool.for}</span>
+                  </div>
+                </div>
+                <span className="text-white/20 line-through text-sm">$20-100/mo</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="border-t border-white/10 pt-6 text-center">
+            <p className="text-white/40 text-sm mb-2">Replace all of the above with</p>
+            <p className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-300 to-accent-cyan">
+              The Agentcy — One Platform
+            </p>
+            <p className="text-white/40 text-sm mt-2">Starting at $29/month</p>
+          </div>
+        </motion.div>
+      </div>
+    </Section>
+  );
+}
+
+// ─── Pricing ───
+function Pricing() {
+  const plans = [
+    {
+      name: "Starter",
+      price: 29,
+      credits: "100",
+      desc: "Perfect for solopreneurs and side projects",
+      features: ["100 credits/month", "All 7 agents", "3 platforms", "720p video", "Email support"],
+      cta: "Start Creating",
+      highlighted: false,
+    },
+    {
+      name: "Growth",
+      price: 99,
+      credits: "500",
+      desc: "For growing teams and serious creators",
+      features: ["500 credits/month", "All 7 agents", "All platforms", "1080p video", "Priority support", "Brand kit"],
+      cta: "Get Early Access",
+      highlighted: true,
+    },
+    {
+      name: "Pro",
+      price: 249,
+      credits: "2,000",
+      desc: "For agencies and marketing teams",
+      features: ["2,000 credits/month", "All 7 agents", "All platforms", "4K video", "Dedicated support", "Custom voices", "API access"],
+      cta: "Get Early Access",
+      highlighted: false,
+    },
+    {
+      name: "Enterprise",
+      price: null,
+      credits: "Custom",
+      desc: "For large organizations",
+      features: ["Unlimited credits", "Custom agents", "White-label", "SLA", "On-prem option", "Dedicated CSM"],
+      cta: "Talk to Sales",
+      highlighted: false,
+    },
+  ];
+
+  return (
+    <Section id="pricing">
+      <div className="max-w-6xl mx-auto">
+        <motion.div variants={fadeUp} className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Simple,{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-green to-accent-cyan">Credit-Based</span>{" "}
+            Pricing
+          </h2>
+          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+            Pay for what you create. No per-seat pricing, no hidden fees.
+          </p>
+        </motion.div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {plans.map((plan) => (
+            <motion.div
+              key={plan.name}
+              variants={fadeUp}
+              className={`rounded-2xl p-6 flex flex-col ${
+                plan.highlighted
+                  ? "bg-gradient-to-b from-brand-500/20 to-brand-900/20 border-2 border-brand-400/40 shadow-xl shadow-brand-500/10"
+                  : "bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+              }`}
+            >
+              {plan.highlighted && (
+                <span className="text-xs font-bold text-brand-300 uppercase tracking-wider mb-2">
+                  Most Popular
+                </span>
+              )}
+              <h3 className="text-xl font-bold">{plan.name}</h3>
+              <div className="mt-3 mb-1">
+                {plan.price ? (
+                  <span className="text-4xl font-bold">${plan.price}</span>
+                ) : (
+                  <span className="text-4xl font-bold">Custom</span>
+                )}
+                {plan.price && <span className="text-white/40 text-sm">/month</span>}
+              </div>
+              <p className="text-white/40 text-sm mb-6">{plan.desc}</p>
+              <ul className="space-y-2 mb-8 flex-1">
+                {plan.features.map((f) => (
+                  <li key={f} className="text-sm text-white/60 flex items-center gap-2">
+                    <span className="text-accent-green text-xs">✓</span>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="#waitlist"
+                className={`text-center py-3 rounded-xl font-medium text-sm transition-all ${
+                  plan.highlighted
+                    ? "bg-brand-500 hover:bg-brand-400 text-white"
+                    : "bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 text-white/80"
+                }`}
+              >
+                {plan.cta}
+              </a>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+// ─── Waitlist ───
+function Waitlist() {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  return (
+    <Section id="waitlist">
+      <div className="max-w-3xl mx-auto text-center">
+        <motion.div variants={fadeUp}>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            Ready to Replace
+            <br />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-300 via-accent-pink to-accent-cyan">
+              Your Entire Agency?
+            </span>
+          </h2>
+          <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto">
+            Join the waitlist for early access. Be among the first to experience the future of content creation.
+          </p>
+        </motion.div>
+
+        <motion.div variants={fadeUp}>
+          {!submitted ? (
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                if (email) setSubmitted(true);
+              }}
+              className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+            >
+              <input
+                type="email"
+                placeholder="you@company.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="flex-1 px-5 py-4 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 border border-white/10 bg-white/5 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-400/50 transition-colors"
+                required
+              />
+              <button
+                type="submit"
+                className="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold hover:shadow-xl hover:shadow-brand-500/25 transition-all hover:scale-105 whitespace-nowrap"
+              >
+                Get Early Access
+              </button>
+            </form>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 max-w-md mx-auto"
+            >
+              <div className="text-4xl mb-3">🎉</div>
+              <h3 className="text-xl font-bold mb-2">You&apos;re on the list!</h3>
+              <p className="text-white/50 text-sm">
+                We&apos;ll reach out soon with your early access invitation.
+              </p>
+            </motion.div>
+          )}
+        </motion.div>
+
+        <motion.p variants={fadeUp} className="text-white/30 text-sm mt-6">
+          No spam, ever. Unsubscribe anytime.
+        </motion.p>
+      </div>
+    </Section>
+  );
+}
+
+// ─── Footer ───
+function Footer() {
+  return (
+    <footer className="border-t border-white/5 py-12 px-6">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 rounded-md bg-gradient-to-br from-brand-400 to-accent-pink flex items-center justify-center text-white font-bold text-xs">
+            A
+          </div>
+          <span className="text-sm font-bold">The Agentcy</span>
+        </div>
+
+        <div className="flex items-center gap-6 text-sm text-white/30">
+          <a href="#" className="hover:text-white/60 transition-colors">Privacy</a>
+          <a href="#" className="hover:text-white/60 transition-colors">Terms</a>
+          <a href="#" className="hover:text-white/60 transition-colors">Twitter</a>
+          <a href="#" className="hover:text-white/60 transition-colors">LinkedIn</a>
+          <a href="#" className="hover:text-white/60 transition-colors">Discord</a>
+        </div>
+
+        <p className="text-white/20 text-sm">© 2026 The Agentcy. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+}
+
+// ─── Main Page ───
+export default function Home() {
+  return (
+    <main className="relative">
+      <Navbar />
+      <Hero />
+      <HowItWorks />
+      <Agents />
+      <Features />
+      <Comparison />
+      <Pricing />
+      <Waitlist />
+      <Footer />
+    </main>
+  );
+}

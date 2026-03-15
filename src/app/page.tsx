@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 import { useRef, useState } from "react";
 
 // ─── Animation Helpers ───
@@ -40,8 +41,14 @@ function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-400 to-accent-pink flex items-center justify-center text-white font-bold text-sm">
-            A
+          <div className="w-8 h-8 rounded-lg overflow-hidden bg-black/30 border border-white/10">
+            <Image
+              src="/logo-mark.png"
+              alt="The Agentcy logo"
+              width={32}
+              height={32}
+              priority
+            />
           </div>
           <span className="text-lg font-bold tracking-tight">The Agentcy</span>
         </div>
@@ -717,8 +724,8 @@ function Footer() {
     <footer className="border-t border-white/5 py-12 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-gradient-to-br from-brand-400 to-accent-pink flex items-center justify-center text-white font-bold text-xs">
-            A
+          <div className="w-6 h-6 rounded-md overflow-hidden bg-black/30 border border-white/10">
+            <Image src="/logo-mark.png" alt="The Agentcy logo" width={24} height={24} />
           </div>
           <span className="text-sm font-bold">The Agentcy</span>
         </div>

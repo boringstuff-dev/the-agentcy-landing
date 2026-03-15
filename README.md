@@ -18,6 +18,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Hero background video
+
+The landing page supports an autoplay hero background video.
+
+Put these files in `public/`:
+- `hero-bg.mp4` (recommended: 6–12s loop, H.264, 1080p, ~3–8MB)
+- `hero-bg.jpg` (poster frame / fallback)
+
+The hero keeps rendering even if the video is missing (you'll just see the existing gradient background).
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More

@@ -623,12 +623,12 @@ function HowItWorks() {
 // ─── NEW: AI Showcase / Showreel ───
 function Showcase() {
   const showcaseItems = [
-    { type: "image", label: "Brand Campaign Visual", gradient: "from-brand-500/30 to-accent-pink/20", icon: "🎨" },
-    { type: "video", label: "Social Media Reel", gradient: "from-accent-cyan/30 to-brand-400/20", icon: "🎬" },
-    { type: "image", label: "Ad Creative Variants", gradient: "from-accent-orange/30 to-accent-pink/20", icon: "🎯" },
-    { type: "image", label: "Investor Pitch Deck", gradient: "from-brand-300/30 to-brand-600/20", icon: "📊" },
-    { type: "video", label: "Explainer Video", gradient: "from-accent-green/30 to-accent-cyan/20", icon: "🎥" },
-    { type: "image", label: "Product Photography", gradient: "from-accent-pink/30 to-brand-300/20", icon: "📸" },
+    { type: "image", label: "Brand Campaign Visual", gradient: "from-brand-500/30 to-accent-pink/20", icon: "🎨", src: "/showcase-brand-campaign.jpg" },
+    { type: "video", label: "Social Media Reel", gradient: "from-accent-cyan/30 to-brand-400/20", icon: "🎬", src: "/showcase-social-reel.mp4" },
+    { type: "image", label: "Ad Creative Variants", gradient: "from-accent-orange/30 to-accent-pink/20", icon: "🎯", src: "/showcase-ad-variants.jpg" },
+    { type: "image", label: "Investor Pitch Deck", gradient: "from-brand-300/30 to-brand-600/20", icon: "📊", src: "/showcase-pitch-deck.jpg" },
+    { type: "video", label: "Explainer Video", gradient: "from-accent-green/30 to-accent-cyan/20", icon: "🎥", src: "/showcase-explainer.mp4" },
+    { type: "image", label: "Product Photography", gradient: "from-accent-pink/30 to-brand-300/20", icon: "📸", src: "/showcase-product-photo.jpg" },
   ];
 
   return (
@@ -649,18 +649,34 @@ function Showcase() {
           {showcaseItems.map((item) => (
             <TiltCard key={item.label} className="gsap-reveal">
               <div className={`relative group rounded-2xl overflow-hidden bg-gradient-to-br ${item.gradient} border border-white/10 aspect-[4/3] hover-target cursor-pointer`}>
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                  <span className="text-5xl mb-3 group-hover:scale-110 transition-transform duration-300">{item.icon}</span>
-                  <span className="text-sm font-medium text-white/70">{item.label}</span>
+                {item.type === "video" ? (
+                  <video
+                    className="absolute inset-0 w-full h-full object-cover"
+                    autoPlay muted loop playsInline preload="metadata"
+                  >
+                    <source src={item.src} type="video/mp4" />
+                  </video>
+                ) : (
+                  <img
+                    src={item.src}
+                    alt={item.label}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">{item.icon}</span>
+                    <span className="text-sm font-medium text-white/90">{item.label}</span>
+                  </div>
                   {item.type === "video" && (
-                    <div className="mt-2 flex items-center gap-1.5 text-xs text-white/40">
+                    <div className="flex items-center gap-1.5 text-xs text-white/50">
                       <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
                       AI Video
                     </div>
                   )}
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
                   <span className="text-xs text-white/60 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1">
                     Powered by WaveSpeed AI
                   </span>

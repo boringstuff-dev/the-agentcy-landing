@@ -676,11 +676,6 @@ function Showcase() {
                     </div>
                   )}
                 </div>
-                <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
-                  <span className="text-xs text-white/60 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1">
-                    Powered by WaveSpeed AI
-                  </span>
-                </div>
               </div>
             </TiltCard>
           ))}

@@ -71,18 +71,24 @@ function NoiseOverlay() {
 
 // ─── Floating Particles ───
 function Particles({ count = 30 }: { count?: number }) {
-  const particles = Array.from({ length: count }, (_, i) => ({
-    id: i,
-    left: `${Math.random() * 100}%`,
-    delay: `${Math.random() * 10}s`,
-    duration: `${8 + Math.random() * 12}s`,
-    size: `${1 + Math.random() * 3}px`,
-    color: [
-      "rgba(139, 92, 246, 0.4)",
-      "rgba(236, 72, 153, 0.3)",
-      "rgba(6, 182, 212, 0.3)",
-    ][Math.floor(Math.random() * 3)],
-  }));
+  const [particles, setParticles] = useState<Array<{ id: number; left: string; delay: string; duration: string; size: string; color: string }>>([]);
+
+  useEffect(() => {
+    setParticles(
+      Array.from({ length: count }, (_, i) => ({
+        id: i,
+        left: `${Math.random() * 100}%`,
+        delay: `${Math.random() * 10}s`,
+        duration: `${8 + Math.random() * 12}s`,
+        size: `${1 + Math.random() * 3}px`,
+        color: [
+          "rgba(139, 92, 246, 0.4)",
+          "rgba(236, 72, 153, 0.3)",
+          "rgba(6, 182, 212, 0.3)",
+        ][Math.floor(Math.random() * 3)],
+      }))
+    );
+  }, [count]);
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -359,7 +365,7 @@ function Hero() {
       <div className="absolute inset-0 -z-10 hero-bg">
         <video
           className="absolute inset-0 w-full h-full object-cover opacity-40 motion-reduce:hidden"
-          autoPlay muted loop playsInline preload="auto" poster="/hero-bg.jpg"
+          autoPlay muted loop playsInline preload="auto" poster="/hero-bg-poster.jpg"
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
@@ -399,9 +405,9 @@ function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] mb-6"
         >
-          Your AI
+          Your Brand.
           <br />
-          <span className="text-shimmer">Creative Agency</span>
+          <span className="text-shimmer">Every Channel. Zero Effort.</span>
         </motion.h1>
 
         <motion.p
@@ -410,9 +416,9 @@ function Hero() {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          From brief to published content in minutes, not weeks.
-          Seven AI agents collaborate like a world-class creative team —
-          strategy, visuals, voice, video, QA, and publishing. All automated.
+          Strategy, content, social media, ads, video — managed from one place.
+          The Agentcy handles your entire communication stack so you can
+          focus on building your business, not managing your marketing.
         </motion.p>
 
         <motion.div
@@ -435,60 +441,8 @@ function Hero() {
           </MagneticBtn>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="mt-20 relative"
-        >
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
-            <PipelinePreview />
-          </div>
-          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-brand-500/20 blur-2xl rounded-full" />
-        </motion.div>
       </div>
     </section>
-  );
-}
-
-function PipelinePreview() {
-  const steps = [
-    { icon: "📋", label: "Brief", color: "from-white/20 to-white/5" },
-    { icon: "🎯", label: "Strategy", color: "from-brand-400/30 to-brand-600/10" },
-    { icon: "🎨", label: "Visuals", color: "from-accent-pink/30 to-accent-pink/5" },
-    { icon: "🎙️", label: "Voice", color: "from-accent-orange/30 to-accent-orange/5" },
-    { icon: "🎬", label: "Compose", color: "from-accent-cyan/30 to-accent-cyan/5" },
-    { icon: "✅", label: "QA", color: "from-accent-green/30 to-accent-green/5" },
-    { icon: "🚀", label: "Publish", color: "from-brand-300/30 to-brand-500/5" },
-  ];
-
-  return (
-    <div className="flex flex-wrap justify-center items-center gap-3 md:gap-2">
-      {steps.map((step, i) => (
-        <div key={step.label} className="flex items-center gap-2 md:gap-2">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1 + i * 0.12 }}
-            whileHover={{ scale: 1.1, y: -4 }}
-            className={`flex flex-col items-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-b ${step.color} border border-white/10 hover-target cursor-default`}
-          >
-            <span className="text-2xl">{step.icon}</span>
-            <span className="text-xs font-medium text-white/70">{step.label}</span>
-          </motion.div>
-          {i < steps.length - 1 && (
-            <motion.span
-              initial={{ opacity: 0, x: -5 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.2 + i * 0.12 }}
-              className="text-white/20 hidden md:block"
-            >
-              →
-            </motion.span>
-          )}
-        </div>
-      ))}
-    </div>
   );
 }
 

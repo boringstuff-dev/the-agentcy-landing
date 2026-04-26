@@ -396,7 +396,7 @@ function Hero() {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 text-sm text-white/70 mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
-          Now in Early Access
+          Free 7-day trial · No credit card needed
         </motion.div>
 
         <motion.h1
@@ -417,7 +417,7 @@ function Hero() {
           className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Tell us what you need. Get back videos, posts, ads, and copy — ready to publish.
-          No freelancers. No agencies. No waiting two weeks for a draft.
+          No freelancers. No agencies. No waiting two weeks for a draft. Try free for 7 days.
         </motion.p>
 
         <motion.div
@@ -430,7 +430,7 @@ function Hero() {
             href="#waitlist"
             className="px-8 py-4 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold text-lg hover:shadow-2xl hover:shadow-brand-500/30 transition-all"
           >
-            Start for Free →
+            Start Free — 7 Days on Us →
           </MagneticBtn>
           <MagneticBtn
             href="#how-it-works"
@@ -899,6 +899,245 @@ function Comparison() {
   );
 }
 
+
+// ─── Stats Bar ───
+function StatsBar() {
+  const stats = [
+    { value: "10+", label: "Hours saved per week", icon: "⏱️" },
+    { value: "70%", label: "Less production time", icon: "⚡" },
+    { value: "5 min", label: "Brief to published content", icon: "🚀" },
+    { value: "10×", label: "More content, same team", icon: "📈" },
+  ];
+
+  return (
+    <section className="relative py-12 px-6 border-y border-white/5 bg-white/[0.02]">
+      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        {stats.map((s) => (
+          <div key={s.label}>
+            <div className="text-3xl mb-1">{s.icon}</div>
+            <div className="text-3xl font-bold text-shimmer mb-1">{s.value}</div>
+            <p className="text-white/40 text-sm">{s.label}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+// ─── Brand Voice ───
+function BrandVoice() {
+  return (
+    <GsapSection>
+      <div className="glow-line mb-24" />
+      <div className="max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="gsap-reveal">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-medium mb-6">
+              ✨ Brand Voice Intelligence
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              AI That Sounds{" "}
+              <span className="text-shimmer">Exactly Like You.</span>
+            </h2>
+            <p className="text-white/50 text-lg leading-relaxed mb-6">
+              Most AI content sounds generic. Ours doesn&apos;t. The Agentcy learns your brand tone, writing style, and personality — then applies it consistently across every piece of content it creates.
+            </p>
+            <ul className="space-y-3">
+              {[
+                "Learns from your existing content and briefs",
+                "Consistent voice across video, copy, captions, and ads",
+                "Adapts tone per platform — casual on TikTok, professional on LinkedIn",
+                "Gets smarter with every project",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-white/60 text-sm">
+                  <span className="text-brand-400 mt-0.5 shrink-0">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <TiltCard className="gsap-reveal">
+            <GlowCard className="rounded-2xl bg-white/[0.03] border border-white/10 p-8">
+              <div className="space-y-4">
+                <div className="text-xs text-white/30 uppercase tracking-wider mb-4">Brand Voice Profile</div>
+                {[
+                  { label: "Tone", value: "Confident & Direct", bar: 85 },
+                  { label: "Formality", value: "Conversational", bar: 40 },
+                  { label: "Humour", value: "Subtle wit", bar: 55 },
+                  { label: "Technicality", value: "Accessible", bar: 35 },
+                ].map((item) => (
+                  <div key={item.label}>
+                    <div className="flex justify-between text-sm mb-1.5">
+                      <span className="text-white/50">{item.label}</span>
+                      <span className="text-white/70">{item.value}</span>
+                    </div>
+                    <div className="h-1.5 rounded-full bg-white/5">
+                      <div
+                        className="h-full rounded-full bg-gradient-to-r from-brand-500 to-accent-cyan"
+                        style={{ width: `${item.bar}%` }}
+                      />
+                    </div>
+                  </div>
+                ))}
+                <div className="pt-4 border-t border-white/5 text-xs text-white/30 text-center">
+                  ✓ Voice profile synced across all 7 AI agents
+                </div>
+              </div>
+            </GlowCard>
+          </TiltCard>
+        </div>
+      </div>
+    </GsapSection>
+  );
+}
+
+// ─── Use Cases ───
+function UseCases() {
+  const cases = [
+    {
+      label: "For Startups & SMBs",
+      icon: "🚀",
+      gradient: "from-brand-500/20 to-brand-700/10",
+      headline: "Look like a funded company. On a bootstrap budget.",
+      desc: "Get professional-grade content — videos, ads, social posts — without hiring a team or paying agency retainers. Launch campaigns in minutes, not months.",
+      outcomes: ["Save $5K–$25K/mo vs agencies", "Go live in days, not weeks", "Consistent brand presence across all channels"],
+    },
+    {
+      label: "For Marketing Teams",
+      icon: "📊",
+      gradient: "from-accent-cyan/20 to-brand-500/10",
+      headline: "10× your output. Without 10× the headcount.",
+      desc: "Stop being the bottleneck. The Agentcy handles production so your team can focus on strategy, performance, and growth — not editing timelines.",
+      outcomes: ["70% less time on content production", "Unlimited campaign variations for A/B testing", "Auto-formatted for every platform and placement"],
+    },
+    {
+      label: "For Agencies",
+      icon: "🏢",
+      gradient: "from-accent-pink/20 to-accent-orange/10",
+      headline: "Scale client output. Not your payroll.",
+      desc: "Deliver more campaigns, faster, to more clients — without hiring. White-label The Agentcy under your brand and offer AI-powered content as a premium service.",
+      outcomes: ["Manage unlimited client brands", "White-label platform available", "Cut delivery time from weeks to hours"],
+    },
+    {
+      label: "For Creators",
+      icon: "🎨",
+      gradient: "from-accent-orange/20 to-accent-pink/10",
+      headline: "Post everywhere. Film once.",
+      desc: "Turn one piece of content into a full multi-platform strategy. The Agentcy adapts your content for every channel, writes the captions, and hits publish — so you can focus on creating.",
+      outcomes: ["Repurpose one video into 5+ formats", "Platform-native captions and hashtags", "Consistent posting without burning out"],
+    },
+  ];
+
+  return (
+    <GsapSection>
+      <div className="glow-line mb-24" />
+      <div className="max-w-6xl mx-auto">
+        <div className="gsap-reveal text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Built for Everyone Who{" "}
+            <span className="text-shimmer">Creates Content Professionally</span>
+          </h2>
+          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+            Whether you&apos;re a solo founder or running a 50-person agency, The Agentcy scales to your workflow.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {cases.map((c) => (
+            <TiltCard key={c.label} className="gsap-reveal">
+              <GlowCard className={`h-full rounded-2xl bg-gradient-to-br ${c.gradient} border border-white/10 hover:border-white/20 transition-all duration-300 p-8`}>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-2xl">{c.icon}</span>
+                  <span className="text-xs font-semibold text-white/50 uppercase tracking-wider">{c.label}</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3">{c.headline}</h3>
+                <p className="text-white/50 text-sm leading-relaxed mb-5">{c.desc}</p>
+                <ul className="space-y-2">
+                  {c.outcomes.map((o) => (
+                    <li key={o} className="flex items-start gap-2 text-sm text-white/60">
+                      <span className="text-accent-green shrink-0 mt-0.5">✓</span>
+                      {o}
+                    </li>
+                  ))}
+                </ul>
+              </GlowCard>
+            </TiltCard>
+          ))}
+        </div>
+      </div>
+    </GsapSection>
+  );
+}
+
+// ─── Testimonials ───
+function Testimonials() {
+  const testimonials = [
+    {
+      quote: "We used to spend two weeks producing a campaign. Now it takes an afternoon. The Agentcy doesn't just save time — it makes our output look better than what we were doing manually.",
+      name: "Sofia Marchetti",
+      role: "Head of Marketing",
+      company: "Nexum Studio",
+      emoji: "🏢",
+    },
+    {
+      quote: "As a solo founder I couldn't afford an agency. The Agentcy gave me a full creative team without the price tag. I'm posting daily on three platforms and it costs me less than a Netflix subscription.",
+      name: "Luca Ferretti",
+      role: "Founder",
+      company: "Launchpad App",
+      emoji: "🚀",
+    },
+    {
+      quote: "We white-labelled The Agentcy for our clients and it's transformed our agency model. We now deliver campaigns in 48 hours that used to take three weeks. Our margins have never been better.",
+      name: "Giulia Romano",
+      role: "Creative Director",
+      company: "Forma Agency",
+      emoji: "🎨",
+    },
+    {
+      quote: "The brand voice feature is what sold me. Every piece of content actually sounds like us — not like generic AI slop. Our audience can't tell the difference. Our team can finally breathe.",
+      name: "Marco Vitale",
+      role: "CMO",
+      company: "GrowthOps",
+      emoji: "📊",
+    },
+  ];
+
+  return (
+    <GsapSection>
+      <div className="glow-line mb-24" />
+      <div className="max-w-6xl mx-auto">
+        <div className="gsap-reveal text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Teams That Switched{" "}
+            <span className="text-shimmer">Never Went Back</span>
+          </h2>
+          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+            Real results from teams who replaced their old content workflow with The Agentcy.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {testimonials.map((t) => (
+            <TiltCard key={t.name} className="gsap-reveal">
+              <GlowCard className="h-full rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all duration-300 p-8">
+                <div className="text-3xl mb-4">❝</div>
+                <p className="text-white/70 leading-relaxed mb-6 text-sm">{t.quote}</p>
+                <div className="flex items-center gap-3 pt-4 border-t border-white/5">
+                  <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-lg">{t.emoji}</div>
+                  <div>
+                    <div className="font-semibold text-sm">{t.name}</div>
+                    <div className="text-white/40 text-xs">{t.role} · {t.company}</div>
+                  </div>
+                </div>
+              </GlowCard>
+            </TiltCard>
+          ))}
+        </div>
+      </div>
+    </GsapSection>
+  );
+}
+
 // ─── Features ───
 function Features() {
   const features = [
@@ -1132,10 +1371,14 @@ export default function Home() {
       <Hero />
       <Services />
       <HowItWorks />
+      <StatsBar />
       <StudioCarousel />
       <Showcase />
+      <BrandVoice />
       <Comparison />
+      <UseCases />
       <Features />
+      <Testimonials />
       <Pricing />
       <Waitlist />
       <Footer />

@@ -652,16 +652,38 @@ function StudioCarousel() {
       gradient: "from-pink-500/20 to-purple-600/20",
       accent: "from-pink-500 to-purple-500",
       content: (
-        <div className="flex flex-col items-center gap-3 w-full">
-          <div className="w-full aspect-[9/16] max-h-[220px] rounded-xl bg-gradient-to-b from-pink-500/30 to-purple-600/30 border border-white/10 flex items-center justify-center relative overflow-hidden">
-            <div className="absolute inset-0 flex flex-col justify-end p-4">
-              <div className="h-2 w-2/3 rounded bg-white/20 mb-2" />
-              <div className="h-2 w-1/2 rounded bg-white/10" />
+        <div className="flex gap-3 w-full">
+          {/* Phone frame */}
+          <div className="flex-1 rounded-2xl bg-black border-2 border-white/10 overflow-hidden relative" style={{maxHeight: 280}}>
+            {/* IG top bar */}
+            <div className="flex items-center justify-between px-3 py-2 bg-black">
+              <span className="text-[10px] text-white/60 font-semibold">Reels</span>
+              <span className="text-white text-sm">📷</span>
             </div>
-            <span className="text-5xl">🎬</span>
-          </div>
-          <div className="flex gap-4 text-xs text-white/40 w-full justify-center">
-            <span>❤️ 4.2K</span><span>💬 318</span><span>↗️ 891</span>
+            {/* Content image */}
+            <div className="relative w-full" style={{height: 200}}>
+              <img src="/mock-ig-content.png" alt="Instagram Reel" className="w-full h-full object-cover" />
+              {/* IG overlay UI */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-3 right-10">
+                <div className="flex items-center gap-2 mb-1">
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-pink-500 to-purple-600 border border-white" />
+                  <span className="text-white text-[10px] font-semibold">@theagentcy</span>
+                  <span className="text-white/60 text-[8px] border border-white/40 rounded px-1">Follow</span>
+                </div>
+                <p className="text-white text-[9px] leading-tight">AI-generated campaign content ✨ #AIMarketing #ContentCreation</p>
+              </div>
+              {/* Right action bar */}
+              <div className="absolute right-2 bottom-4 flex flex-col items-center gap-3 text-white">
+                <div className="flex flex-col items-center"><span className="text-lg">❤️</span><span className="text-[8px]">4.2K</span></div>
+                <div className="flex flex-col items-center"><span className="text-lg">💬</span><span className="text-[8px]">318</span></div>
+                <div className="flex flex-col items-center"><span className="text-lg">↗️</span><span className="text-[8px]">891</span></div>
+              </div>
+            </div>
+            {/* IG bottom bar */}
+            <div className="flex justify-around py-2 bg-black border-t border-white/5 text-white/40 text-sm">
+              <span>🏠</span><span>🔍</span><span>➕</span><span>🎬</span><span>👤</span>
+            </div>
           </div>
         </div>
       ),
@@ -669,15 +691,41 @@ function StudioCarousel() {
     {
       platform: "TikTok Video",
       icon: "🎵",
-      gradient: "from-gray-900/60 to-red-500/20",
+      gradient: "from-gray-900/60 to-red-500/10",
       accent: "from-red-400 to-pink-500",
       content: (
-        <div className="flex gap-3 w-full">
-          <div className="flex-1 aspect-[9/16] max-h-[220px] rounded-xl bg-black/40 border border-white/10 flex items-center justify-center">
-            <span className="text-4xl">🎵</span>
-          </div>
-          <div className="flex flex-col gap-4 justify-end pb-4 text-xl">
-            <span>❤️</span><span>💬</span><span>↗️</span><span>🎵</span>
+        <div className="flex gap-2 w-full">
+          <div className="flex-1 rounded-2xl bg-black border-2 border-white/10 overflow-hidden relative" style={{maxHeight: 280}}>
+            {/* TikTok top */}
+            <div className="flex items-center justify-center py-2 bg-black gap-4">
+              <span className="text-[10px] text-white/40">Following</span>
+              <span className="text-[10px] text-white font-bold border-b border-white pb-0.5">For You</span>
+              <span className="text-[10px] text-white/40">LIVE</span>
+            </div>
+            <div className="relative" style={{height: 210}}>
+              <img src="/mock-tt-content.png" alt="TikTok" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              {/* Bottom info */}
+              <div className="absolute bottom-3 left-3 right-12">
+                <p className="text-white text-[9px] font-semibold mb-1">@theagentcy</p>
+                <p className="text-white/80 text-[8px]">This content was made in 5 minutes with AI 🤯 #AIContent</p>
+                <div className="flex items-center gap-1 mt-1">
+                  <span className="text-[8px]">🎵</span>
+                  <span className="text-white/60 text-[8px]">Original sound - The Agentcy</span>
+                </div>
+              </div>
+              {/* Right sidebar */}
+              <div className="absolute right-2 bottom-4 flex flex-col items-center gap-3">
+                <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-pink-500 to-purple-600 border-2 border-white" />
+                <div className="flex flex-col items-center text-white"><span>❤️</span><span className="text-[7px]">84.2K</span></div>
+                <div className="flex flex-col items-center text-white"><span>💬</span><span className="text-[7px]">1.3K</span></div>
+                <div className="flex flex-col items-center text-white"><span>🔗</span><span className="text-[7px]">Share</span></div>
+                <span className="text-lg">🎵</span>
+              </div>
+            </div>
+            <div className="flex justify-around py-2 bg-black border-t border-white/5 text-white/40 text-sm">
+              <span>🏠</span><span>👥</span><span>➕</span><span>📥</span><span>👤</span>
+            </div>
           </div>
         </div>
       ),
@@ -688,22 +736,33 @@ function StudioCarousel() {
       gradient: "from-blue-600/20 to-cyan-500/20",
       accent: "from-blue-400 to-cyan-400",
       content: (
-        <div className="flex flex-col gap-3 w-full">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-blue-500/30 border border-white/10 flex items-center justify-center text-lg">🏢</div>
-            <div>
-              <div className="h-2 w-24 rounded bg-white/30 mb-1" />
-              <div className="h-2 w-16 rounded bg-white/15" />
+        <div className="w-full rounded-xl bg-[#1b1f23] border border-white/10 overflow-hidden text-xs">
+          {/* LinkedIn header */}
+          <div className="bg-[#0a66c2]/20 px-3 py-2 flex items-center justify-between">
+            <span className="text-[#0a66c2] font-bold text-[11px]">in LinkedIn</span>
+            <span className="text-white/30 text-[9px]">🔔 Notifications</span>
+          </div>
+          {/* Post card */}
+          <div className="p-3">
+            <div className="flex items-start gap-2 mb-2">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brand-500 to-accent-cyan flex items-center justify-center text-white font-bold text-[10px] shrink-0">TA</div>
+              <div>
+                <p className="text-white text-[10px] font-semibold">The Agentcy</p>
+                <p className="text-white/40 text-[8px]">AI-Powered Creative Agency · Sponsored</p>
+              </div>
             </div>
-          </div>
-          <div className="space-y-1.5">
-            <div className="h-2 w-full rounded bg-white/20" />
-            <div className="h-2 w-5/6 rounded bg-white/15" />
-            <div className="h-2 w-4/6 rounded bg-white/10" />
-          </div>
-          <div className="w-full h-24 rounded-lg bg-blue-500/20 border border-white/10 flex items-center justify-center text-3xl">📊</div>
-          <div className="flex gap-4 text-xs text-white/40">
-            <span>👍 482</span><span>💬 61</span><span>↗️ 34</span>
+            <p className="text-white/80 text-[9px] leading-relaxed mb-2">
+              We replaced a $15K/month agency with AI. Here&apos;s what happened to our content output in 30 days... 🧵
+            </p>
+            <div className="rounded-lg overflow-hidden mb-2">
+              <img src="/mock-li-content.png" alt="LinkedIn" className="w-full h-24 object-cover" />
+            </div>
+            <div className="text-white/40 text-[8px] mb-2 flex items-center gap-1">
+              <span>👍</span><span>❤️</span><span className="text-white/30">482 reactions · 61 comments</span>
+            </div>
+            <div className="flex gap-3 border-t border-white/5 pt-2 text-white/30 text-[8px]">
+              <span>👍 Like</span><span>💬 Comment</span><span>🔁 Repost</span><span>↗️ Send</span>
+            </div>
           </div>
         </div>
       ),
@@ -714,36 +773,75 @@ function StudioCarousel() {
       gradient: "from-blue-500/20 to-indigo-600/20",
       accent: "from-blue-500 to-indigo-500",
       content: (
-        <div className="flex flex-col gap-3 w-full">
-          <div className="flex items-center gap-2 text-xs text-white/30">
-            <div className="w-6 h-6 rounded bg-blue-500/40 flex items-center justify-center">🎯</div>
-            <span>Your Brand · <span className="text-white/20">Sponsored</span></span>
+        <div className="w-full rounded-xl bg-[#242526] border border-white/10 overflow-hidden text-xs">
+          {/* FB top bar */}
+          <div className="bg-[#1877f2]/20 px-3 py-2 flex items-center gap-2">
+            <span className="text-[#1877f2] font-bold text-[12px]">f</span>
+            <span className="text-white/30 text-[9px] ml-auto">📣 Ads Manager</span>
           </div>
-          <div className="w-full h-28 rounded-xl bg-indigo-500/20 border border-white/10 flex items-center justify-center text-4xl">🖼️</div>
-          <div className="h-2 w-3/4 rounded bg-white/25 mb-1" />
-          <div className="h-2 w-1/2 rounded bg-white/15" />
-          <div className="mt-2 w-full py-2 rounded-lg bg-blue-500/40 border border-blue-400/30 text-center text-xs font-semibold text-blue-200">
-            Learn More →
+          <div className="p-3">
+            <div className="flex items-center gap-2 mb-2">
+              <div className="w-7 h-7 rounded-full bg-gradient-to-br from-brand-500 to-accent-pink flex items-center justify-center text-white text-[9px] font-bold">TA</div>
+              <div>
+                <p className="text-white text-[10px] font-semibold">The Agentcy</p>
+                <p className="text-white/30 text-[8px]">Sponsored · 🌐</p>
+              </div>
+            </div>
+            <p className="text-white/70 text-[9px] mb-2">Stop paying $10K/month for an agency. Get the same results in 5 minutes with AI.</p>
+            <div className="rounded-lg overflow-hidden mb-2">
+              <img src="/mock-meta-content.png" alt="Meta Ad" className="w-full h-28 object-cover" />
+            </div>
+            <div className="flex items-center justify-between bg-[#3a3b3c] rounded-lg px-3 py-2">
+              <div>
+                <p className="text-white/30 text-[7px]">theagentcy.ai</p>
+                <p className="text-white text-[9px] font-semibold">Start Free — 7 Days on Us</p>
+              </div>
+              <span className="bg-[#1877f2] text-white text-[8px] font-bold px-2 py-1 rounded">Learn More</span>
+            </div>
+            <div className="flex gap-4 mt-2 text-white/25 text-[8px]">
+              <span>👍 Like</span><span>💬 Comment</span><span>↗️ Share</span>
+            </div>
           </div>
         </div>
       ),
     },
     {
-      platform: "YouTube Short",
+      platform: "YouTube",
       icon: "🎬",
       gradient: "from-red-600/20 to-orange-500/20",
       accent: "from-red-500 to-orange-400",
       content: (
-        <div className="flex flex-col gap-3 w-full">
-          <div className="w-full aspect-[9/16] max-h-[200px] rounded-xl bg-black/60 border border-white/10 flex items-center justify-center relative">
-            <span className="text-5xl">▶️</span>
-            <div className="absolute bottom-2 left-2 right-2 h-1 rounded bg-white/10">
-              <div className="h-full w-2/5 rounded bg-red-500" />
+        <div className="w-full rounded-xl bg-[#0f0f0f] border border-white/10 overflow-hidden text-xs">
+          {/* YT top */}
+          <div className="flex items-center justify-between px-3 py-2 bg-[#0f0f0f]">
+            <span className="text-red-500 font-bold text-[12px]">▶ YouTube</span>
+            <span className="text-white/30 text-[9px]">🔍</span>
+          </div>
+          {/* Video thumbnail */}
+          <div className="relative">
+            <img src="/mock-yt-content.png" alt="YouTube" className="w-full h-36 object-cover" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-black/70 flex items-center justify-center">
+                <span className="text-white text-lg ml-0.5">▶</span>
+              </div>
+            </div>
+            <div className="absolute bottom-2 right-2 bg-black/80 text-white text-[8px] px-1 rounded">2:47</div>
+            {/* Progress bar */}
+            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/10">
+              <div className="h-full w-1/3 bg-red-500" />
             </div>
           </div>
-          <div className="h-2 w-3/4 rounded bg-white/25" />
-          <div className="flex gap-3 text-xs text-white/40">
-            <span>👍 12K</span><span>👎</span><span>🔗 Share</span>
+          <div className="p-3">
+            <p className="text-white text-[10px] font-semibold mb-1">We built a full marketing campaign with AI in 5 minutes</p>
+            <p className="text-white/30 text-[8px] mb-2">The Agentcy · 24K views · 2 days ago</p>
+            <div className="flex items-center gap-2">
+              <div className="w-6 h-6 rounded-full bg-gradient-to-br from-brand-500 to-accent-cyan" />
+              <span className="text-white/50 text-[8px]">The Agentcy</span>
+              <span className="ml-auto bg-white text-black text-[7px] font-bold px-2 py-0.5 rounded-full">Subscribe</span>
+            </div>
+            <div className="flex gap-3 mt-2 text-white/30 text-[8px]">
+              <span>👍 4.1K</span><span>👎</span><span>↗️ Share</span><span>📋 Save</span>
+            </div>
           </div>
         </div>
       ),

@@ -508,19 +508,23 @@ function Services() {
                   {group.category}
                 </h3>
               </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div className="grid sm:grid-cols-2 gap-4">
                 {group.services.map((service) => (
                   <TiltCard key={service.title} className="gsap-reveal">
-                    <GlowCard className="h-full p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all duration-300">
-                      <div className="text-3xl mb-3">{service.icon}</div>
-                      <h4 className="font-bold text-lg mb-2">{service.title}</h4>
-                      <p className="text-white/40 text-sm leading-relaxed mb-4">{service.desc}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {service.outputs.map((output) => (
-                          <span key={output} className="text-xs px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/50">
-                            {output}
-                          </span>
-                        ))}
+                    <GlowCard className="h-full rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all duration-300">
+                      <div className="flex gap-5 items-start p-7 min-h-[140px]">
+                        <div className="text-4xl shrink-0 mt-1">{service.icon}</div>
+                        <div className="flex-1">
+                          <h4 className="font-bold text-lg mb-2">{service.title}</h4>
+                          <p className="text-white/45 text-sm leading-relaxed mb-4">{service.desc}</p>
+                          <div className="flex flex-wrap gap-2">
+                            {service.outputs.map((output) => (
+                              <span key={output} className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/55">
+                                {output}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </GlowCard>
                   </TiltCard>
@@ -566,6 +570,193 @@ function HowItWorks() {
                 <p className="text-white/50 leading-relaxed text-sm">{step.desc}</p>
               </GlowCard>
             </TiltCard>
+          ))}
+        </div>
+      </div>
+    </GsapSection>
+  );
+}
+
+
+// ─── Studio Carousel ───
+function StudioCarousel() {
+  const [current, setCurrent] = useState(0);
+
+  const slides = [
+    {
+      platform: "Instagram Reel",
+      icon: "📱",
+      gradient: "from-pink-500/20 to-purple-600/20",
+      accent: "from-pink-500 to-purple-500",
+      content: (
+        <div className="flex flex-col items-center gap-3 w-full">
+          <div className="w-full aspect-[9/16] max-h-[220px] rounded-xl bg-gradient-to-b from-pink-500/30 to-purple-600/30 border border-white/10 flex items-center justify-center relative overflow-hidden">
+            <div className="absolute inset-0 flex flex-col justify-end p-4">
+              <div className="h-2 w-2/3 rounded bg-white/20 mb-2" />
+              <div className="h-2 w-1/2 rounded bg-white/10" />
+            </div>
+            <span className="text-5xl">🎬</span>
+          </div>
+          <div className="flex gap-4 text-xs text-white/40 w-full justify-center">
+            <span>❤️ 4.2K</span><span>💬 318</span><span>↗️ 891</span>
+          </div>
+        </div>
+      ),
+    },
+    {
+      platform: "TikTok Video",
+      icon: "🎵",
+      gradient: "from-gray-900/60 to-red-500/20",
+      accent: "from-red-400 to-pink-500",
+      content: (
+        <div className="flex gap-3 w-full">
+          <div className="flex-1 aspect-[9/16] max-h-[220px] rounded-xl bg-black/40 border border-white/10 flex items-center justify-center">
+            <span className="text-4xl">🎵</span>
+          </div>
+          <div className="flex flex-col gap-4 justify-end pb-4 text-xl">
+            <span>❤️</span><span>💬</span><span>↗️</span><span>🎵</span>
+          </div>
+        </div>
+      ),
+    },
+    {
+      platform: "LinkedIn Post",
+      icon: "💼",
+      gradient: "from-blue-600/20 to-cyan-500/20",
+      accent: "from-blue-400 to-cyan-400",
+      content: (
+        <div className="flex flex-col gap-3 w-full">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-blue-500/30 border border-white/10 flex items-center justify-center text-lg">🏢</div>
+            <div>
+              <div className="h-2 w-24 rounded bg-white/30 mb-1" />
+              <div className="h-2 w-16 rounded bg-white/15" />
+            </div>
+          </div>
+          <div className="space-y-1.5">
+            <div className="h-2 w-full rounded bg-white/20" />
+            <div className="h-2 w-5/6 rounded bg-white/15" />
+            <div className="h-2 w-4/6 rounded bg-white/10" />
+          </div>
+          <div className="w-full h-24 rounded-lg bg-blue-500/20 border border-white/10 flex items-center justify-center text-3xl">📊</div>
+          <div className="flex gap-4 text-xs text-white/40">
+            <span>👍 482</span><span>💬 61</span><span>↗️ 34</span>
+          </div>
+        </div>
+      ),
+    },
+    {
+      platform: "Meta Ad",
+      icon: "🎯",
+      gradient: "from-blue-500/20 to-indigo-600/20",
+      accent: "from-blue-500 to-indigo-500",
+      content: (
+        <div className="flex flex-col gap-3 w-full">
+          <div className="flex items-center gap-2 text-xs text-white/30">
+            <div className="w-6 h-6 rounded bg-blue-500/40 flex items-center justify-center">🎯</div>
+            <span>Your Brand · <span className="text-white/20">Sponsored</span></span>
+          </div>
+          <div className="w-full h-28 rounded-xl bg-indigo-500/20 border border-white/10 flex items-center justify-center text-4xl">🖼️</div>
+          <div className="h-2 w-3/4 rounded bg-white/25 mb-1" />
+          <div className="h-2 w-1/2 rounded bg-white/15" />
+          <div className="mt-2 w-full py-2 rounded-lg bg-blue-500/40 border border-blue-400/30 text-center text-xs font-semibold text-blue-200">
+            Learn More →
+          </div>
+        </div>
+      ),
+    },
+    {
+      platform: "YouTube Short",
+      icon: "🎬",
+      gradient: "from-red-600/20 to-orange-500/20",
+      accent: "from-red-500 to-orange-400",
+      content: (
+        <div className="flex flex-col gap-3 w-full">
+          <div className="w-full aspect-[9/16] max-h-[200px] rounded-xl bg-black/60 border border-white/10 flex items-center justify-center relative">
+            <span className="text-5xl">▶️</span>
+            <div className="absolute bottom-2 left-2 right-2 h-1 rounded bg-white/10">
+              <div className="h-full w-2/5 rounded bg-red-500" />
+            </div>
+          </div>
+          <div className="h-2 w-3/4 rounded bg-white/25" />
+          <div className="flex gap-3 text-xs text-white/40">
+            <span>👍 12K</span><span>👎</span><span>🔗 Share</span>
+          </div>
+        </div>
+      ),
+    },
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((c) => (c + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
+  return (
+    <GsapSection>
+      <div className="glow-line mb-24" />
+      <div className="max-w-5xl mx-auto">
+        <div className="gsap-reveal text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            One Brief.{" "}
+            <span className="text-shimmer">Every Platform.</span>
+          </h2>
+          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+            Write your brief once. The Agentcy formats, optimizes, and publishes to every channel automatically — each piece native to the platform.
+          </p>
+        </div>
+
+        <div className="relative flex items-center justify-center gap-4">
+          <button
+            onClick={() => setCurrent((c) => (c - 1 + slides.length) % slides.length)}
+            className="shrink-0 w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center justify-center text-white/60 hover:text-white hover-target"
+          >
+            ←
+          </button>
+
+          <div className="overflow-hidden w-full max-w-sm">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${current * 100}%)` }}
+            >
+              {slides.map((slide, i) => (
+                <div key={i} className="min-w-full flex justify-center">
+                  <TiltCard className="w-full">
+                    <div className={`rounded-2xl bg-gradient-to-br ${slide.gradient} border border-white/10 p-6 min-h-[400px] flex flex-col gap-4`}>
+                      <div className="flex items-center gap-3">
+                        <span className="text-2xl">{slide.icon}</span>
+                        <span className={`text-sm font-semibold bg-clip-text text-transparent bg-gradient-to-r ${slide.accent}`}>
+                          {slide.platform}
+                        </span>
+                        <span className="ml-auto text-xs px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-white/30">AI-generated</span>
+                      </div>
+                      <div className="flex-1">{slide.content}</div>
+                    </div>
+                  </TiltCard>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <button
+            onClick={() => setCurrent((c) => (c + 1) % slides.length)}
+            className="shrink-0 w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center justify-center text-white/60 hover:text-white hover-target"
+          >
+            →
+          </button>
+        </div>
+
+        <div className="flex justify-center gap-2 mt-8">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`transition-all duration-300 rounded-full hover-target ${
+                i === current ? "w-6 h-2 bg-brand-400" : "w-2 h-2 bg-white/20 hover:bg-white/40"
+              }`}
+            />
           ))}
         </div>
       </div>
@@ -752,10 +943,10 @@ function Features() {
 // ─── Pricing ───
 function Pricing() {
   const plans = [
-    { name: "Starter", price: 499, desc: "For solopreneurs and small teams getting started", features: ["50 deliverables/month", "All service categories", "All platforms", "720p video", "Email support"], highlighted: false },
-    { name: "Growth", price: 999, desc: "For growing teams scaling their output", features: ["150 deliverables/month", "All service categories", "All platforms", "1080p video", "Priority support", "Brand kit storage"], highlighted: true },
-    { name: "Pro", price: 2499, desc: "For agencies and marketing teams", features: ["500 deliverables/month", "All service categories", "All platforms", "4K video", "Dedicated support", "Custom voices", "API access"], highlighted: false },
-    { name: "Enterprise", price: null as number | null, desc: "For large organizations", features: ["Unlimited deliverables", "Custom integrations", "White-label platform", "SLA guarantee", "Dedicated CSM", "On-prem option"], highlighted: false },
+    { name: "Starter", price: 29, desc: "Try it risk-free. No credit card needed.", features: ["10 projects/month", "Videos, posts, ads & copy", "Instagram + TikTok publishing", "720p video output", "Email support"], highlighted: false },
+    { name: "Growth", price: 99, desc: "For teams serious about content.", features: ["50 projects/month", "All service categories", "All platforms", "1080p video output", "Priority support", "Brand kit storage"], highlighted: true },
+    { name: "Pro", price: 249, desc: "For agencies and high-volume teams.", features: ["200 projects/month", "All service categories", "All platforms", "4K video output", "Dedicated support", "Custom voices", "API access"], highlighted: false },
+    { name: "Enterprise", price: null as number | null, desc: "For large organizations.", features: ["Unlimited projects", "Custom integrations", "White-label platform", "SLA guarantee", "Dedicated CSM", "On-prem option"], highlighted: false },
   ];
 
   return (
@@ -941,6 +1132,7 @@ export default function Home() {
       <Hero />
       <Services />
       <HowItWorks />
+      <StudioCarousel />
       <Showcase />
       <Comparison />
       <Features />

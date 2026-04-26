@@ -714,7 +714,7 @@ function Features() {
     { icon: "⚡", title: "No More Tool Juggling", desc: "One brief. One platform. Strategy, visuals, copy, video — everything comes out the other side, ready to publish." },
     { icon: "💰", title: "Fire Your Agency", desc: "The average creative agency charges $5–25K/month. We deliver the same output for a fraction of the price." },
     { icon: "🌐", title: "Every Platform, Natively", desc: "Instagram, TikTok, YouTube, X, LinkedIn — each piece auto-formatted to the right spec, caption, and hashtags." },
-    { icon: "🔄", title: "Iterate in Plain English", desc: '"Make it punchier." "Use blue tones." "Shorter." Just say it — we'll redo it instantly.' },
+    { icon: "🔄", title: "Iterate in Plain English", desc: "Just say what you want — punchier, shorter, different tone. We\'ll redo it instantly." },
     { icon: "📈", title: "Scale Without Hiring", desc: "10 pieces of content or 10,000 — the output scales instantly. No bottlenecks, no burnout, no headcount." },
     { icon: "🏎️", title: "5 Minutes, Not 2 Weeks", desc: "Brief to finished, publish-ready content in under 5 minutes. Agencies can't compete with that." },
   ];

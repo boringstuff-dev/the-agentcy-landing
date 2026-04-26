@@ -405,9 +405,9 @@ function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] mb-6"
         >
-          Your Brand.
+          Your Agency.
           <br />
-          <span className="text-shimmer">Every Channel. Zero Effort.</span>
+          <span className="text-shimmer">At 1% of the Cost.</span>
         </motion.h1>
 
         <motion.p
@@ -416,9 +416,8 @@ function Hero() {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Strategy, content, social media, ads, video — managed from one place.
-          The Agentcy handles your entire communication stack so you can
-          focus on building your business, not managing your marketing.
+          Tell us what you need. Get back videos, posts, ads, and copy — ready to publish.
+          No freelancers. No agencies. No waiting two weeks for a draft.
         </motion.p>
 
         <motion.div
@@ -431,13 +430,13 @@ function Hero() {
             href="#waitlist"
             className="px-8 py-4 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold text-lg hover:shadow-2xl hover:shadow-brand-500/30 transition-all"
           >
-            Get Early Access
+            Start for Free →
           </MagneticBtn>
           <MagneticBtn
-            href="#services"
+            href="#how-it-works"
             className="px-8 py-4 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 text-white/80 font-medium text-lg"
           >
-            Explore Services →
+            See How It Works
           </MagneticBtn>
         </motion.div>
 
@@ -493,11 +492,11 @@ function Services() {
       <div className="max-w-6xl mx-auto">
         <div className="gsap-reveal text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Everything a Creative Agency Delivers,{" "}
-            <span className="text-shimmer">Powered by AI</span>
+            Everything You&apos;d Get From an Agency.{" "}
+            <span className="text-shimmer">In Minutes, Not Weeks.</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Submit a brief. Get finished, publish-ready work. No freelancers, no waiting.
+            Describe what you need in plain language. We handle the rest — from strategy to finished assets, ready to post.
           </p>
         </div>
 
@@ -543,19 +542,19 @@ function HowItWorks() {
       <div className="max-w-5xl mx-auto">
         <div className="gsap-reveal text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Brief to Published in{" "}
-            <span className="text-shimmer">Minutes</span>
+            From Idea to Published{" "}
+            <span className="text-shimmer">in Under 5 Minutes</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            No more juggling tools, freelancers, and timelines. One platform, one workflow, zero friction.
+            No tools to learn. No freelancers to brief. No revisions that take a week. Just results.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { num: "01", icon: "📋", title: "Submit Your Brief", desc: "Describe your campaign, product, or content needs in plain language. Upload brand assets if you have them.", gradient: "from-brand-400 to-brand-600" },
-            { num: "02", icon: "⚡", title: "Agents Collaborate", desc: "Seven AI agents work in parallel — strategy, visuals, copy, voice, video, QA — all orchestrated automatically.", gradient: "from-accent-pink to-brand-400" },
-            { num: "03", icon: "🚀", title: "Review & Publish", desc: "Preview everything, request changes in natural language, and publish to every platform with one click.", gradient: "from-accent-cyan to-accent-green" },
+            { num: "01", icon: "📋", title: "Tell Us What You Need", desc: "Type your brief like you'd explain it to a colleague. Product launch? Weekly posts? Ad campaign? Just say it.", gradient: "from-brand-400 to-brand-600" },
+            { num: "02", icon: "⚡", title: "AI Gets to Work", desc: "Strategy, visuals, copy, voiceover, video, and quality check — all produced automatically in parallel. No input needed.", gradient: "from-accent-pink to-brand-400" },
+            { num: "03", icon: "🚀", title: "Approve & Go Live", desc: "Review your content, tweak anything in plain language, and hit publish. We handle formatting for every platform.", gradient: "from-accent-cyan to-accent-green" },
           ].map((step) => (
             <TiltCard key={step.num} className="gsap-reveal">
               <GlowCard className="p-8 rounded-2xl text-center bg-white/[0.03] border border-white/10">
@@ -591,11 +590,11 @@ function Showcase() {
       <div className="max-w-6xl mx-auto">
         <div className="gsap-reveal text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            See What{" "}
-            <span className="text-shimmer">Our AI Creates</span>
+            Real Output.{" "}
+            <span className="text-shimmer">Zero Human Production.</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Every piece below was generated by our AI agents. From concept to finished asset — no humans in the loop.
+            Every asset below was created by The Agentcy from a single brief. No designers. No editors. No agency.
           </p>
         </div>
 
@@ -672,11 +671,12 @@ function Comparison() {
       <div className="max-w-5xl mx-auto">
         <div className="gsap-reveal text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Replace{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-orange to-accent-pink">Your Entire Stack</span>
+            You&apos;re Already Paying{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-orange to-accent-pink">For All of This</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Stop paying for 6 tools that don&apos;t talk to each other.
+            Six tools that don&apos;t talk to each other. A freelancer who disappears. An agency that takes two weeks.
+            There&apos;s a better way.
           </p>
         </div>
 
@@ -699,7 +699,7 @@ function Comparison() {
             <div className="border-t border-white/10 pt-6 text-center">
               <p className="text-white/40 text-sm mb-2">Replace all of the above with</p>
               <p className="text-3xl font-bold text-shimmer">The Agentcy — One Platform</p>
-              <p className="text-white/40 text-sm mt-2">Starting at $499/month</p>
+              <p className="text-white/40 text-sm mt-2">One flat monthly plan. No per-seat fees. Cancel anytime.</p>
             </div>
           </GlowCard>
         </div>
@@ -711,12 +711,12 @@ function Comparison() {
 // ─── Features ───
 function Features() {
   const features = [
-    { icon: "⚡", title: "End-to-End Pipeline", desc: "From creative brief to published content — no handoffs, no gaps, no waiting." },
-    { icon: "🤝", title: "Agent Collaboration", desc: "Agents communicate and iterate autonomously, just like a real creative team." },
-    { icon: "🌐", title: "Multi-Platform Publishing", desc: "Auto-format and publish to Instagram, TikTok, YouTube, X, LinkedIn simultaneously." },
-    { icon: "📈", title: "Unlimited Scale", desc: "10 briefs or 10,000 — the platform doesn't get tired, miss deadlines, or raise rates." },
-    { icon: "🔄", title: "Natural Language Iteration", desc: 'Say "make the logo bigger" or "try a warmer tone" — agents understand and adapt.' },
-    { icon: "🏎️", title: "Minutes, Not Weeks", desc: "What took your agency weeks now takes minutes. Same quality, 100x faster." },
+    { icon: "⚡", title: "No More Tool Juggling", desc: "One brief. One platform. Strategy, visuals, copy, video — everything comes out the other side, ready to publish." },
+    { icon: "💰", title: "Fire Your Agency", desc: "The average creative agency charges $5–25K/month. We deliver the same output for a fraction of the price." },
+    { icon: "🌐", title: "Every Platform, Natively", desc: "Instagram, TikTok, YouTube, X, LinkedIn — each piece auto-formatted to the right spec, caption, and hashtags." },
+    { icon: "🔄", title: "Iterate in Plain English", desc: '"Make it punchier." "Use blue tones." "Shorter." Just say it — we'll redo it instantly.' },
+    { icon: "📈", title: "Scale Without Hiring", desc: "10 pieces of content or 10,000 — the output scales instantly. No bottlenecks, no burnout, no headcount." },
+    { icon: "🏎️", title: "5 Minutes, Not 2 Weeks", desc: "Brief to finished, publish-ready content in under 5 minutes. Agencies can't compete with that." },
   ];
 
   return (
@@ -725,11 +725,11 @@ function Features() {
       <div className="max-w-6xl mx-auto">
         <div className="gsap-reveal text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Why{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-300 to-accent-orange">The Agentcy</span>
+            Why Thousands of Businesses{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-300 to-accent-orange">Are Ditching Their Agency</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Built different. Built better. Built for the future of content creation.
+            The old way is slow, expensive, and exhausting. The Agentcy is how modern teams produce content.
           </p>
         </div>
 
@@ -764,11 +764,11 @@ function Pricing() {
       <div className="max-w-6xl mx-auto">
         <div className="gsap-reveal text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Predictable{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-green to-accent-cyan">Pricing</span>
+            Less Than One{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-green to-accent-cyan">Freelancer Invoice</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Flat monthly plans. No per-seat fees. Scale your output without scaling your costs.
+            A single freelancer charges $500–2,000 per project. We give you unlimited content for one flat monthly fee.
           </p>
         </div>
 
@@ -835,12 +835,12 @@ function Waitlist() {
       <div className="max-w-3xl mx-auto text-center">
         <div className="gsap-reveal">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Ready to Replace
+            Stop Overpaying.
             <br />
-            <span className="text-shimmer">Your Entire Agency?</span>
+            <span className="text-shimmer">Start Creating.</span>
           </h2>
           <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto">
-            Join the waitlist for early access. Be among the first to experience the future of content creation.
+            Join the waitlist and get early access. Your first brief is on us.
           </p>
         </div>
 

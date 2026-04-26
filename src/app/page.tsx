@@ -492,12 +492,50 @@ function Services() {
       <div className="max-w-6xl mx-auto">
         <div className="gsap-reveal text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Everything You&apos;d Get From an Agency.{" "}
-            <span className="text-shimmer">In Minutes, Not Weeks.</span>
+            How It Works.{" "}
+            <span className="text-shimmer">What You Get.</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Describe what you need in plain language. We handle the rest — from strategy to finished assets, ready to post.
+            Submit a brief. Seven AI agents collaborate, produce, and publish — no tools to learn, no freelancers to manage.
           </p>
+        </div>
+
+        {/* Process steps */}
+        <div className="gsap-reveal grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-20">
+          {[
+            { num: "01", icon: "📋", title: "Submit a Brief", desc: "Describe what you need in plain language — campaign, post, video, ad." },
+            { num: "02", icon: "🤖", title: "Agents Get to Work", desc: "Strategy, visuals, copy, voice, video, and QA run automatically in parallel." },
+            { num: "03", icon: "✏️", title: "Review & Refine", desc: "Preview your content. Request changes in plain language. We update instantly." },
+            { num: "04", icon: "🚀", title: "Publish Everywhere", desc: "One click sends platform-optimised content to every channel simultaneously." },
+          ].map((step) => (
+            <div key={step.num} className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 text-center">
+              <div className="text-3xl mb-3">{step.icon}</div>
+              <div className="text-xs font-mono text-brand-400 mb-2">Step {step.num}</div>
+              <h3 className="font-bold text-sm mb-2">{step.title}</h3>
+              <p className="text-white/40 text-xs leading-relaxed">{step.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Key features strip */}
+        <div className="gsap-reveal grid md:grid-cols-3 gap-4 mb-20">
+          {[
+            { icon: "⚡", title: "Under 5 Minutes", desc: "From brief to finished, publish-ready content." },
+            { icon: "🌐", title: "8+ Platforms", desc: "Instagram, TikTok, YouTube, X, LinkedIn, Meta Ads and more." },
+            { icon: "🧠", title: "Brand Voice AI", desc: "Every output sounds like you — not like generic AI." },
+          ].map((f) => (
+            <div key={f.title} className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5">
+              <span className="text-3xl shrink-0">{f.icon}</span>
+              <div>
+                <div className="font-semibold text-sm mb-1">{f.title}</div>
+                <div className="text-white/40 text-xs">{f.desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="gsap-reveal text-center mb-10">
+          <h3 className="text-2xl font-bold text-white/70">Everything included in every plan:</h3>
         </div>
 
         <div className="space-y-16">

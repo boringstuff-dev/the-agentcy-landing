@@ -538,37 +538,62 @@ function Services() {
           <h3 className="text-2xl font-bold text-white/70">Everything included in every plan:</h3>
         </div>
 
-        <div className="space-y-16">
-          {serviceGroups.map((group) => (
-            <div key={group.category}>
-              <div className="gsap-reveal mb-6">
-                <h3 className={`text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r ${group.gradient}`}>
-                  {group.category}
-                </h3>
-              </div>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {group.services.map((service) => (
-                  <TiltCard key={service.title} className="gsap-reveal">
-                    <GlowCard className="h-full rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all duration-300">
-                      <div className="flex gap-5 items-start p-7 min-h-[140px]">
-                        <div className="text-4xl shrink-0 mt-1">{service.icon}</div>
-                        <div className="flex-1">
-                          <h4 className="font-bold text-lg mb-2">{service.title}</h4>
-                          <p className="text-white/45 text-sm leading-relaxed mb-4">{service.desc}</p>
-                          <div className="flex flex-wrap gap-2">
-                            {service.outputs.map((output) => (
-                              <span key={output} className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/55">
-                                {output}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </GlowCard>
-                  </TiltCard>
-                ))}
-              </div>
-            </div>
+        {/* Feature showcase with AI-generated images */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            {
+              img: "/feature-calendar.png",
+              icon: "📅",
+              title: "Publishing Calendar & Scheduled Publishing",
+              desc: "Plan, schedule, and publish content across all platforms from a single calendar. Color-coded campaigns, drag-and-drop scheduling, and optimal timing suggestions.",
+              tags: ["Monthly & weekly views", "Multi-platform", "Auto-scheduling"],
+              gradient: "from-brand-500/20 to-brand-700/10",
+            },
+            {
+              img: "/feature-analytics.png",
+              icon: "📊",
+              title: "Brand & Market Analysis",
+              desc: "AI-powered competitive intelligence. Understand your market positioning, track competitors, and get actionable insights delivered as ready-to-use reports.",
+              tags: ["Competitor tracking", "Market sizing", "AI insights"],
+              gradient: "from-accent-cyan/20 to-brand-500/10",
+            },
+            {
+              img: "/feature-media.png",
+              icon: "🎨",
+              title: "AI Image & Video Production",
+              desc: "Generate professional visuals, videos, voiceovers, and ad creatives from a brief. Full pipeline from concept to publish-ready asset — no design tools needed.",
+              tags: ["Images & video", "Voiceover", "Ad creatives"],
+              gradient: "from-accent-pink/20 to-accent-orange/10",
+            },
+            {
+              img: "/feature-kpis.png",
+              icon: "📈",
+              title: "KPIs & Strategy Monitoring",
+              desc: "Track campaign performance in real-time. Engagement, reach, conversions, and ROI — all in one dashboard. Know what\u2019s working before your agency does.",
+              tags: ["Real-time metrics", "Campaign health", "ROI tracking"],
+              gradient: "from-accent-green/20 to-accent-cyan/10",
+            },
+          ].map((f) => (
+            <TiltCard key={f.title} className="gsap-reveal">
+              <GlowCard className={`h-full rounded-2xl bg-gradient-to-br ${f.gradient} border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden`}>
+                <div className="relative w-full aspect-[16/9] overflow-hidden">
+                  <img src={f.img} alt={f.title} className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-2xl">{f.icon}</span>
+                    <h4 className="font-bold text-lg">{f.title}</h4>
+                  </div>
+                  <p className="text-white/50 text-sm leading-relaxed mb-4">{f.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {f.tags.map((tag) => (
+                      <span key={tag} className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/55">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </GlowCard>
+            </TiltCard>
           ))}
         </div>
       </div>

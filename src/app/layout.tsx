@@ -13,13 +13,13 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Agentcy — AI-Powered Creative Agency",
+  title: "The Agentcy — The AI-Native Agency",
   description:
-    "One platform replaces an entire creative agency. From brief to published content, powered by AI agents that collaborate like a world-class team.",
+    "The first AI-native creative agency. Seven AI agents collaborate to deliver videos, posts, ads, and copy — ready to publish, at 1% of agency cost.",
   openGraph: {
-    title: "The Agentcy — AI-Powered Creative Agency",
+    title: "The Agentcy — The AI-Native Agency",
     description:
-      "From brief to published content. AI agents that replace an entire creative agency.",
+      "AI-native by design — not a tool with AI bolted on. Brief in, publish-ready content out.",
     type: "website",
   },
 };

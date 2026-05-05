@@ -5,6 +5,8 @@ import { motion, useInView, useMotionValue, useSpring, useTransform } from "fram
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SOLUTIONS_GROUPS, type MegaMenuGroup } from "@/lib/solutions";
+import { FEATURES_GROUPS } from "@/lib/features";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -282,6 +284,75 @@ function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
   return <span ref={ref}>0{suffix}</span>;
 }
 
+
+const COLUMN_PRESETS: Record<3 | 4, { gridClass: string; widthClass: string }> = {
+  3: { gridClass: "grid-cols-3", widthClass: "w-[860px]" },
+  4: { gridClass: "grid-cols-4", widthClass: "w-[1100px]" },
+};
+
+function MegaMenu({ label, groups, columns }: { label: string; groups: MegaMenuGroup[]; columns: 3 | 4 }) {
+  const [open, setOpen] = useState(false);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleEnter = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpen(true);
+  };
+  const handleLeave = () => {
+    closeTimer.current = setTimeout(() => setOpen(false), 120);
+  };
+
+  const { gridClass, widthClass } = COLUMN_PRESETS[columns];
+
+  return (
+    <div className="relative" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+      <button
+        type="button"
+        className="flex items-center gap-1 hover:text-white transition-colors relative group hover-target"
+        aria-expanded={open}
+      >
+        {label}
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`}>
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+        <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-brand-400 transition-all duration-300 group-hover:w-full" />
+      </button>
+
+      <motion.div
+        initial={false}
+        animate={open ? { opacity: 1, y: 0, pointerEvents: "auto" } : { opacity: 0, y: -8, pointerEvents: "none" }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
+        className="fixed left-1/2 -translate-x-1/2 top-[64px] pt-2"
+      >
+        <div className={`${widthClass} max-w-[calc(100vw-2rem)] rounded-2xl bg-black/85 backdrop-blur-2xl border border-white/10 shadow-2xl shadow-black/40 p-6 grid ${gridClass} gap-4`}>
+          {groups.map((group) => (
+            <div key={group.title} className="flex flex-col gap-1">
+              <div className="text-xs font-mono uppercase tracking-wider text-brand-400 px-3 py-2">
+                {group.title}
+              </div>
+              {group.items.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="group flex items-start gap-3 px-3 py-2 rounded-lg hover:bg-white/5 transition-colors hover-target"
+                >
+                  <span className="mt-0.5 text-brand-400 group-hover:text-brand-300 transition-colors">
+                    {item.icon(18)}
+                  </span>
+                  <span className="flex flex-col">
+                    <span className="text-sm font-medium text-white">{item.label}</span>
+                    <span className="text-xs text-white/50 leading-snug">{item.desc}</span>
+                  </span>
+                </a>
+              ))}
+            </div>
+          ))}
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
 // ─── Navbar ───
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -311,12 +382,10 @@ function Navbar() {
           <span className="text-lg font-bold tracking-tight">The Agentcy</span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm text-white/60">
+          <MegaMenu label="Solutions" groups={SOLUTIONS_GROUPS} columns={3} />
           {[
-            { label: "Services", href: "#services" },
             { label: "How it Works", href: "#how-it-works" },
             { label: "Showcase", href: "#showcase" },
-            { label: "Features", href: "#features" },
-            { label: "Pricing", href: "#pricing" },
           ].map((item) => (
             <a
               key={item.label}
@@ -327,6 +396,21 @@ function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-brand-400 transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
+          <MegaMenu label="Features" groups={FEATURES_GROUPS} columns={4} />
+          <a
+            href="#pricing"
+            className="hover:text-white transition-colors relative group hover-target"
+          >
+            Pricing
+            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-brand-400 transition-all duration-300 group-hover:w-full" />
+          </a>
+          <a
+            href="/docs"
+            className="hover:text-white transition-colors relative group hover-target"
+          >
+            API Docs
+            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-brand-400 transition-all duration-300 group-hover:w-full" />
+          </a>
         </div>
         <MagneticBtn
           href="#waitlist"
@@ -396,7 +480,9 @@ function Hero() {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 text-sm text-white/70 mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
-          Free 7-day trial · No credit card needed
+          <span className="text-shimmer font-semibold">The AI-Native Agency</span>
+          <span className="text-white/40">·</span>
+          <span>Free 7-day trial</span>
         </motion.div>
 
         <motion.h1
@@ -416,8 +502,8 @@ function Hero() {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Tell us what you need. Get back videos, posts, ads, and copy — ready to publish.
-          No freelancers. No agencies. No waiting two weeks for a draft. Try free for 7 days.
+          The first <span className="text-shimmer font-semibold">AI-native creative agency</span>. Tell us what you need — videos, posts, ads, copy — and get it back ready to publish.
+          No freelancers. No retainers. No two-week drafts. Try free for 7 days.
         </motion.p>
 
         <motion.div

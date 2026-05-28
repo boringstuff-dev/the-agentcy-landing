@@ -408,7 +408,7 @@ function Navbar() {
             href="/docs"
             className="hover:text-white transition-colors relative group hover-target"
           >
-            API Docs
+            Docs
             <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-brand-400 transition-all duration-300 group-hover:w-full" />
           </a>
         </div>

@@ -1524,7 +1524,13 @@ function Waitlist() {
         <div className="gsap-reveal">
           {!submitted ? (
             <form
-              onSubmit={(e) => { e.preventDefault(); if (email) setSubmitted(true); }}
+              onSubmit={(e) => {
+                e.preventDefault();
+                if (!email) return;
+                setSubmitted(true);
+                // B3 — conversion goal for the Plausible dashboard
+                (window as unknown as { plausible?: (n: string) => void }).plausible?.("signup");
+              }}
               className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
             >
               <input

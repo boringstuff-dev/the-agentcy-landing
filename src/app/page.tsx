@@ -413,10 +413,10 @@ function Navbar() {
           </a>
         </div>
         <MagneticBtn
-          href="#waitlist"
+          href="#demo"
           className="px-4 py-2 rounded-full bg-brand-500 hover:bg-brand-400 text-white text-sm font-medium transition-all hover:shadow-lg hover:shadow-brand-500/25"
         >
-          Get Early Access
+          Book a Demo
         </MagneticBtn>
       </div>
     </motion.nav>
@@ -513,7 +513,7 @@ function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <MagneticBtn
-            href="#waitlist"
+            href="https://app.the-agentcy.ai/auth/login"
             className="px-8 py-4 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold text-lg hover:shadow-2xl hover:shadow-brand-500/30 transition-all"
           >
             Start Free — 7 Days on Us →
@@ -1483,14 +1483,14 @@ function Pricing() {
                   ))}
                 </ul>
                 <MagneticBtn
-                  href="#waitlist"
+                  href={plan.price ? "https://app.the-agentcy.ai/auth/login" : "#demo"}
                   className={`text-center py-3 rounded-xl font-medium text-sm transition-all w-full block ${
                     plan.highlighted
                       ? "bg-brand-500 hover:bg-brand-400 text-white"
                       : "bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 text-white/80"
                   }`}
                 >
-                  {plan.price ? "Get Early Access" : "Talk to Sales"}
+                  {plan.price ? "Start Free" : "Talk to Sales"}
                 </MagneticBtn>
               </div>
             </TiltCard>
@@ -1501,52 +1501,81 @@ function Pricing() {
   );
 }
 
-// ─── Waitlist ───
-function Waitlist() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+// ─── Book a demo ───
+function BookDemo() {
+  const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
+  const [state, setState] = useState<"idle" | "busy" | "done" | "error">("idle");
+
+  const field = (key: keyof typeof form) => ({
+    value: form[key],
+    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+      setForm((f) => ({ ...f, [key]: e.target.value })),
+  });
+  const inputCls =
+    "w-full px-5 py-4 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-400/50 transition-colors";
+
+  async function submit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!form.name || !form.email) return;
+    setState("busy");
+    const res = await fetch("/api/demo-request", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    }).catch(() => null);
+    if (!res?.ok) {
+      setState("error");
+      return;
+    }
+    setState("done");
+    // Conversion goal for the Plausible dashboard
+    (window as unknown as { plausible?: (n: string) => void }).plausible?.("demo_request");
+  }
 
   return (
-    <GsapSection id="waitlist">
+    <GsapSection id="demo">
       <div className="glow-line mb-24" />
       <div className="max-w-3xl mx-auto text-center">
         <div className="gsap-reveal">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Stop Overpaying.
+            See It Work
             <br />
-            <span className="text-shimmer">Start Creating.</span>
+            <span className="text-shimmer">On Your Brand.</span>
           </h2>
           <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto">
-            Join the waitlist and get early access. Your first brief is on us.
+            Book a demo and we&apos;ll run your first brief live — video, posts, and copy
+            for your actual product.
           </p>
         </div>
 
         <div className="gsap-reveal">
-          {!submitted ? (
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                if (!email) return;
-                setSubmitted(true);
-                // B3 — conversion goal for the Plausible dashboard
-                (window as unknown as { plausible?: (n: string) => void }).plausible?.("signup");
-              }}
-              className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-            >
-              <input
-                type="email"
-                placeholder="you@company.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 px-5 py-4 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-400/50 transition-colors"
-                required
+          {state !== "done" ? (
+            <form onSubmit={submit} className="flex flex-col gap-3 max-w-md mx-auto text-left">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input type="text" placeholder="Your name" required className={inputCls} {...field("name")} />
+                <input type="email" placeholder="you@company.com" required className={inputCls} {...field("email")} />
+              </div>
+              <input type="text" placeholder="Company (optional)" className={inputCls} {...field("company")} />
+              <textarea
+                placeholder="What would you like to see? (optional)"
+                rows={3}
+                className={inputCls}
+                {...field("message")}
               />
+              {/* Honeypot — humans never see or fill this */}
+              <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
               <button
                 type="submit"
-                className="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold hover:shadow-xl hover:shadow-brand-500/25 transition-all hover:scale-105 whitespace-nowrap magnetic-btn hover-target"
+                disabled={state === "busy"}
+                className="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-500 to-brand-400 text-white font-semibold hover:shadow-xl hover:shadow-brand-500/25 transition-all hover:scale-105 whitespace-nowrap magnetic-btn hover-target disabled:opacity-60"
               >
-                Get Early Access
+                {state === "busy" ? "Sending…" : "Book a Demo"}
               </button>
+              {state === "error" && (
+                <p className="text-red-400 text-sm text-center">
+                  Something went wrong — please try again or email hello@the-agentcy.ai.
+                </p>
+              )}
             </form>
           ) : (
             <motion.div
@@ -1554,14 +1583,18 @@ function Waitlist() {
               animate={{ opacity: 1, scale: 1 }}
               className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 max-w-md mx-auto"
             >
-              <div className="text-4xl mb-3">🎉</div>
-              <h3 className="text-xl font-bold mb-2">You&apos;re on the list!</h3>
-              <p className="text-white/50 text-sm">We&apos;ll reach out soon with your early access invitation.</p>
+              <div className="text-4xl mb-3">📅</div>
+              <h3 className="text-xl font-bold mb-2">Request received!</h3>
+              <p className="text-white/50 text-sm">
+                We&apos;ll reach out within a day to schedule your demo.
+              </p>
             </motion.div>
           )}
         </div>
 
-        <p className="gsap-reveal text-white/30 text-sm mt-6">No spam, ever. Unsubscribe anytime.</p>
+        <p className="gsap-reveal text-white/30 text-sm mt-6">
+          Or jump straight in — <a href="https://app.the-agentcy.ai/auth/login" className="text-brand-400 hover:text-brand-300 underline underline-offset-4">create a free account</a>.
+        </p>
       </div>
     </GsapSection>
   );
@@ -1633,7 +1666,7 @@ export default function Home() {
       <Features />
       <Testimonials />
       <Pricing />
-      <Waitlist />
+      <BookDemo />
       <Footer />
     </main>
   );

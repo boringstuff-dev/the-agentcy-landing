@@ -41,17 +41,23 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Name and a valid email are required." }, { status: 400 });
   }
 
-  const res = await fetch(`${process.env.SUPABASE_URL}/rest/v1/demo_requests`, {
-    method: "POST",
-    headers: {
-      apikey: process.env.SUPABASE_SERVICE_ROLE_KEY!,
-      Authorization: `Bearer ${process.env.SUPABASE_SERVICE_ROLE_KEY}`,
-      "Content-Type": "application/json",
-      Prefer: "return=minimal",
-    },
-    body: JSON.stringify({ name, email, company: company || null, message: message || null }),
-  });
-  if (!res.ok) {
+  try {
+    const res = await fetch(`${process.env.SUPABASE_URL}/rest/v1/demo_requests`, {
+      method: "POST",
+      headers: {
+        apikey: process.env.SUPABASE_SERVICE_ROLE_KEY!,
+        Authorization: `Bearer ${process.env.SUPABASE_SERVICE_ROLE_KEY}`,
+        "Content-Type": "application/json",
+        Prefer: "return=minimal",
+      },
+      body: JSON.stringify({ name, email, company: company || null, message: message || null }),
+    });
+    if (!res.ok) {
+      console.error("demo-request insert failed:", res.status, await res.text().catch(() => ""));
+      return NextResponse.json({ error: "Could not save your request — please try again." }, { status: 500 });
+    }
+  } catch (err) {
+    console.error("demo-request insert threw:", err);
     return NextResponse.json({ error: "Could not save your request — please try again." }, { status: 500 });
   }
 

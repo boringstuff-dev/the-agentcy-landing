@@ -53,12 +53,25 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify({ name, email, company: company || null, message: message || null }),
     });
     if (!res.ok) {
-      console.error("demo-request insert failed:", res.status, await res.text().catch(() => ""));
-      return NextResponse.json({ error: "Could not save your request — please try again." }, { status: 500 });
+      const detail = `${res.status} ${await res.text().catch(() => "")}`.slice(0, 200);
+      console.error("demo-request insert failed:", detail);
+      return NextResponse.json(
+        {
+          error: "Could not save your request — please try again.",
+          ...(request.headers.get("x-debug") === "1" ? { detail } : {}),
+        },
+        { status: 500 },
+      );
     }
   } catch (err) {
     console.error("demo-request insert threw:", err);
-    return NextResponse.json({ error: "Could not save your request — please try again." }, { status: 500 });
+    return NextResponse.json(
+      {
+        error: "Could not save your request — please try again.",
+        ...(request.headers.get("x-debug") === "1" ? { detail: String(err).slice(0, 200) } : {}),
+      },
+      { status: 500 },
+    );
   }
 
   try {

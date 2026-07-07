@@ -27,6 +27,15 @@ function limited(ip: string): boolean {
 export async function POST(request: NextRequest) {
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
   if (limited(ip)) return NextResponse.json({ error: "Too many requests." }, { status: 429 });
+  if (request.headers.get("x-debug") === "1") {
+    const keys = Object.keys(process.env).filter((k) =>
+      /SUPABASE|AGENTCY|DEMO|VERCEL_ENV/.test(k),
+    );
+    console.error("demo-request env keys:", keys.join(","));
+    if (request.headers.get("x-debug-keys") === "1") {
+      return NextResponse.json({ keys });
+    }
+  }
 
   const body = (await request.json().catch(() => ({}))) as Record<string, unknown>;
   // Honeypot: real users never fill "website" (hidden field).

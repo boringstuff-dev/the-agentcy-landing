@@ -1518,7 +1518,7 @@ function BookDemo() {
     e.preventDefault();
     if (!form.name || !form.email) return;
     setState("busy");
-    const res = await fetch("/api/demo-request", {
+    const res = await fetch("https://app.the-agentcy.ai/api/public/demo-request", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),

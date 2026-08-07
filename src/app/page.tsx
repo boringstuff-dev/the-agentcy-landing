@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SOLUTIONS_GROUPS, type MegaMenuGroup } from "@/lib/solutions";
 import { FEATURES_GROUPS } from "@/lib/features";
+import { EVENTS_GROUPS } from "@/lib/events";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -285,12 +286,13 @@ function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
 }
 
 
-const COLUMN_PRESETS: Record<3 | 4, { gridClass: string; widthClass: string }> = {
+const COLUMN_PRESETS: Record<3 | 4 | 5, { gridClass: string; widthClass: string }> = {
   3: { gridClass: "grid-cols-3", widthClass: "w-[860px]" },
   4: { gridClass: "grid-cols-4", widthClass: "w-[1100px]" },
+  5: { gridClass: "grid-cols-5", widthClass: "w-[1340px]" },
 };
 
-function MegaMenu({ label, groups, columns }: { label: string; groups: MegaMenuGroup[]; columns: 3 | 4 }) {
+function MegaMenu({ label, groups, columns }: { label: string; groups: MegaMenuGroup[]; columns: 3 | 4 | 5 }) {
   const [open, setOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -396,7 +398,8 @@ function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-brand-400 transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
-          <MegaMenu label="Features" groups={FEATURES_GROUPS} columns={4} />
+          <MegaMenu label="Features" groups={FEATURES_GROUPS} columns={5} />
+          <MegaMenu label="Events" groups={EVENTS_GROUPS} columns={3} />
           <a
             href="#pricing"
             className="hover:text-white transition-colors relative group hover-target"
@@ -1429,10 +1432,10 @@ function Features() {
 // ─── Pricing ───
 function Pricing() {
   const plans = [
-    { name: "Starter", price: 29, desc: "Try it risk-free. No credit card needed.", features: ["10 projects/month", "Videos, posts, ads & copy", "Instagram + TikTok publishing", "720p video output", "Email support"], highlighted: false },
-    { name: "Growth", price: 99, desc: "For teams serious about content.", features: ["50 projects/month", "All service categories", "All platforms", "1080p video output", "Priority support", "Brand kit storage"], highlighted: true },
-    { name: "Pro", price: 249, desc: "For agencies and high-volume teams.", features: ["200 projects/month", "All service categories", "All platforms", "4K video output", "Dedicated support", "Custom voices", "API access"], highlighted: false },
-    { name: "Enterprise", price: null as number | null, desc: "For large organizations.", features: ["Unlimited projects", "Custom integrations", "White-label platform", "SLA guarantee", "Dedicated CSM", "On-prem option"], highlighted: false },
+    { name: "Starter", price: 0, credits: "300 credits / mo", desc: "Try the platform — no card needed.", features: ["300 credits every month", "Text + image creation tools", "1 brand workspace", "Community support"], highlighted: false },
+    { name: "Growth", price: 35, credits: "2,400 credits / mo", desc: "For active brands running social.", features: ["2,400 credits every month", "Text + image social (light video)", "Unlimited brands", "Channel connectors (IG, LinkedIn, Telegram)", "Priority generation"], highlighted: true },
+    { name: "Pro", price: 129, credits: "9,000 credits / mo", desc: "Full creative firepower.", features: ["9,000 credits every month", "Video, storyboards & synthetic influencers", "Daily market intelligence", "Developer API access", "Priority support"], highlighted: false },
+    { name: "Enterprise", price: null as number | null, credits: "Custom volume", desc: "White-label & managed service.", features: ["Custom credit volumes", "White-label & SSO", "Custom connectors & fine-tuning", "Dedicated success manager", "SLA & onboarding"], highlighted: false },
   ];
 
   return (
@@ -1441,11 +1444,11 @@ function Pricing() {
       <div className="max-w-6xl mx-auto">
         <div className="gsap-reveal text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Less Than One{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-green to-accent-cyan">Freelancer Invoice</span>
+            Simple pricing, one{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-green to-accent-cyan">currency: credits</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            A single freelancer charges $500–2,000 per project. We give you unlimited content for one flat monthly fee.
+            Every action — a caption, an image, a full storyboard video — costs credits. Pick the monthly plan that fits, and top up anytime.
           </p>
         </div>
 
@@ -1463,16 +1466,17 @@ function Pricing() {
                   <span className="text-xs font-bold text-brand-300 uppercase tracking-wider mb-2">Most Popular</span>
                 )}
                 <h3 className="text-xl font-bold">{plan.name}</h3>
-                <div className="mt-3 mb-1">
-                  {plan.price ? (
+                <div className="mt-3 mb-2">
+                  {plan.price != null ? (
                     <>
-                      <span className="text-4xl font-bold">${plan.price.toLocaleString()}</span>
+                      <span className="text-4xl font-bold">€{plan.price.toLocaleString()}</span>
                       <span className="text-white/40 text-sm">/mo</span>
                     </>
                   ) : (
                     <span className="text-4xl font-bold">Custom</span>
                   )}
                 </div>
+                <div className="inline-block text-xs font-semibold text-brand-300 bg-brand-500/10 px-2.5 py-1 rounded-md mb-3">{plan.credits}</div>
                 <p className="text-white/40 text-sm mb-6">{plan.desc}</p>
                 <ul className="space-y-2 mb-8 flex-1">
                   {plan.features.map((f) => (
@@ -1483,19 +1487,22 @@ function Pricing() {
                   ))}
                 </ul>
                 <MagneticBtn
-                  href={plan.price ? "https://app.the-agentcy.ai/auth/login" : "#demo"}
+                  href={plan.price != null ? "https://app.the-agentcy.ai/auth/login" : "#demo"}
                   className={`text-center py-3 rounded-xl font-medium text-sm transition-all w-full block ${
                     plan.highlighted
                       ? "bg-brand-500 hover:bg-brand-400 text-white"
                       : "bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 text-white/80"
                   }`}
                 >
-                  {plan.price ? "Start Free" : "Talk to Sales"}
+                  {plan.price != null ? "Start Free" : "Talk to Sales"}
                 </MagneticBtn>
               </div>
             </TiltCard>
           ))}
         </div>
+        <p className="text-center text-white/40 text-sm mt-8">
+          Plus one-time top-up packs — 1,000 credits €15 · 5,000 credits €65. Annual billing saves 20%. Unused credits roll over one month.
+        </p>
       </div>
     </GsapSection>
   );

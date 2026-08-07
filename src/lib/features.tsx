@@ -151,6 +151,41 @@ export const FEATURES_GROUPS: MegaMenuGroup[] = [
       },
     ],
   },
+  {
+    title: "Creative Studio",
+    items: [
+      {
+        icon: svg(<><rect x="2" y="5" width="20" height="14" rx="2" /><path d="M10 9l5 3-5 3z" /></>),
+        label: "Video & Storyboards",
+        desc: "Script to finished video — multi-scene, with voice & music.",
+        href: "/features/video-storyboards",
+      },
+      {
+        icon: svg(<><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" /><path d="M18 3l.7 1.8L20.5 5.5l-1.8.7L18 8l-.7-1.8L15.5 5.5l1.8-.7z" /></>),
+        label: "Synthetic Influencers",
+        desc: "Your own on-brand AI creators for always-on content.",
+        href: "/features/synthetic-influencers",
+      },
+      {
+        icon: svg(<><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3M8 11h6M11 8v6" /></>),
+        label: "Market Intelligence",
+        desc: "A daily brief on your market, with live web research.",
+        href: "/features/market-intelligence",
+      },
+      {
+        icon: svg(<><rect x="3" y="4" width="18" height="12" rx="2" /><path d="M8 20h8M12 16v4M9 10l2 2 4-4" /></>),
+        label: "Interactive Prototypes",
+        desc: "Click-through prototypes and demo videos from a sentence.",
+        href: "/features/interactive-prototypes",
+      },
+      {
+        icon: svg(<><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18" /></>),
+        label: "Brand Websites & Articles",
+        desc: "A living brand site that keeps itself fresh.",
+        href: "/features/brand-websites",
+      },
+    ],
+  },
 ];
 
 // ─── Per-slug page content ───
@@ -572,6 +607,111 @@ export const FEATURE_PAGES: Record<string, FeaturePageContent> = {
       quote: "I open the app, pick three ideas, ship by lunch. Posting is a habit again.",
       author: "Reza T.",
       role: "Operator and B2B creator",
+    },
+    accent: "emerald",
+  },
+  "video-storyboards": {
+    tagline: "From script to finished video — automatically.",
+    intro:
+      "Turn an idea into a multi-scene storyboard, then a fully rendered video with voiceover and music. Edit any scene in plain language before it renders.",
+    benefits: [
+      { title: "Scene-by-scene storyboards", desc: "Structure your video as scenes you can reorder, rewrite and reframe." },
+      { title: "Voice, music & mux", desc: "Rendered with narration and a music bed — output ready to publish." },
+      { title: "Edit before you render", desc: "Change a scene, a line or the pacing without starting over." },
+    ],
+    painPoints: [
+      "A single short video means a brief, an editor, and a week of back-and-forth.",
+      "Storyboards live in slides nobody updates once production starts.",
+      "Great scripts die because production is too slow and too expensive.",
+    ],
+    proofQuote: {
+      quote: "We shipped a month of video content in an afternoon — voiceover and all.",
+      author: "Cleo M.",
+      role: "Content lead, DTC brand",
+    },
+    accent: "violet",
+  },
+  "synthetic-influencers": {
+    tagline: "Your own on-brand AI creators.",
+    intro:
+      "Generate consistent, on-brand synthetic influencers — a hero character and endless variations — for always-on content that looks like a real creator made it.",
+    benefits: [
+      { title: "Consistent characters", desc: "A hero persona plus variations that stay recognisably on-brand." },
+      { title: "Always-on content", desc: "UGC-style posts and spokesperson scenes without a shoot or a contract." },
+      { title: "Trained to your brand", desc: "Built on a model tuned to your look, so every output fits." },
+    ],
+    painPoints: [
+      "Creator shoots are expensive, slow and impossible to keep consistent.",
+      "Every UGC video looks like a different brand made it.",
+      "You need always-on content and creators can't move that fast.",
+    ],
+    proofQuote: {
+      quote: "Our synthetic creator posts out-perform half our paid UGC — at a fraction of the cost.",
+      author: "Bruno T.",
+      role: "Performance marketer",
+    },
+    accent: "pink",
+  },
+  "market-intelligence": {
+    tagline: "A daily brief on your market — while you sleep.",
+    intro:
+      "On-demand competitor and market intelligence with live web research, delivered as a sharp brief you can act on — not another wall of dashboards.",
+    benefits: [
+      { title: "Live web research", desc: "Fresh signals on competitors, category and audience — gathered for you." },
+      { title: "Decisions, not dashboards", desc: "A concise brief with what changed and what to do about it." },
+      { title: "On tap or daily", desc: "Run a brief when you need one, or get one every morning." },
+    ],
+    painPoints: [
+      "Competitive research is a browser with forty tabs and no conclusion.",
+      "By the time you spot a competitor's move, it's old news.",
+      "Your analytics are full of numbers and empty of 'so what.'",
+    ],
+    proofQuote: {
+      quote: "It's the first thing I read every morning — I always walk in knowing what moved.",
+      author: "Aisha R.",
+      role: "Founder",
+    },
+    accent: "cyan",
+  },
+  "interactive-prototypes": {
+    tagline: "Click-through prototypes from a sentence.",
+    intro:
+      "Describe a product, landing page or app idea and get a navigable HTML prototype you can share and demo — plus a polished demo video to go with it.",
+    benefits: [
+      { title: "Navigable, not static", desc: "Real click-through flows you can put in front of stakeholders." },
+      { title: "Demo video included", desc: "Turn the prototype into a narrated demo video in a click." },
+      { title: "From idea to shareable", desc: "Go from a sentence to a link you can send in minutes." },
+    ],
+    painPoints: [
+      "Pitching an idea means either hand-wavy slides or weeks of design and build.",
+      "Static mockups don't convey how the thing actually feels to use.",
+      "Recording a decent product demo is its own half-day project.",
+    ],
+    proofQuote: {
+      quote: "I mocked a full click-through demo for a pitch in the time a coffee took to go cold.",
+      author: "Noah P.",
+      role: "Product marketer",
+    },
+    accent: "amber",
+  },
+  "brand-websites": {
+    tagline: "A living brand site that writes itself.",
+    intro:
+      "Spin up an on-brand landing site and keep it fresh with AI-drafted articles — published on your own subdomain, with insights on how each page performs.",
+    benefits: [
+      { title: "On-brand site in minutes", desc: "Sections drafted and styled to your brand, live on your own URL." },
+      { title: "Articles on autopilot", desc: "Draft and publish on-brand articles — set autopilot to keep it fresh." },
+      { title: "See what's working", desc: "Built-in insights show which pages and articles pull their weight." },
+    ],
+    painPoints: [
+      "Your 'blog' hasn't been touched since launch because writing is a chore.",
+      "A simple landing page still means a developer and a two-week queue.",
+      "Nobody knows which pages actually drive anything.",
+    ],
+    proofQuote: {
+      quote: "Our site finally updates itself — we publish more in a week than we used to in a quarter.",
+      author: "Ivy C.",
+      role: "Marketing manager",
     },
     accent: "emerald",
   },

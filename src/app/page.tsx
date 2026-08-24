@@ -1429,6 +1429,122 @@ function Features() {
   );
 }
 
+// ─── Events ───
+function Events() {
+  const items = [
+    { icon: "🎯", title: "Event Radar", desc: "Find the events worth showing up to — matched to your brand.", href: "/events/event-radar" },
+    { icon: "🗂️", title: "AI Event Plan", desc: "A full production plan — format, staffing, budget — in minutes.", href: "/events/event-plan" },
+    { icon: "🎬", title: "Production Management", desc: "Venue, staff, rentals and catering — all in one place.", href: "/events/production-management" },
+    { icon: "🎟️", title: "Ticketing & Registration", desc: "Ticket tiers, sign-ups and check-in — straight into your CRM.", href: "/events/ticketing" },
+    { icon: "🖥️", title: "Event Microsites", desc: "A beautiful, on-brand event page — live in minutes.", href: "/events/event-microsites" },
+    { icon: "✉️", title: "Attendee Communications", desc: "Confirmations, reminders and follow-ups — on-brand.", href: "/events/attendee-comms" },
+  ];
+  return (
+    <GsapSection id="events">
+      <div className="glow-line mb-24" />
+      <div className="max-w-6xl mx-auto">
+        <div className="gsap-reveal text-center mb-14">
+          <span className="text-xs font-mono uppercase tracking-wider text-brand-400">Events</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 mt-2">
+            Run events{" "}
+            <span className="text-shimmer">end to end.</span>
+          </h2>
+          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+            Discover the events worth attending, plan the whole production, sell tickets, and fill the room — all in one platform, no separate event tools.
+          </p>
+        </div>
+
+        <div className="gsap-reveal grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
+          {[
+            { icon: "🔎", t: "Discover & plan" },
+            { icon: "🎬", t: "Produce & staff" },
+            { icon: "🎟️", t: "Sell & register" },
+            { icon: "📣", t: "Fill the room" },
+          ].map((s) => (
+            <div key={s.t} className="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+              <span className="text-2xl shrink-0">{s.icon}</span>
+              <span className="text-sm font-medium text-white/70">{s.t}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {items.map((f) => (
+            <a key={f.title} href={f.href} className="block group">
+              <TiltCard className="gsap-reveal h-full">
+                <GlowCard className="p-7 rounded-2xl bg-white/[0.03] border border-white/10 h-full">
+                  <div className="text-3xl mb-4">{f.icon}</div>
+                  <h3 className="font-bold text-lg mb-2">{f.title}</h3>
+                  <p className="text-white/40 text-sm leading-relaxed mb-4">{f.desc}</p>
+                  <span className="text-sm font-medium text-brand-300 group-hover:text-brand-200 transition-colors">Learn more →</span>
+                </GlowCard>
+              </TiltCard>
+            </a>
+          ))}
+        </div>
+      </div>
+    </GsapSection>
+  );
+}
+
+// ─── Websites ───
+function Websites() {
+  const cards = [
+    {
+      icon: "🌐", badge: "Brand", title: "Brand websites & articles",
+      desc: "Launch an on-brand landing site and keep it fresh with AI-drafted articles — published on your own domain, with insights on what performs. An autopilot keeps it updated for you.",
+      tags: ["On-brand in minutes", "Articles on autopilot", "Your own domain", "Built-in insights"],
+      href: "/features/brand-websites", gradient: "from-emerald-500/20 to-teal-500/10",
+    },
+    {
+      icon: "🎟️", badge: "Events", title: "Event microsites",
+      desc: "Every event gets its own public page — agenda, speakers, venue and a registration flow — drafted on-brand and live in minutes, no web team required.",
+      tags: ["Agenda & speakers", "Registration built in", "Shareable URL", "On-brand styling"],
+      href: "/events/event-microsites", gradient: "from-pink-500/20 to-rose-500/10",
+    },
+  ];
+  return (
+    <GsapSection id="websites">
+      <div className="glow-line mb-24" />
+      <div className="max-w-6xl mx-auto">
+        <div className="gsap-reveal text-center mb-14">
+          <span className="text-xs font-mono uppercase tracking-wider text-brand-400">Websites</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 mt-2">
+            Websites that{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 to-accent-cyan">build themselves.</span>
+          </h2>
+          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+            Launch on-brand sites without a web team — one for your brand, and one for every event you run.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {cards.map((c) => (
+            <a key={c.title} href={c.href} className="block group">
+              <TiltCard className="gsap-reveal h-full">
+                <GlowCard className={`h-full rounded-2xl bg-gradient-to-br ${c.gradient} border border-white/10 group-hover:border-white/20 transition-all duration-300 p-8`}>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-3xl">{c.icon}</span>
+                    <span className="text-xs font-mono uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/10 text-white/70">{c.badge}</span>
+                  </div>
+                  <h3 className="font-bold text-2xl mb-3">{c.title}</h3>
+                  <p className="text-white/55 text-sm leading-relaxed mb-5">{c.desc}</p>
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {c.tags.map((t) => (
+                      <span key={t} className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/55">{t}</span>
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-white group-hover:text-brand-200 transition-colors">Explore →</span>
+                </GlowCard>
+              </TiltCard>
+            </a>
+          ))}
+        </div>
+      </div>
+    </GsapSection>
+  );
+}
+
 // ─── Pricing ───
 function Pricing() {
   const plans = [
@@ -1671,6 +1787,8 @@ export default function Home() {
       <Comparison />
       <UseCases />
       <Features />
+      <Events />
+      <Websites />
       <Testimonials />
       <Pricing />
       <BookDemo />

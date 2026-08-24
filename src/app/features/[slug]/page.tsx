@@ -74,10 +74,10 @@ export default async function FeaturePage({
               ← Back to home
             </Link>
             <Link
-              href="/#cta"
+              href="/#demo"
               className="px-4 py-2 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors"
             >
-              Get Early Access
+              Book a Demo
             </Link>
           </div>
         </div>

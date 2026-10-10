@@ -522,15 +522,83 @@ function Hero() {
             Start Free — 7 Days on Us →
           </MagneticBtn>
           <MagneticBtn
-            href="#how-it-works"
+            href="#watch"
             className="px-8 py-4 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 text-white/80 font-medium text-lg"
           >
-            See How It Works
+            ▶ Watch the 2-minute film
           </MagneticBtn>
         </motion.div>
 
       </div>
     </section>
+  );
+}
+
+// ─── Explainer film ───
+const EXPLAINER_VIDEO = "https://olrhbwoobepaijsgyfwn.supabase.co/storage/v1/object/public/academy/explainer/video.mp4";
+const EXPLAINER_POSTER = "https://olrhbwoobepaijsgyfwn.supabase.co/storage/v1/object/public/academy/explainer/poster.jpg";
+
+function Explainer() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(false);
+
+  const play = useCallback(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = false;
+    void v.play();
+  }, []);
+
+  return (
+    <GsapSection id="watch" className="!pt-8 md:!pt-12">
+      <div className="max-w-5xl mx-auto">
+        <div className="gsap-reveal text-center mb-10">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 text-sm text-white/70 mb-6">
+            <span className="w-2 h-2 rounded-full bg-brand-400 animate-pulse" />
+            <span>Two minutes, start to finish</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            See The Agentcy <span className="text-shimmer">run a brand</span>
+          </h2>
+          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+            One brief becomes a carousel, a flyer and a video. The posts point to a site it built. Every visitor lands in the CRM, and the journeys take it from there.
+          </p>
+        </div>
+
+        <div className="gsap-reveal">
+          <GlowCard className="rounded-3xl p-2 bg-white/[0.03] border border-white/10 hover-target">
+            <div className="relative aspect-video rounded-2xl overflow-hidden bg-black">
+              <video
+                ref={videoRef}
+                className="absolute inset-0 w-full h-full"
+                src={EXPLAINER_VIDEO}
+                poster={EXPLAINER_POSTER}
+                preload="metadata"
+                playsInline
+                controls={playing}
+                onPlay={() => setPlaying(true)}
+                onEnded={() => setPlaying(false)}
+              />
+              {!playing && (
+                <button
+                  type="button"
+                  onClick={play}
+                  aria-label="Play the explainer video"
+                  className="absolute inset-0 flex items-center justify-center group"
+                >
+                  <span className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <span className="relative flex items-center justify-center w-24 h-24 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl shadow-brand-500/30 transition-transform duration-300 group-hover:scale-110">
+                    <span className="absolute inset-0 rounded-full bg-brand-500/30 animate-ping" />
+                    <svg className="relative w-9 h-9 translate-x-0.5 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+                  </span>
+                  <span className="absolute bottom-6 left-0 right-0 text-center text-white/80 text-sm font-medium">Watch the explainer · 1:42</span>
+                </button>
+              )}
+            </div>
+          </GlowCard>
+        </div>
+      </div>
+    </GsapSection>
   );
 }
 
@@ -1778,6 +1846,7 @@ export default function Home() {
       <NoiseOverlay />
       <Navbar />
       <Hero />
+      <Explainer />
       <Services />
       <HowItWorks />
       <StatsBar />

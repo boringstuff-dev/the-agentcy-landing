@@ -1,28 +1,17 @@
-"use client";
-
-import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
-/** Fade-up on scroll, once. Keeps the page static-rendered: only this thin
- *  wrapper is a client component. */
+/** Fade-up as the block scrolls into view. Pure CSS (see `.reveal` in
+ *  globals.css): no client JS, and the content is visible immediately in
+ *  browsers without scroll-driven animations. `delay` is accepted for call
+ *  sites that stagger cards, but staggering is handled by the per-element
+ *  scroll timeline, so it is a no-op. */
 export default function Reveal({
   children,
-  className,
-  delay = 0,
+  className = "",
 }: {
   children: ReactNode;
   className?: string;
   delay?: number;
 }) {
-  return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6, delay, ease: [0.2, 0.8, 0.2, 1] }}
-    >
-      {children}
-    </motion.div>
-  );
+  return <div className={`reveal ${className}`.trim()}>{children}</div>;
 }

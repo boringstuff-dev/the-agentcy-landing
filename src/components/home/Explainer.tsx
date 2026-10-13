@@ -29,7 +29,7 @@ export default function Explainer() {
               poster={EXPLAINER_POSTER}
               controls
               playsInline
-              preload="metadata"
+              preload="none"
               onPlay={() => {
                 if (tracked.current) return;
                 tracked.current = true;

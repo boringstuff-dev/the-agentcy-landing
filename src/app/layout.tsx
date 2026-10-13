@@ -13,9 +13,12 @@ const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
 });
 
+// Only the docs and feature pages use the mono face; don't preload it on
+// every page.
 const mono = JetBrains_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
+  preload: false,
 });
 
 export const metadata: Metadata = {

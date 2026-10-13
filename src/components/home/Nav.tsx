@@ -101,7 +101,7 @@ export default function Nav() {
     <header className="sticky top-0 z-50 px-4 py-4 sm:px-6">
       <nav
         aria-label="Main"
-        className="glass relative mx-auto flex max-w-6xl items-center justify-between gap-6 rounded-full bg-[#0c0b1a]/55 py-2 pr-2.5 pl-4"
+        className="glass glass-keep relative mx-auto flex max-w-6xl items-center justify-between gap-6 rounded-full bg-[#0c0b1a]/55 py-2 pr-2.5 pl-4"
       >
         <a href="#top" className="flex items-center gap-2.5 text-white">
           <Image src="/logo-mark.png" alt="" width={32} height={32} className="h-8 w-8 rounded-[10px]" priority />

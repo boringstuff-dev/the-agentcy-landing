@@ -242,24 +242,33 @@ body {
 .glass {
   background: rgba(255, 255, 255, 0.055);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(24px) saturate(150%);
-  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  backdrop-filter: blur(20px) saturate(150%);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 30px 80px -30px rgba(0, 0, 0, 0.7);
 }
 /* Opaque enough to float over busy content (menus, dialogs) */
 .glass-solid {
   background: rgba(12, 11, 26, 0.88);
   border: 1px solid rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(28px) saturate(160%);
-  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  backdrop-filter: blur(24px) saturate(160%);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 40px 90px -30px rgba(0, 0, 0, 0.85);
 }
 .glass-soft {
   background: rgba(255, 255, 255, 0.035);
   border: 1px solid rgba(255, 255, 255, 0.09);
-  backdrop-filter: blur(18px) saturate(140%);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+/* Phones: backdrop-filter is the single most expensive thing on this page
+   (every panel re-samples the screen each frame). Keep it only where the
+   effect is the point — the sticky nav, the chat bar and the menus — and
+   give everything else a slightly denser tint instead. */
+@media (max-width: 767px) {
+  .glass:not(.glass-keep):not(.glass-bar),
+  .glass-soft {
+    backdrop-filter: none;
+  }
+  .glass:not(.glass-keep):not(.glass-bar) { background: rgba(255, 255, 255, 0.075); }
+  .glass-soft { background: rgba(255, 255, 255, 0.055); }
 }
 .glass-hover {
   transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.35s, border-color 0.35s;
@@ -274,7 +283,8 @@ body {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 0 0 4px rgba(139, 92, 246, 0.18),
     0 40px 90px -30px rgba(124, 58, 237, 0.55);
 }
-/* Rotating gradient ring around the chat bar */
+/* Gradient ring around the chat bar. Static on touch devices (an animated
+   @property repaints the ring every frame); rotates only with a mouse. */
 .glass-ring {
   position: absolute;
   inset: -1px;
@@ -292,23 +302,27 @@ body {
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  animation: gradient-rotate 6s linear infinite;
   pointer-events: none;
   opacity: 0.8;
 }
-/* Aurora background */
-.aurora-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-  will-change: transform;
-  animation: aurora-drift 22s ease-in-out infinite alternate;
+@media (hover: hover) and (min-width: 768px) {
+  .glass-ring { animation: gradient-rotate 6s linear infinite; }
 }
-.aurora-blob.d2 { animation-duration: 28s; animation-delay: -8s; }
-.aurora-blob.d3 { animation-duration: 34s; animation-delay: -16s; }
-@keyframes aurora-drift {
-  from { transform: translate3d(0, 0, 0) scale(1); }
-  to { transform: translate3d(60px, -40px, 0) scale(1.12); }
+/* Aurora background: pre-blurred radial gradients painted once, instead of
+   animated `filter: blur()` layers that kept the GPU busy on every frame. */
+.aurora {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(360px 360px at 6% 220px, rgba(139, 92, 246, 0.42), transparent 70%),
+    radial-gradient(320px 320px at 98% 440px, rgba(6, 182, 212, 0.26), transparent 70%),
+    radial-gradient(280px 280px at 42% 1040px, rgba(236, 72, 153, 0.18), transparent 70%),
+    radial-gradient(350px 350px at 100% 2750px, rgba(139, 92, 246, 0.22), transparent 70%),
+    radial-gradient(340px 340px at 0% 3940px, rgba(6, 182, 212, 0.18), transparent 70%),
+    radial-gradient(310px 310px at 85% 5310px, rgba(236, 72, 153, 0.16), transparent 70%),
+    radial-gradient(380px 380px at 30% 6780px, rgba(139, 92, 246, 0.26), transparent 70%);
+  background-repeat: no-repeat;
 }
 .aurora-grid {
   position: absolute;
@@ -335,6 +349,22 @@ body {
   0%, 100% { transform: translateY(0) rotate(var(--tilt, 0deg)); }
   50% { transform: translateY(-12px) rotate(var(--tilt, 0deg)); }
 }
+/* Scroll reveal with zero JS: browsers with scroll-driven animations fade
+   sections in as they enter the viewport; everyone else sees them at once.
+   (Replaces a framer-motion wrapper that hid content until hydration.) */
+@keyframes reveal-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+}
 .eyebrow {
   font-size: 12px;
   font-weight: 700;
@@ -343,6 +373,6 @@ body {
   color: #a78bfa;
 }
 @media (prefers-reduced-motion: reduce) {
-  .aurora-blob, .floaty, .glass-ring { animation: none; }
+  .floaty, .glass-ring { animation: none; }
 }
 }

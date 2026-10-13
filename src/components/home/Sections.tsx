@@ -29,13 +29,7 @@ function Icon({ d, className = "" }: { d: ReactNode; className?: string }) {
 export function Aurora() {
   return (
     <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-      <div className="aurora-blob bg-brand-500 opacity-40" style={{ top: -140, left: -120, width: 720, height: 720 }} />
-      <div className="aurora-blob d2 bg-cyan-500 opacity-25" style={{ top: 120, right: -200, width: 640, height: 640 }} />
-      <div className="aurora-blob d3 bg-pink-500 opacity-[0.18]" style={{ top: 760, left: "30%", width: 560, height: 560 }} />
-      <div className="aurora-blob bg-brand-500 opacity-20" style={{ top: 2400, right: -160, width: 700, height: 700 }} />
-      <div className="aurora-blob d2 bg-cyan-500 opacity-[0.18]" style={{ top: 3600, left: -220, width: 680, height: 680 }} />
-      <div className="aurora-blob d3 bg-pink-500 opacity-[0.16]" style={{ top: 5000, right: "10%", width: 620, height: 620 }} />
-      <div className="aurora-blob bg-brand-500 opacity-25" style={{ top: 6400, left: "20%", width: 760, height: 760 }} />
+      <div className="aurora" />
       <div className="aurora-grid" style={{ height: 1200 }} />
       <div className="aurora-noise" />
     </div>

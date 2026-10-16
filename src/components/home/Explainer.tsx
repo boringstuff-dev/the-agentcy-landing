@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { EXPLAINER_POSTER, EXPLAINER_VIDEO, track } from "./links";
 import Reveal from "./Reveal";
 
-const STEPS = ["Brand DNA", "Ask", "Create", "Publish", "Grow"];
+const STEPS = ["Website", "Brand DNA", "Plan", "Create", "Publish", "Grow"];
 
 export default function Explainer() {
   const tracked = useRef(false);
@@ -15,8 +15,8 @@ export default function Explainer() {
         <span className="eyebrow">The 100-second film</span>
         <h2 className="font-display text-4xl leading-[1.05] font-semibold tracking-tight md:text-[52px]">See The Agentcy run a brand</h2>
         <p className="text-lg leading-relaxed text-white/72">
-          One brief becomes a carousel, a flyer and a video. The posts point to a site it built. Every visitor lands in the CRM, and
-          the journeys take it from there.
+          One link becomes a plan. The plan becomes a carousel, a flyer and a video. The posts point to a site it built, every
+          visitor lands in the CRM, and the journeys take it from there. Week after week.
         </p>
       </Reveal>
 

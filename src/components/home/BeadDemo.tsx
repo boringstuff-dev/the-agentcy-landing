@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
  *  studio shows, so the legend is a demo rather than a list. Pauses on
  *  reduced motion (stays on "ready"). */
 const STATES = [
-  { key: "idle", c: "#ec4899", name: "Pink", what: "ready for your brief", pulse: false },
+  { key: "idle", c: "#ec4899", name: "Pink", what: "ready, nothing waiting on you", pulse: false },
   { key: "working", c: "#a78bfa", name: "Purple", what: "working on it", pulse: true },
   { key: "done", c: "#34d399", name: "Emerald", what: "done, chef's kiss", pulse: false },
   { key: "ask", c: "#fbbf24", name: "Amber", what: "needs your approval", pulse: true },

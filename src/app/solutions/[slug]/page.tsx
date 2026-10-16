@@ -40,10 +40,10 @@ export async function generateMetadata({
 }
 
 const STEPS = [
-  { n: "01", emoji: "📋", title: "Submit a Brief", desc: "Describe what you need in plain language — campaign, post, video, ad." },
-  { n: "02", emoji: "🤖", title: "Agents Get to Work", desc: "Strategy, visuals, copy, voice, video, and QA run automatically in parallel." },
-  { n: "03", emoji: "✏️", title: "Review & Refine", desc: "Preview your content. Request changes in plain language. We update instantly." },
-  { n: "04", emoji: "🚀", title: "Publish Everywhere", desc: "One click sends platform-optimised content to every channel simultaneously." },
+  { n: "01", emoji: "🔗", title: "Paste your website", desc: "Brand DNA reads your site — palette, tone, offer, audience — in a minute. No site yet? Describe the brand." },
+  { n: "02", emoji: "🧭", title: "Get your audit and plan", desc: "Lo Stratega checks the market and your channels, finds the gaps and drafts this month's moves." },
+  { n: "03", emoji: "✅", title: "Approve from anywhere", desc: "Preview the drafts, ask for changes in plain language, approve from your phone. Every spend shows its cost first." },
+  { n: "04", emoji: "🚀", title: "Autopilot runs the rest", desc: "Posts, articles, journeys and event pages ship on schedule. Next week's plan is waiting when you log in." },
 ];
 
 export default async function SolutionPage({
@@ -192,10 +192,10 @@ export default async function SolutionPage({
               How it works
             </div>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold tracking-tight">
-              From brief to published in under five minutes.
+              Paste a link. Approve the plan. The rest runs on autopilot.
             </h2>
             <p className="mt-4 text-white/60">
-              Same flow that powers every persona on The Agentcy. Submit a brief, seven AI agents collaborate, and you approve before anything goes live.
+              Same autopilot that powers every persona on The Agentcy: seven AI agents plan and draft across site, social, email and events, and you approve before anything goes live.
             </p>
           </div>
           <div className="mt-12 grid md:grid-cols-4 gap-4">

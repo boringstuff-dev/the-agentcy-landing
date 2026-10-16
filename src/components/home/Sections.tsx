@@ -40,10 +40,10 @@ export function Aurora() {
 
 /* ─── Stats strip ─── */
 const STATS = [
-  { value: "10+", label: "Hours saved per week" },
-  { value: "70%", label: "Less production time" },
-  { value: "5 min", label: "Brief to published content" },
-  { value: "10×", label: "More content, same team" },
+  { value: "1 link", label: "Teaches it your brand" },
+  { value: "5 min", label: "To an audit and this month's plan" },
+  { value: "7", label: "Specialist agents, one workshop" },
+  { value: "10+", label: "Hours a week handed back" },
 ];
 
 export function Stats() {
@@ -76,8 +76,8 @@ const STEPS = [
         <path d="M5 17l.9 2.1L8 20l-2.1.9L5 23l-.9-2.1L2 20l2.1-.9z" />
       </>
     ),
-    title: "Teach it your brand",
-    desc: "Paste your site or upload a logo. Brand DNA pulls palette, type, tone and audience into editable cards.",
+    title: "Paste your website",
+    desc: "Brand DNA reads your site: palette, type, tone, offer and audience, into cards you can edit. No site yet? Describe the brand and it drafts one.",
   },
   {
     n: "02",
@@ -88,15 +88,15 @@ const STEPS = [
         <path d="M8 9h8M8 12h5" />
       </>
     ),
-    title: "Ask in plain English",
-    desc: "Type or speak the brief. The agent plans the work, asks what it needs and shows you drafts in the chat.",
+    title: "Get your audit and plan",
+    desc: "Lo Stratega checks the market and your channels, finds the gaps, and drafts this month: site, social, email, events. Ask for anything else in plain English.",
   },
   {
     n: "03",
     color: "text-pink-300",
     icon: <path d="M20 6L9 17l-5-5" />,
-    title: "Review and approve",
-    desc: "Edit in the studio or say “punchier, shorter, warmer”. Renders and sends wait for your approval and show their credit cost.",
+    title: "Approve from anywhere",
+    desc: "Drafts land in your inbox and on your phone. Approve, or say “punchier, shorter, warmer”. Every spend shows its credit cost first.",
   },
   {
     n: "04",
@@ -107,8 +107,8 @@ const STEPS = [
         <path d="M15 9h5v5" />
       </>
     ),
-    title: "Publish and grow",
-    desc: "Posts go out on schedule, the site and event pages go live, and every visitor flows into the CRM and its journeys.",
+    title: "Autopilot runs the rest",
+    desc: "Posts go out, articles keep the site fresh for search, journeys follow up every lead, and next week's plan is waiting when you log in.",
   },
 ];
 
@@ -118,10 +118,10 @@ export function HowItWorks() {
       <Reveal className="mb-9 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
         <div className="flex max-w-[620px] flex-col gap-3.5">
           <span className="eyebrow">How it works</span>
-          <h2 className={H2}>Four steps. You only do the first two.</h2>
+          <h2 className={H2}>Paste a link. Approve the plan. The rest runs itself.</h2>
         </div>
         <p className="max-w-[380px] text-base leading-relaxed text-white/72">
-          Agents draft. You approve. Nothing renders or publishes without your say-so, and every spend shows its cost in credits first.
+          Agents plan and draft. You approve. Nothing renders, publishes or spends without your say-so, and every cost shows in credits first.
         </p>
       </Reveal>
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -147,7 +147,7 @@ export function Makes() {
   return (
     <section id="makes" className={SECTION}>
       <Reveal className="mx-auto mb-10 flex max-w-[680px] flex-col items-center gap-3.5 text-center">
-        <span className="eyebrow">What it makes</span>
+        <span className="eyebrow">What it makes along the way</span>
         <h2 className={H2}>Everything an agency hands you, on-brand by default</h2>
       </Reveal>
 
@@ -225,47 +225,83 @@ export function Makes() {
   );
 }
 
-/* ─── Beyond content ─── */
-const BEYOND = [
+/* ─── The ecosystem ─── */
+const ECOSYSTEM = [
   {
     tint: "bg-brand-500/20 text-brand-200",
     dash: "text-brand-300",
     icon: <><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" /></>,
-    title: "Brand websites",
-    desc: "Multi-page sites drafted from your Brand DNA with a design kit, your own domain and AI-drafted articles that keep it fresh.",
-    bullets: ["Drag-and-drop editor, undo and redo", "Three design proposals to pick from", "yourbrand.com or a free subdomain"],
+    title: "Website & SEO",
+    desc: "A multi-page site drafted from your Brand DNA, on your own domain, kept fresh with articles written to bring in search traffic.",
+    bullets: ["Three design proposals, drag-and-drop editing", "Articles and meta copy in your voice", "yourbrand.com or a free subdomain"],
+  },
+  {
+    tint: "bg-fuchsia-500/18 text-fuchsia-300",
+    dash: "text-fuchsia-300",
+    icon: <><rect x="3" y="4" width="18" height="16" rx="3" /><path d="M3 9h18M9 20V9" /></>,
+    title: "Social content",
+    desc: "Carousels, reels, flyers and posts for every channel, drafted to the plan and scheduled by Il Postino when each audience is awake.",
+    bullets: ["A calendar that fills its own gaps", "Right spec, caption and hashtags per channel", "Hook-tested first slides"],
   },
   {
     tint: "bg-cyan-500/18 text-cyan-300",
     dash: "text-cyan-300",
+    icon: <><rect x="3" y="5" width="18" height="14" rx="3" /><path d="M3 8l9 6 9-6" /></>,
+    title: "Email marketing",
+    desc: "Newsletters and automated journeys from an on-brand builder, sent from your own domain with deliverability guardrails.",
+    bullets: ["Welcome, offer and review flows", "Send from your own domain", "NPS and replies back into the CRM"],
+  },
+  {
+    tint: "bg-pink-500/18 text-pink-300",
+    dash: "text-pink-300",
+    icon: <><path d="M16 11a4 4 0 1 0-8 0 4 4 0 0 0 8 0z" /><path d="M4 21a8 8 0 0 1 16 0" /></>,
+    title: "CRM",
+    desc: "Every visitor, subscriber and attendee lands in one contact base, profiled nightly, with audiences suggested from what people actually do.",
+    bullets: ["Lifecycle stages and segments", "Suggested audiences from behaviour", "Profiles the agents read before they write"],
+  },
+  {
+    tint: "bg-amber-400/18 text-amber-300",
+    dash: "text-amber-300",
     icon: <><rect x="3" y="5" width="18" height="16" rx="3" /><path d="M3 10h18M8 3v4M16 3v4" /></>,
     title: "Events",
     desc: "From finding the right event to the follow-up email: plan, venue scouting, microsite, tickets, QR check-in.",
     bullets: ["Agenda, speakers and sponsors pages", "Ticket tiers and discounts", "Attendees land in the CRM"],
   },
   {
-    tint: "bg-pink-500/18 text-pink-300",
-    dash: "text-pink-300",
-    icon: <><path d="M16 11a4 4 0 1 0-8 0 4 4 0 0 0 8 0z" /><path d="M4 21a8 8 0 0 1 16 0" /></>,
-    title: "CRM & email journeys",
-    desc: "Contacts, segments and automated journeys with an on-brand email builder, deliverability guardrails and NPS built in.",
-    bullets: ["Suggested audiences from behaviour", "Send from your own domain", "Welcome, offer and review flows"],
+    tint: "bg-emerald-500/18 text-emerald-300",
+    dash: "text-emerald-300",
+    icon: <><path d="M4 19l6-6 4 4 6-8" /><path d="M15 9h5v5" /></>,
+    title: "Market intelligence",
+    desc: "Lo Stratega watches your market and competitors daily and turns what changed into next moves, not another dashboard.",
+    bullets: ["Daily brief with live web research", "Content gaps and opportunities", "Next moves ranked by impact"],
   },
 ];
 
-export function Beyond() {
+/** One autopilot week, told by the maestri. The last column is the only one
+ *  with a person in it. */
+const WEEK = [
+  { day: "Mon", who: "Lo Stratega", bead: "#a78bfa", what: "Scans the market, drafts the week's plan." },
+  { day: "Tue", who: "Il Pittore & Lo Scrittore", bead: "#c084fc", what: "Carousel, reel and an SEO article drafted." },
+  { day: "Wed", who: "Il Postino", bead: "#22d3ee", what: "Posts go out. The article goes live on your site." },
+  { day: "Thu", who: "Lo Scrittore", bead: "#60a5fa", what: "Newsletter sent. Journeys follow up new leads." },
+  { day: "Fri", who: "Il Sommelier", bead: "#2dd4bf", what: "Checks what moved and feeds next week." },
+  { day: "You", who: "On your phone", bead: "#fbbf24", what: "Tap approve. That is the whole job." },
+];
+
+export function Ecosystem() {
   return (
-    <section id="beyond" className={SECTION}>
+    <section id="ecosystem" className={SECTION}>
       <Reveal className="mx-auto mb-10 flex max-w-3xl flex-col items-center gap-3.5 text-center">
-        <span className="eyebrow">Beyond content</span>
-        <h2 className={H2}>The posts point somewhere. It builds that too.</h2>
+        <span className="eyebrow">The ecosystem</span>
+        <h2 className={H2}>Not just the posts. The whole machine behind them.</h2>
         <p className="text-lg leading-relaxed text-white/72">
-          A brand website, an event with tickets, and the CRM and email journeys that turn a visitor into a customer.
+          Content is the loud part. Underneath it The Agentcy runs the website and its SEO, the email journeys, the events and
+          the CRM that turn a visitor into a customer, as one system that feeds itself.
         </p>
       </Reveal>
-      <div className="grid gap-4 lg:grid-cols-3">
-        {BEYOND.map((b, i) => (
-          <Reveal key={b.title} delay={i * 0.06} className="flex">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {ECOSYSTEM.map((b, i) => (
+          <Reveal key={b.title} delay={i * 0.05} className="flex">
             <div className={`${CARD} w-full gap-4`}>
               <div className={`flex h-12 w-12 items-center justify-center rounded-[14px] ${b.tint}`}>
                 <Icon d={b.icon} />
@@ -284,14 +320,38 @@ export function Beyond() {
           </Reveal>
         ))}
       </div>
+
+      <Reveal delay={0.1} className="mt-6">
+        <div className="glass rounded-3xl p-5 md:p-6">
+          <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+            <span className="eyebrow">One week on autopilot</span>
+            <span className="text-[13px] text-white/55">Every week looks like this. The plan changes, the rhythm does not.</span>
+          </div>
+          <ol className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6">
+            {WEEK.map((w, i) => (
+              <li
+                key={w.day}
+                className={`flex flex-col gap-2 rounded-2xl p-4 ${i === WEEK.length - 1 ? "border border-amber-300/30 bg-amber-400/10" : "glass-soft"}`}
+              >
+                <div className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full" style={{ background: w.bead, boxShadow: `0 0 8px ${w.bead}` }} aria-hidden="true" />
+                  <span className="text-[12px] font-semibold tracking-[.08em] text-white/55 uppercase">{w.day}</span>
+                </div>
+                <strong className="text-[14px] leading-tight text-white">{w.who}</strong>
+                <span className="text-[13px] leading-snug text-white/70">{w.what}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </Reveal>
     </section>
   );
 }
 
 /* ─── Why ─── */
 const WHY = [
-  ["5 minutes, not 2 weeks", "Brief to publish-ready work before the meeting ends."],
-  ["No tool juggling", "Strategy, visuals, copy, video, site and email in one place."],
+  ["A link, not a brief", "Paste your site. The audit, the plan and the drafts come to you."],
+  ["No tool juggling", "Site, SEO, social, email, events and CRM in one workshop."],
   ["Every platform, natively", "Right spec, caption and hashtags for each channel."],
   ["Iterate in plain English", "“Punchier, shorter, warmer.” Done."],
   ["You stay in control", "Drafts first. Spend confirmed. Nothing publishes alone."],
@@ -306,11 +366,11 @@ export function Why() {
           <div className="flex flex-col gap-4">
             <span className="eyebrow">Why teams switch</span>
             <h2 className="font-display text-4xl leading-[1.05] font-semibold tracking-tight md:text-[44px]">
-              An agency&apos;s output. A subscription&apos;s price.
+              A marketing department&apos;s output. A subscription&apos;s price.
             </h2>
             <p className="text-base leading-relaxed text-white/72">
-              The average creative agency charges €5–25K a month and takes two weeks per round. The Agentcy answers in minutes,
-              iterates in plain English and never runs out of hours.
+              The average agency charges €5–25K a month and takes two weeks per round. The Agentcy runs your marketing every
+              day, answers in minutes, iterates in plain English and never runs out of hours.
             </p>
             <div>
               <a
@@ -393,14 +453,14 @@ export function Footer() {
             <Image src="/logo-mark.png" alt="" width={28} height={28} className="h-7 w-7 rounded-lg" />
             <span className="font-display text-base font-bold">The Agentcy</span>
           </div>
-          <p className="text-[13.5px] leading-normal text-white/72">The AI-native agency. Brief in, publish-ready work out.</p>
+          <p className="text-[13.5px] leading-normal text-white/72">The AI-native agency. Paste your website, approve the plan, and your marketing runs on autopilot.</p>
         </div>
         {[
           {
             title: "Product",
             links: [
+              ["The ecosystem", "#ecosystem"],
               ["What it makes", "#makes"],
-              ["Websites & events", "#beyond"],
               ["Pricing", "#pricing"],
               ["Docs & API", "/docs"],
             ],

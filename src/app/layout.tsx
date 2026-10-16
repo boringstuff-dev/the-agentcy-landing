@@ -23,13 +23,13 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Agentcy — The AI-Native Agency",
+  title: "The Agentcy — Marketing on autopilot",
   description:
-    "The AI-native creative agency, run like a Renaissance bottega: seven specialist agents under one roof deliver videos, posts, ads, sites and copy made to measure for your brand, ready to publish.",
+    "Paste your website. Seven specialist AI agents, run like a Renaissance bottega, learn your brand and then plan, make and ship your whole marketing: website and SEO, social, email journeys, events and CRM. Every day, on autopilot. You just approve.",
   openGraph: {
-    title: "The Agentcy — The AI-Native Agency",
+    title: "The Agentcy — Marketing on autopilot",
     description:
-      "AI-native by design — not a tool with AI bolted on. Brief in, publish-ready content out.",
+      "Paste your website. The AI-native agency plans, makes and ships your marketing across site, social, email and events. You just approve.",
     type: "website",
   },
 };

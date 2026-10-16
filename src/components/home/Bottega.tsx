@@ -14,7 +14,7 @@ const MAESTRI = [
     role: "Creative Director",
     bead: "#ec4899",
     image: "/mascot/puntino-wave.webp",
-    line: "Reads your brief and cuts the plan to measure. That is Puntino, and he wears the tape.",
+    line: "Reads your brand and cuts the month's plan to measure. That is Puntino, and he wears the tape.",
   },
   {
     key: "stratega",
@@ -75,7 +75,7 @@ export default function Bottega() {
           <h2 className="font-display text-4xl leading-[1.05] font-semibold tracking-tight md:text-5xl">
             Seven maestri. One workshop.
             <br />
-            Your brief.
+            Your brand, every day.
           </h2>
         </div>
         <div className="flex flex-col gap-3 text-base leading-relaxed text-white/72">
@@ -85,8 +85,8 @@ export default function Bottega() {
             Leonardo.
           </p>
           <p className="m-0">
-            The Agentcy runs the same way. Seven specialist agents share one workshop and your Brand DNA, and nothing leaves it
-            without your approval. <span className="text-white/90">Su misura</span>: made to measure, never from a template.
+            The Agentcy runs the same way. Seven specialist agents share one workshop and your Brand DNA, keep your marketing
+            moving every day, and nothing leaves the workshop without your approval. <span className="text-white/90">Su misura</span>: made to measure, never from a template.
           </p>
         </div>
       </Reveal>

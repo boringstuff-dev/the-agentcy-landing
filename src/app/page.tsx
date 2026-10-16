@@ -5,7 +5,7 @@ import Pricing from "@/components/home/Pricing";
 import BookDemo from "@/components/home/BookDemo";
 import Bottega from "@/components/home/Bottega";
 import Channels from "@/components/home/Channels";
-import { Aurora, Ecosystem, Footer, HowItWorks, Makes, Stats, Testimonials, Why } from "@/components/home/Sections";
+import { Aurora, Beyond, Footer, HowItWorks, Makes, Stats, Testimonials, Why } from "@/components/home/Sections";
 
 export default function Home() {
   return (
@@ -18,9 +18,9 @@ export default function Home() {
         <Stats />
         <Explainer />
         <HowItWorks />
-        <Ecosystem />
         <Bottega />
         <Makes />
+        <Beyond />
         <Why />
         <Testimonials />
         <Pricing />

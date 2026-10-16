@@ -19,8 +19,8 @@ function Words({ text, from = 0, className = "" }: { text: string; from?: number
 const rise = (i: number) => ({ "--i": i }) as React.CSSProperties;
 
 /**
- * The hero is one composition: the website going in on the left, La Bottega
- * running the marketing on the right. The scene has no frame and bleeds past the column toward
+ * The hero is one composition: the brief on the left, La Bottega making it
+ * on the right. The scene has no frame and bleeds past the column toward
  * the viewport edge (the page clips overflow), so the workshop and the
  * headline share the same dark. Below lg it stacks: words, chat bar, scene.
  */
@@ -36,15 +36,15 @@ export default function Hero() {
           </span>
 
           <h1 className="m-0 font-display text-[44px] leading-[1.02] font-semibold tracking-tight text-white md:text-[64px] lg:text-[54px] xl:text-[58px]">
-            <Words text="Paste your website." />
+            <Words text="Brief it once." />
             <br />
-            <Words text="Marketing on autopilot." from={3} className="bg-linear-to-r from-brand-200 via-cyan-300 to-pink-300 bg-clip-text text-transparent" />
+            <Words text="Every channel ships." from={3} className="bg-linear-to-r from-brand-200 via-cyan-300 to-pink-300 bg-clip-text text-transparent" />
           </h1>
 
           <p className="hero-rise m-0 max-w-[560px] text-lg leading-relaxed text-white/72 md:text-[19px]" style={rise(5)}>
-            It reads your site and learns your brand. Then seven specialist agents, run like a Renaissance bottega, plan, make
-            and ship your whole marketing: website and SEO, social, email journeys, events and the CRM behind them.{" "}
-            <span className="text-white/90">Every day. You just approve.</span>
+            An AI-native creative agency run like a Renaissance bottega: seven specialist agents, one workshop, your brief.
+            Carousels, flyers, video, websites, events, email journeys and the CRM behind them.{" "}
+            <span className="text-white/90">Made to measure, ready to publish.</span>
           </p>
 
           <div className="hero-rise w-full" style={rise(6)}>
@@ -52,7 +52,7 @@ export default function Hero() {
           </div>
 
           <div className="hero-rise flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-white/55 lg:justify-start" style={rise(7)}>
-            <span>Sign up in a minute. The workshop opens with your Brand DNA read and the first week drafted.</span>
+            <span>Sign up in a minute, teach it your brand, and the agent picks up where you left off.</span>
             <a href="#bottega" className="inline-flex items-center gap-1.5 font-semibold text-white/80 transition-colors hover:text-white">
               Meet the maestri
               <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

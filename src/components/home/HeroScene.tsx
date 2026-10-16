@@ -66,10 +66,8 @@ const CARDS: {
     side: "below",
     tilt: "2deg",
     delay: "-4.6s",
-    title: "SEO article",
-    line: "Lo Scrittore · live on your site",
-    pill: "Published",
-    pillTone: "bg-emerald-500/18 text-emerald-300",
+    title: "Newsletter",
+    line: "Lo Scrittore · drafted in your tone",
   },
   {
     bead: "stratega",
@@ -78,10 +76,10 @@ const CARDS: {
     side: "below",
     tilt: "-2deg",
     delay: "-1.2s",
-    title: "This week's plan",
-    line: "Lo Stratega · 3 moves, 1 tap each",
-    pill: "Approve",
-    pillTone: "bg-amber-400/20 text-amber-200",
+    title: "Market analysis",
+    line: "Lo Stratega · 3 opportunities found",
+    pill: "New",
+    pillTone: "bg-brand-500/25 text-brand-200",
   },
 ];
 

@@ -3,6 +3,7 @@ import Hero from "@/components/home/Hero";
 import Explainer from "@/components/home/Explainer";
 import Pricing from "@/components/home/Pricing";
 import BookDemo from "@/components/home/BookDemo";
+import Bottega from "@/components/home/Bottega";
 import { Aurora, Beyond, Footer, HowItWorks, Makes, Stats, Testimonials, Why } from "@/components/home/Sections";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <Stats />
         <Explainer />
         <HowItWorks />
+        <Bottega />
         <Makes />
         <Beyond />
         <Why />

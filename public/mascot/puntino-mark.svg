@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" width="200" height="220">
+  <defs>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff2d8a"/>
+      <stop offset="0.5" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <radialGradient id="body" cx="0.4" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.7" stop-color="#eceaf6"/>
+      <stop offset="1" stop-color="#c9c4e4"/>
+    </radialGradient>
+    <radialGradient id="node" cx="0.35" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#ffd1e6"/>
+      <stop offset="0.5" stop-color="#ff2d8a"/>
+      <stop offset="1" stop-color="#c2127a"/>
+    </radialGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- antenna -->
+  <line x1="100" y1="62" x2="100" y2="40" stroke="#eceaf6" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="100" cy="32" r="11" fill="url(#node)" filter="url(#glow)"/>
+  <!-- Murano swirl -->
+  <path d="M93 34 C95 27 103 26 106 30" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" opacity="0.8"/>
+  <!-- arms -->
+  <ellipse cx="42" cy="158" rx="12" ry="20" fill="url(#body)" transform="rotate(20 42 158)"/>
+  <ellipse cx="158" cy="158" rx="12" ry="20" fill="url(#body)" transform="rotate(-20 158 158)"/>
+  <!-- body: soft teardrop, echoes the logo's A silhouette -->
+  <path d="M100 58 C64 58 44 108 44 150 C44 190 72 206 100 206 C128 206 156 190 156 150 C156 108 136 58 100 58 Z" fill="url(#body)"/>
+  <path d="M100 58 C64 58 44 108 44 150 C44 190 72 206 100 206 C128 206 156 190 156 150 C156 108 136 58 100 58 Z" fill="none" stroke="url(#rim)" stroke-width="2.5" opacity="0.55"/>
+  <!-- face -->
+  <ellipse cx="82" cy="132" rx="8.5" ry="12" fill="#0b0b1a"/>
+  <ellipse cx="118" cy="132" rx="8.5" ry="12" fill="#0b0b1a"/>
+  <circle cx="85" cy="127" r="2.6" fill="#ffffff"/>
+  <circle cx="121" cy="127" r="2.6" fill="#ffffff"/>
+  <path d="M90 155 Q100 163 110 155" fill="none" stroke="#0b0b1a" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

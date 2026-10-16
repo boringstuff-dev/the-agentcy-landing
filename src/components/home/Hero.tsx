@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { HeroChatBar } from "./ChatBar";
+import Reveal from "./Reveal";
 
 function FloatingCards() {
   return (
@@ -70,8 +72,9 @@ export default function Hero() {
         </h1>
 
         <p className="m-0 max-w-[640px] text-lg leading-relaxed text-white/72 md:text-[19px]">
-          The Agentcy is an AI-native creative agency. Carousels, flyers, video, websites, events, email journeys and the CRM behind
-          them. One brief in, publish-ready work out.
+          The Agentcy is an AI-native creative agency run like a Renaissance bottega: seven specialist agents, one workshop, your
+          brief. Carousels, flyers, video, websites, events, email journeys and the CRM behind them. Made to measure, ready to
+          publish.
         </p>
 
         <HeroChatBar />
@@ -80,6 +83,47 @@ export default function Hero() {
           Sign up in a minute, teach it your brand, and the agent picks up right where you left off.
         </p>
       </div>
+
+      {/* La Bottega — the seven maestri at work. The scene is rendered on the
+          page's own dark ground so it needs no alpha; the gradient at the
+          foot carries the caption and hands off to the section below. */}
+      <Reveal className="mx-auto mt-14 w-full max-w-[1040px] md:mt-16">
+        <div className="glass rounded-[32px] p-2.5 md:p-3">
+          {/* Phones get a taller crop and the caption below the picture; from md
+              the caption sits on a gradient over the foot of the scene. */}
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] bg-[#050510] md:aspect-[3/2]">
+            <Image
+              src="/mascot/bottega-hero.webp"
+              alt="La Bottega: the seven Agentcy maestri at work in a Renaissance workshop, each with a glowing bead on its head"
+              fill
+              priority
+              sizes="(max-width: 1100px) 100vw, 1040px"
+              className="object-cover"
+            />
+            <div className="hidden md:absolute md:inset-x-0 md:bottom-0 md:flex md:flex-wrap md:items-end md:justify-between md:gap-3 md:bg-linear-to-t md:from-[#050510]/95 md:via-[#050510]/55 md:to-transparent md:px-6 md:pt-14 md:pb-5">
+              <div className="flex flex-col gap-0.5">
+                <span className="eyebrow">La Bottega</span>
+                <span className="font-display text-lg font-semibold text-white md:text-xl">Seven maestri. One workshop. Your brief.</span>
+              </div>
+              <a
+                href="#bottega"
+                className="glass-soft inline-flex min-h-[40px] items-center rounded-full px-4 text-[13.5px] font-semibold text-white/85 transition-colors hover:text-white"
+              >
+                Meet the maestri
+              </a>
+            </div>
+          </div>
+          <div className="flex items-center justify-between gap-3 px-3 pt-3 pb-1.5 md:hidden">
+            <div className="flex min-w-0 flex-col gap-0.5">
+              <span className="eyebrow">La Bottega</span>
+              <span className="font-display text-[15px] leading-tight font-semibold text-white">Seven maestri. One workshop.</span>
+            </div>
+            <a href="#bottega" className="glass-soft inline-flex min-h-[40px] flex-none items-center rounded-full px-4 text-[13px] font-semibold text-white/85">
+              Meet them
+            </a>
+          </div>
+        </div>
+      </Reveal>
     </section>
   );
 }

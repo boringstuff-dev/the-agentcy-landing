@@ -17,7 +17,7 @@ const MENUS: { key: MenuKey; label: string; groups: MegaMenuGroup[]; cols: strin
 
 const LINKS_BEFORE_FEATURES = [
   { label: "How it works", href: "#how" },
-  { label: "Showcase", href: "#makes" },
+  { label: "Ecosystem", href: "#ecosystem" },
 ];
 const LINKS_AFTER = [
   { label: "Pricing", href: "#pricing" },

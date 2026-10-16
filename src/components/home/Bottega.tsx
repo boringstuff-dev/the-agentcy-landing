@@ -1,4 +1,5 @@
 import Image from "next/image";
+import BeadDemo from "./BeadDemo";
 import Reveal from "./Reveal";
 
 /**
@@ -93,21 +94,21 @@ export default function Bottega() {
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {MAESTRI.map((m, i) => (
           <Reveal key={m.key} delay={i * 0.04} className={`flex ${i === 0 ? "sm:col-span-2 lg:col-span-1" : ""}`}>
-            <article className="glass glass-hover flex w-full flex-col gap-3 rounded-3xl p-5">
-              <div className="relative mx-auto aspect-square w-full max-w-[200px]">
+            <article className="glass maestro-card flex w-full flex-col gap-3 rounded-3xl p-5">
+              <div className="bob relative mx-auto aspect-square w-full max-w-[200px]" style={{ "--i": i } as React.CSSProperties}>
                 <Image
                   src={m.image}
                   alt={`${m.name}, the ${m.role}`}
                   fill
                   sizes="(max-width: 640px) 60vw, 200px"
-                  className="object-contain drop-shadow-[0_18px_30px_rgba(139,92,246,.22)]"
+                  className="maestro-img object-contain drop-shadow-[0_18px_30px_rgba(139,92,246,.22)]"
                 />
               </div>
               <div className="flex items-center gap-2.5">
                 <span
                   aria-hidden="true"
-                  className="h-2.5 w-2.5 rounded-full"
-                  style={{ background: m.bead, boxShadow: `0 0 10px ${m.bead}` }}
+                  className="bead-dot h-2.5 w-2.5 rounded-full"
+                  style={{ background: m.bead, color: m.bead, animationDelay: `${i * -0.35}s` }}
                 />
                 <h3 className="font-display text-[21px] leading-tight font-semibold">{m.name}</h3>
               </div>
@@ -126,20 +127,7 @@ export default function Bottega() {
                 doing before you read a word.
               </p>
             </div>
-            <ul className="m-0 flex list-none flex-col gap-2 p-0 text-[13.5px] text-white/80">
-              {[
-                ["#ec4899", "Pink", "ready for your brief"],
-                ["#a78bfa", "Purple", "working on it"],
-                ["#34d399", "Emerald", "done, chef's kiss"],
-                ["#fbbf24", "Amber", "needs your approval"],
-              ].map(([c, name, what]) => (
-                <li key={name} className="flex items-center gap-2.5">
-                  <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full" style={{ background: c, boxShadow: `0 0 10px ${c}` }} />
-                  <strong className="font-semibold">{name}</strong>
-                  <span className="text-white/60">{what}</span>
-                </li>
-              ))}
-            </ul>
+            <BeadDemo />
           </div>
         </Reveal>
       </div>

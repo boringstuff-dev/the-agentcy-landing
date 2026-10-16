@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 import { APP_LOGIN } from "./links";
 import Reveal from "./Reveal";
+import CountUp from "./CountUp";
 
 const SECTION = "mx-auto max-w-6xl px-4 pb-24 sm:px-6 md:pb-30";
 const H2 = "font-display text-4xl leading-[1.05] font-semibold tracking-tight md:text-5xl";
@@ -51,7 +52,9 @@ export function Stats() {
         <div className="glass grid grid-cols-2 gap-6 rounded-3xl px-6 py-7 text-center md:grid-cols-4">
           {STATS.map((s) => (
             <div key={s.label}>
-              <div className="font-display text-[40px] leading-none font-semibold">{s.value}</div>
+              <div className="font-display text-[40px] leading-none font-semibold">
+                <CountUp value={s.value} />
+              </div>
               <div className="mt-2 text-sm text-white/72">{s.label}</div>
             </div>
           ))}

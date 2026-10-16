@@ -1,6 +1,19 @@
-import Image from "next/image";
 import { HeroChatBar } from "./ChatBar";
-import Reveal from "./Reveal";
+import HeroScene from "./HeroScene";
+
+/** Splits a line into words that rise one after another on load. */
+function Words({ text, from = 0, className = "" }: { text: string; from?: number; className?: string }) {
+  return (
+    <>
+      {text.split(" ").map((w, i) => (
+        <span key={`${w}-${i}`} className={`hero-word ${className}`} style={{ "--i": from + i } as React.CSSProperties}>
+          {w}
+          {i < text.split(" ").length - 1 ? " " : ""}
+        </span>
+      ))}
+    </>
+  );
+}
 
 function FloatingCards() {
   return (
@@ -37,20 +50,8 @@ function FloatingCards() {
         </div>
       </div>
 
-      <div
-        className="glass floaty d3 absolute right-10 bottom-[60px] hidden w-[230px] rounded-[20px] p-4 xl:block"
-        style={{ "--tilt": "-3deg" } as React.CSSProperties}
-        aria-hidden="true"
-      >
-        <div className="mb-2.5 text-xs font-bold text-white/80">Published</div>
-        <div className="flex flex-wrap gap-2">
-          {["Instagram", "LinkedIn", "Brand site"].map((p) => (
-            <span key={p} className="glass-soft rounded-full px-2.5 py-1.5 text-[11px] font-semibold text-white/85">
-              {p}
-            </span>
-          ))}
-        </div>
-      </div>
+      {/* The former "Published" card is now told by the scene's at-work
+          cards (Il Postino · queued), so it no longer floats here. */}
     </>
   );
 }
@@ -60,70 +61,39 @@ export default function Hero() {
     <section id="top" className="relative mx-auto max-w-6xl px-4 pt-20 pb-20 sm:px-6 md:pt-24 md:pb-24">
       <FloatingCards />
       <div className="mx-auto flex max-w-[860px] flex-col items-center gap-7 text-center">
-        <span className="glass-soft inline-flex items-center gap-2 rounded-full px-3.5 py-2 text-[13px] font-semibold text-white/85">
+        <span
+          className="hero-rise glass-soft inline-flex items-center gap-2 rounded-full px-3.5 py-2 text-[13px] font-semibold text-white/85"
+          style={{ "--i": 0 } as React.CSSProperties}
+        >
           <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_0_4px_rgba(52,211,153,.2)]" />
           Starts free · no card · 300 credits a month
         </span>
 
         <h1 className="m-0 font-display text-[44px] leading-[1.02] font-semibold tracking-tight text-white md:text-7xl">
-          Brief it once.
+          <Words text="Brief it once." />
           <br />
-          <span className="bg-linear-to-r from-brand-200 via-cyan-300 to-pink-300 bg-clip-text text-transparent">Every channel ships.</span>
+          <Words text="Every channel ships." from={3} className="bg-linear-to-r from-brand-200 via-cyan-300 to-pink-300 bg-clip-text text-transparent" />
         </h1>
 
-        <p className="m-0 max-w-[640px] text-lg leading-relaxed text-white/72 md:text-[19px]">
+        <p className="hero-rise m-0 max-w-[640px] text-lg leading-relaxed text-white/72 md:text-[19px]" style={{ "--i": 5 } as React.CSSProperties}>
           The Agentcy is an AI-native creative agency run like a Renaissance bottega: seven specialist agents, one workshop, your
           brief. Carousels, flyers, video, websites, events, email journeys and the CRM behind them. Made to measure, ready to
           publish.
         </p>
 
-        <HeroChatBar />
+        <div className="hero-rise w-full" style={{ "--i": 6 } as React.CSSProperties}>
+          <HeroChatBar />
+        </div>
 
-        <p className="m-0 text-[13px] text-white/55">
+        <p className="hero-rise m-0 text-[13px] text-white/55" style={{ "--i": 7 } as React.CSSProperties}>
           Sign up in a minute, teach it your brand, and the agent picks up right where you left off.
         </p>
       </div>
 
-      {/* La Bottega — the seven maestri at work. The scene is rendered on the
-          page's own dark ground so it needs no alpha; the gradient at the
-          foot carries the caption and hands off to the section below. */}
-      <Reveal className="mx-auto mt-14 w-full max-w-[1040px] md:mt-16">
-        <div className="glass rounded-[32px] p-2.5 md:p-3">
-          {/* Phones get a taller crop and the caption below the picture; from md
-              the caption sits on a gradient over the foot of the scene. */}
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] bg-[#050510] md:aspect-[3/2]">
-            <Image
-              src="/mascot/bottega-hero.webp"
-              alt="La Bottega: the seven Agentcy maestri at work in a Renaissance workshop, each with a glowing bead on its head"
-              fill
-              priority
-              sizes="(max-width: 1100px) 100vw, 1040px"
-              className="object-cover"
-            />
-            <div className="hidden md:absolute md:inset-x-0 md:bottom-0 md:flex md:flex-wrap md:items-end md:justify-between md:gap-3 md:bg-linear-to-t md:from-[#050510]/95 md:via-[#050510]/55 md:to-transparent md:px-6 md:pt-14 md:pb-5">
-              <div className="flex flex-col gap-0.5">
-                <span className="eyebrow">La Bottega</span>
-                <span className="font-display text-lg font-semibold text-white md:text-xl">Seven maestri. One workshop. Your brief.</span>
-              </div>
-              <a
-                href="#bottega"
-                className="glass-soft inline-flex min-h-[40px] items-center rounded-full px-4 text-[13.5px] font-semibold text-white/85 transition-colors hover:text-white"
-              >
-                Meet the maestri
-              </a>
-            </div>
-          </div>
-          <div className="flex items-center justify-between gap-3 px-3 pt-3 pb-1.5 md:hidden">
-            <div className="flex min-w-0 flex-col gap-0.5">
-              <span className="eyebrow">La Bottega</span>
-              <span className="font-display text-[15px] leading-tight font-semibold text-white">Seven maestri. One workshop.</span>
-            </div>
-            <a href="#bottega" className="glass-soft inline-flex min-h-[40px] flex-none items-center rounded-full px-4 text-[13px] font-semibold text-white/85">
-              Meet them
-            </a>
-          </div>
-        </div>
-      </Reveal>
+      {/* La Bottega, in motion: the loop, the beads and the at-work cards. */}
+      <div className="hero-rise mx-auto mt-14 w-full max-w-[1040px] md:mt-16" style={{ "--i": 8 } as React.CSSProperties}>
+        <HeroScene />
+      </div>
     </section>
   );
 }

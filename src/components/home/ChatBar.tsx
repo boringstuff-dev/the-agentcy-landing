@@ -4,11 +4,11 @@ import { useState } from "react";
 import { askHref, track } from "./links";
 
 const SUGGESTIONS = [
-  "Launch carousel for a new espresso blend",
-  "Event page with tickets for a tasting night",
-  "Brand website on my own domain",
-  "Welcome email journey for new customers",
-  "30-second reel from my product photos",
+  "Launch carousel for a new blend",
+  "Event page with tickets",
+  "Brand website on my domain",
+  "Welcome email journey",
+  "30-second reel from my photos",
 ];
 
 function Arrow() {
@@ -28,7 +28,7 @@ export function HeroChatBar() {
   const [prompt, setPrompt] = useState("");
 
   return (
-    <div className="mt-2 w-full max-w-[780px]">
+    <div className="mx-auto mt-2 w-full max-w-[780px] lg:mx-0">
       <div className="glass glass-bar relative rounded-[28px] px-[18px] pt-[18px] pb-3.5">
         <div className="glass-ring" aria-hidden="true" />
         <label htmlFor="ask" className="sr-only">
@@ -56,7 +56,7 @@ export function HeroChatBar() {
         </div>
       </div>
 
-      <div className="mt-4 flex flex-wrap justify-center gap-2">
+      <div className="mt-4 flex flex-wrap justify-center gap-2 lg:justify-start">
         {SUGGESTIONS.map((s) => (
           <button
             key={s}

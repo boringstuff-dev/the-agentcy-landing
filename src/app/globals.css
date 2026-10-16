@@ -418,6 +418,22 @@ body {
     }
   }
 }
+/* The hero scene has no frame: its edges dissolve into the page. */
+.scene-bleed img,
+.scene-bleed video {
+  /* Radii are % of the box, so 58%/62% puts the fade's end just past the
+     edge midpoints and well inside the corners: an ink fade, not a vignette.
+     On the elements themselves because Chrome composites <video> in its own
+     layer and ignores a mask set on the parent. */
+  mask-image: radial-gradient(ellipse 58% 62% at 50% 50%, #000 58%, transparent 100%);
+}
+/* Leader lines fade in after the cards have risen. */
+@keyframes leader-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.leader { animation: leader-in 1.2s ease-out 1.1s both; }
+
 /* The loop video shows only where it is worth its bytes. Display is owned
    here (not by a `hidden` utility, which would outrank this layer). */
 .scene-video { display: none; }
@@ -470,7 +486,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .floaty, .glass-ring, .hero-rise, .hero-word, .bead-glow, .bob, .bead-dot, .bead-demo-pulse, .marquee-track { animation: none; }
+  .floaty, .glass-ring, .hero-rise, .hero-word, .bead-glow, .bob, .bead-dot, .bead-demo-pulse, .marquee-track, .leader { animation: none; }
   .maestro-card, .maestro-img { transition: none; }
 }
 }

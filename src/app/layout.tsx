@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import Analytics from "@/components/consent/Analytics";
+import CookieBanner from "@/components/consent/CookieBanner";
 import { Bricolage_Grotesque, JetBrains_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 
@@ -42,18 +43,9 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${manrope.variable} ${bricolage.variable} ${mono.variable} font-sans antialiased`}>
         {children}
-        {/* B3 — Plausible CE (self-hosted, cookie-less). The shim queues
-            custom events (e.g. the signup goal) fired before the script
-            loads. */}
-        <Script
-          defer
-          data-domain="the-agentcy.ai"
-          src="https://plausible.the-agentcy.ai/js/script.js"
-          strategy="afterInteractive"
-        />
-        <Script id="plausible-shim" strategy="afterInteractive">
-          {`window.plausible = window.plausible || function(){(window.plausible.q = window.plausible.q || []).push(arguments)}`}
-        </Script>
+        {/* Cookie consent + consent-gated Plausible CE (see lib/consent.ts). */}
+        <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );

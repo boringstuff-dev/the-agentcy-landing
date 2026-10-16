@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { APP_LOGIN } from "./links";
 import Reveal from "./Reveal";
 import CountUp from "./CountUp";
+import CookieSettingsLink from "@/components/consent/CookieSettingsLink";
 
 const SECTION = "mx-auto max-w-6xl px-4 pb-24 sm:px-6 md:pb-30";
 const H2 = "font-display text-4xl leading-[1.05] font-semibold tracking-tight md:text-5xl";
@@ -410,6 +411,7 @@ export function Footer() {
               ["Book a demo", "#demo"],
               ["Privacy", "/privacy"],
               ["Data deletion", "/data-deletion"],
+              ["Cookie settings", "#cookie-settings"],
             ],
           },
           {
@@ -422,11 +424,15 @@ export function Footer() {
         ].map((col) => (
           <div key={col.title} className="flex flex-col gap-2.5">
             <strong className="text-[13px] tracking-[.08em] text-white/50 uppercase">{col.title}</strong>
-            {col.links.map(([label, href]) => (
-              <a key={label} href={href} className={FOOT_LINK}>
-                {label}
-              </a>
-            ))}
+            {col.links.map(([label, href]) =>
+              href === "#cookie-settings" ? (
+                <CookieSettingsLink key={label} className={FOOT_LINK} />
+              ) : (
+                <a key={label} href={href} className={FOOT_LINK}>
+                  {label}
+                </a>
+              ),
+            )}
           </div>
         ))}
       </div>

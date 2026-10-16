@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "How The Agentcy collects, uses, and protects your data.",
 };
 
-const LAST_UPDATED = "19 April 2026";
+const LAST_UPDATED = "16 October 2026";
 const CONTACT_EMAIL = "privacy@the-agentcy.ai";
 
 export default function PrivacyPage() {
@@ -102,6 +102,39 @@ export default function PrivacyPage() {
               <li>LinkedIn, Meta (Instagram/Facebook) — social publishing APIs you explicitly connect</li>
               <li>Stripe — payment processing (when billing is enabled)</li>
             </ul>
+          </Section>
+
+          <Section title="Cookies and analytics">
+            <p>
+              The marketing site at the-agentcy.ai sets no tracking cookies.
+              Your cookie choice itself is kept in your browser&rsquo;s local
+              storage so we do not ask again, and the brief you type on the
+              home page is carried into the app the same way when you sign up.
+            </p>
+            <ul className="list-disc pl-6 space-y-2 mt-2">
+              <li>
+                <strong className="text-white">Necessary</strong> — the
+                consent record and the sign-up hand-off above. Always on.
+              </li>
+              <li>
+                <strong className="text-white">Analytics</strong> — a
+                self-hosted, cookie-less Plausible instance that counts page
+                views and a few conversion events (for example a demo
+                request). It stores no personal identifiers and is loaded
+                only after you opt in.
+              </li>
+              <li>
+                <strong className="text-white">Marketing</strong> — reserved
+                for advertising measurement pixels. None is in use today; if
+                we add one it will load only with this category enabled.
+              </li>
+            </ul>
+            <p className="mt-2">
+              You can change your choice at any time from the
+              &ldquo;Cookie settings&rdquo; link in the footer. The studio app
+              at app.the-agentcy.ai uses strictly necessary cookies to keep
+              you signed in.
+            </p>
           </Section>
 
           <Section title="How your data is shared">

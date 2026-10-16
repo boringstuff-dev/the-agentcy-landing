@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import CookieSettingsLink from "@/components/consent/CookieSettingsLink";
 import { ACCENT_CLASSES } from "@/lib/solutions";
 import {
   FEATURE_PAGES,
@@ -265,6 +266,7 @@ export default async function FeaturePage({
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
             <Link href="/data-deletion" className="hover:text-white transition-colors">Data deletion</Link>
+            <CookieSettingsLink className="hover:text-white transition-colors" />
           </div>
         </div>
       </footer>

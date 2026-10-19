@@ -1,80 +1,60 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { APP_LOGIN } from "./links";
 import Reveal from "./Reveal";
 
+/** Plan names are brand terms and stay as they are; the rest of each plan
+ *  is `pricing.plans.<key>` in the messages. */
 const PLANS = [
   {
+    key: "starter",
     name: "Starter",
-    desc: "Try the platform. No card needed.",
     monthly: 0,
-    credits: "300 credits / month",
-    features: ["Text and image creation tools", "1 brand workspace", "Community support"],
-    cta: "Start free",
     href: APP_LOGIN,
     highlighted: false,
   },
   {
+    key: "growth",
     name: "Growth",
-    desc: "For active brands running social.",
     monthly: 35,
-    credits: "2,400 credits / month",
-    features: [
-      "Text and image social, light video",
-      "Unlimited brands",
-      "Channel connectors: Instagram, LinkedIn, Telegram",
-      "Brand website and events",
-      "Priority generation",
-    ],
-    cta: "Start free",
     href: APP_LOGIN,
     highlighted: true,
   },
   {
+    key: "pro",
     name: "Pro",
-    desc: "Full creative firepower.",
     monthly: 129,
-    credits: "9,000 credits / month",
-    features: [
-      "Video, storyboards and synthetic presenters",
-      "Daily market intelligence",
-      "Custom domains",
-      "Developer API access",
-      "Priority support",
-    ],
-    cta: "Start free",
     href: APP_LOGIN,
     highlighted: false,
   },
   {
+    key: "enterprise",
     name: "Enterprise",
-    desc: "White-label and managed service.",
     monthly: null as number | null,
-    credits: "Custom volume",
-    features: ["White-label and SSO", "Custom connectors and fine-tuning", "Dedicated success manager", "SLA and onboarding"],
-    cta: "Talk to sales",
     href: "#demo",
     highlighted: false,
   },
 ];
 
 export default function Pricing() {
+  const t = useTranslations("pricing");
   const [annual, setAnnual] = useState(false);
   const price = (m: number) => (annual ? Math.round(m * 0.8) : m);
 
   return (
     <section id="pricing" className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 md:pb-30">
       <Reveal className="mx-auto mb-8 flex max-w-3xl flex-col items-center gap-3.5 text-center">
-        <span className="eyebrow">Pricing</span>
-        <h2 className="font-display text-4xl leading-[1.05] font-semibold tracking-tight md:text-5xl">One currency: credits</h2>
+        <span className="eyebrow">{t("eyebrow")}</span>
+        <h2 className="font-display text-4xl leading-[1.05] font-semibold tracking-tight md:text-5xl">{t("title")}</h2>
         <p className="text-lg leading-relaxed text-white/72">
-          Every action, from a caption to a full storyboard video, costs credits. Pick the monthly plan that fits and top up anytime.
+          {t("body")}
         </p>
-        <div className="glass-soft mt-1.5 inline-flex gap-1 rounded-full p-1" role="group" aria-label="Billing period">
+        <div className="glass-soft mt-1.5 inline-flex gap-1 rounded-full p-1" role="group" aria-label={t("billingPeriod")}>
           {[
-            { on: false, label: "Monthly" },
-            { on: true, label: "Annual · save 20%" },
+            { on: false, label: t("monthly") },
+            { on: true, label: t("annual") },
           ].map((t) => (
             <button
               key={t.label}
@@ -104,18 +84,21 @@ export default function Pricing() {
               <div className="flex items-start justify-between gap-2">
                 <div>
                   <h3 className="mb-1.5 font-display text-xl font-semibold">{plan.name}</h3>
-                  <p className="text-sm text-white/72">{plan.desc}</p>
+                  <p className="text-sm text-white/72">{t(`plans.${plan.key}.desc`)}</p>
                 </div>
                 {plan.highlighted && (
-                  <span className="rounded-full bg-brand-500 px-2.5 py-1.5 text-[11px] font-semibold text-white">Most popular</span>
+                  <span className="rounded-full bg-brand-500 px-2.5 py-1.5 text-[11px] font-semibold text-white">{t("mostPopular")}</span>
                 )}
               </div>
               <div className="flex items-baseline gap-1.5">
                 <span className="font-display text-[44px] leading-none font-semibold">
-                  {plan.monthly == null ? "Custom" : `€${price(plan.monthly)}`}
+                  {plan.monthly == null ? t("custom") : `€${price(plan.monthly)}`}
                 </span>
                 {plan.monthly != null && (
-                  <span className="text-sm text-white/72">/ month{annual && plan.monthly > 0 ? ", billed yearly" : ""}</span>
+                  <span className="text-sm text-white/72">
+                    {t("perMonth")}
+                    {annual && plan.monthly > 0 ? t("billedYearly") : ""}
+                  </span>
                 )}
               </div>
               <span
@@ -123,10 +106,10 @@ export default function Pricing() {
                   plan.highlighted ? "bg-brand-500/25 text-brand-100" : "bg-brand-500/18 text-brand-200"
                 }`}
               >
-                {plan.credits}
+                {t(`plans.${plan.key}.credits`)}
               </span>
               <ul className="flex flex-1 flex-col gap-2.5 text-sm text-white/72">
-                {plan.features.map((f) => (
+                {(t.raw(`plans.${plan.key}.features`) as string[]).map((f) => (
                   <li key={f}>{f}</li>
                 ))}
               </ul>
@@ -138,14 +121,14 @@ export default function Pricing() {
                     : "border border-white/14 bg-white/6 text-white hover:bg-white/11"
                 }`}
               >
-                {plan.cta}
+                {t(`plans.${plan.key}.cta`)}
               </a>
             </div>
           </Reveal>
         ))}
       </div>
       <p className="mt-5 text-center text-[13.5px] text-white/60">
-        Top-up packs: 1,000 credits €15 · 5,000 credits €65. Unused credits roll over one month.
+        {t("topUps")}
       </p>
     </section>
   );

@@ -22,7 +22,8 @@
  * are shareable. Override the OpenAPI URL with `NEXT_PUBLIC_OPENAPI_URL`.
  */
 import { Suspense, useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Script from "next/script";
 import { useSearchParams } from "next/navigation";
 import McpReference from "./McpReference";
@@ -33,6 +34,7 @@ const SCALAR_CDN = "https://cdn.jsdelivr.net/npm/@scalar/api-reference";
 type Tab = "rest" | "mcp";
 
 function DocsInner() {
+  const t = useTranslations("docs");
   const params = useSearchParams();
   const initial: Tab = params.get("tab") === "mcp" ? "mcp" : "rest";
   const [tab, setTab] = useState<Tab>(initial);
@@ -56,7 +58,8 @@ function DocsInner() {
   function select(next: Tab) {
     setTab(next);
     if (typeof window === "undefined") return;
-    const url = next === "rest" ? "/docs" : `/docs?tab=${next}`;
+    const path = window.location.pathname; // keeps the /it prefix
+    const url = next === "rest" ? path : `${path}?tab=${next}`;
     window.history.replaceState(null, "", url);
   }
 
@@ -70,14 +73,14 @@ function DocsInner() {
             href="/"
             className="text-sm text-white/60 hover:text-white transition-colors mr-4"
           >
-            ← The Agentcy
+            {t("back")}
           </Link>
           <div className="flex items-center gap-1 rounded-full bg-white/5 border border-white/10 p-1">
             <TabButton active={tab === "rest"} onClick={() => select("rest")}>
-              REST API
+              {t("rest")}
             </TabButton>
             <TabButton active={tab === "mcp"} onClick={() => select("mcp")}>
-              MCP server
+              {t("mcp")}
             </TabButton>
           </div>
         </div>

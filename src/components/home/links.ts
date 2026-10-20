@@ -7,21 +7,21 @@ export function looksLikeUrl(s: string) {
   return URL_RE.test(s.trim());
 }
 
-/** The autopilot opener: a pasted website becomes the first brief the studio
- *  sees, so the agent builds Brand DNA from the site, audits the channels and
- *  drafts the month, instead of the user starting from a blank chat. */
-export function autopilotPrompt(site: string) {
-  const url = /^https?:\/\//i.test(site) ? site : `https://${site}`;
-  return `My website is ${url}. Build my Brand DNA from it, audit what my marketing is missing, and plan this month across the site, social, email and events. Draft the first week so I can approve it.`;
+/** A pasted site as a full URL. */
+export function siteUrl(site: string) {
+  return /^https?:\/\//i.test(site) ? site : `https://${site}`;
 }
 
 /** Where the landing chat bar sends a visitor: the app's auth page, with the
  *  typed brief carried over as `?ask=` so the studio can prefill Ask after
- *  sign-up. A pasted website is expanded into the autopilot opener first. */
-export function askHref(prompt: string) {
+ *  sign-up. A pasted website is expanded into the autopilot opener first
+ *  (`chat.autopilotPrompt` in the messages, in the visitor's language), so
+ *  the agent builds Brand DNA from the site, audits the channels and drafts
+ *  the month, instead of the user starting from a blank chat. */
+export function askHref(prompt: string, autopilotPrompt: (url: string) => string) {
   const p = prompt.trim();
   if (!p) return APP_LOGIN;
-  const ask = looksLikeUrl(p) ? autopilotPrompt(p) : p;
+  const ask = looksLikeUrl(p) ? autopilotPrompt(siteUrl(p)) : p;
   return `${APP_LOGIN}?ask=${encodeURIComponent(ask)}`;
 }
 

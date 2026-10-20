@@ -30,22 +30,9 @@ export type Consent = {
   marketing: boolean;
 };
 
-export const CATEGORIES: {
-  key: ConsentCategory;
-  title: string;
-  desc: string;
-}[] = [
-  {
-    key: "analytics",
-    title: "Analytics",
-    desc: "Privacy-friendly page statistics (self-hosted Plausible). No cookies, no cross-site tracking — we only learn which pages and buttons work.",
-  },
-  {
-    key: "marketing",
-    title: "Marketing",
-    desc: "Lets ad platforms measure whether a campaign brought you here. Nothing is loaded in this category today.",
-  },
-];
+/** The optional categories, in display order. Their titles and
+ *  descriptions are `cookies.categories.<key>` in the messages. */
+export const CATEGORIES: ConsentCategory[] = ["analytics", "marketing"];
 
 function hasStorage() {
   return typeof window !== "undefined" && typeof window.localStorage !== "undefined";

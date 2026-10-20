@@ -1,0 +1,1961 @@
+{
+  "meta": {
+    "title": "The Agentcy — Il marketing col pilota automatico",
+    "description": "Incolla il tuo sito. Sette agenti AI specializzati, organizzati come una bottega rinascimentale, imparano il tuo brand e poi pianificano, creano e pubblicano tutto il tuo marketing: sito e SEO, social, percorsi email, eventi e CRM. Ogni giorno, in automatico. Tu approvi e basta.",
+    "ogDescription": "Incolla il tuo sito. L'agenzia nativa AI pianifica, crea e pubblica il tuo marketing su sito, social, email ed eventi. Tu approvi e basta."
+  },
+  "language": {
+    "label": "Lingua",
+    "switchTo": "Passa a {name}"
+  },
+  "nav": {
+    "aria": "Principale",
+    "solutions": "Soluzioni",
+    "features": "Funzionalità",
+    "events": "Eventi",
+    "how": "Come funziona",
+    "ecosystem": "Ecosistema",
+    "pricing": "Prezzi",
+    "docs": "Docs",
+    "login": "Accedi",
+    "bookDemo": "Prenota demo",
+    "startFree": "Inizia gratis",
+    "openMenu": "Apri il menu",
+    "closeMenu": "Chiudi il menu",
+    "language": "Lingua"
+  },
+  "hero": {
+    "badge": "Si parte gratis · senza carta · 300 crediti al mese",
+    "line1": "Incolla il tuo sito.",
+    "line2": "Il marketing va da solo.",
+    "body": "Legge il tuo sito e impara il tuo brand. Poi sette agenti specializzati, organizzati come una bottega rinascimentale, pianificano, creano e pubblicano tutto il tuo marketing: sito e SEO, social, percorsi email, eventi e il CRM che c'è dietro.",
+    "bodyStrong": "Ogni giorno. Tu approvi e basta.",
+    "note": "Ti registri in un minuto. La bottega apre con il tuo Brand DNA già letto e la prima settimana già scritta.",
+    "meetMaestri": "Conosci i maestri",
+    "sceneAlt": "La Bottega: i sette maestri di The Agentcy al lavoro in una bottega rinascimentale, ognuno con una perla luminosa sulla testa",
+    "cards": {
+      "pittore": {
+        "title": "Carosello",
+        "line": "Il Pittore · 6 slide, la tua palette",
+        "pill": "Pronto"
+      },
+      "postino": {
+        "title": "Post social",
+        "line": "Il Postino · 3 programmati questa settimana",
+        "pill": "In coda"
+      },
+      "scrittore": {
+        "title": "Articolo SEO",
+        "line": "Lo Scrittore · online sul tuo sito",
+        "pill": "Pubblicato"
+      },
+      "stratega": {
+        "title": "Il piano della settimana",
+        "line": "Lo Stratega · 3 mosse, un tocco ciascuna",
+        "pill": "Approva"
+      }
+    }
+  },
+  "chat": {
+    "label": "Incolla il tuo sito o di' a The Agentcy cosa ti serve",
+    "placeholder": "Incolla il tuo sito, oppure di' a The Agentcy cosa vuoi di più: clienti, prenotazioni, iscrizioni, un lancio che lasci il segno…",
+    "hintSite": "Legge il tuo sito, crea il tuo Brand DNA e scrive il piano del mese",
+    "hintDefault": "Account gratuito · il tuo link o brief ti segue",
+    "startAutopilot": "Avvia l'autopilota",
+    "startFree": "Inizia gratis",
+    "suggestions": [
+      "Metti i miei social in automatico",
+      "Sito con articoli SEO sul mio dominio",
+      "Percorso di benvenuto per i nuovi contatti",
+      "Pagina evento con biglietti",
+      "Analizza il mio marketing"
+    ],
+    "compactLabel": "Incolla il tuo sito o descrivi il tuo brand",
+    "compactPlaceholder": "Incolla il tuo sito o descrivi il tuo brand…",
+    "autopilotPrompt": "Il mio sito è {url}. Crea il mio Brand DNA partendo da lì, analizza cosa manca al mio marketing e pianifica questo mese su sito, social, email ed eventi. Scrivi la prima settimana così posso approvarla."
+  },
+  "channels": {
+    "aria": "Canali su cui pubblica The Agentcy",
+    "eyebrow": "Il Postino consegna su",
+    "names": {
+      "youtubeShorts": "YouTube Shorts",
+      "emailJourneys": "Percorsi email",
+      "brandWebsite": "Sito del brand",
+      "eventPages": "Pagine evento"
+    }
+  },
+  "stats": [
+    {
+      "value": "1 link",
+      "label": "Per insegnargli il tuo brand"
+    },
+    {
+      "value": "5 min",
+      "label": "Per un'analisi e il piano del mese"
+    },
+    {
+      "value": "7",
+      "label": "Agenti specializzati, una sola bottega"
+    },
+    {
+      "value": "10+",
+      "label": "Ore a settimana restituite a te"
+    }
+  ],
+  "explainer": {
+    "eyebrow": "Il film da 100 secondi",
+    "title": "Guarda The Agentcy gestire un brand",
+    "body": "Un link diventa un piano. Il piano diventa un carosello, un volantino e un video. I post rimandano a un sito che ha costruito lui, ogni visitatore finisce nel CRM e i percorsi fanno il resto. Settimana dopo settimana.",
+    "steps": [
+      "Sito",
+      "Brand DNA",
+      "Piano",
+      "Creazione",
+      "Pubblicazione",
+      "Crescita"
+    ],
+    "captions": "Sottotitoli in inglese · 1 min 41 s"
+  },
+  "how": {
+    "eyebrow": "Come funziona",
+    "title": "Incolla un link. Approva il piano. Il resto va da sé.",
+    "body": "Gli agenti pianificano e scrivono. Tu approvi. Niente viene generato, pubblicato o speso senza il tuo via libera, e ogni costo è mostrato prima in crediti.",
+    "steps": [
+      {
+        "title": "Incolla il tuo sito",
+        "desc": "Il Brand DNA legge il tuo sito — palette, font, tono, offerta e pubblico — e lo trasforma in schede modificabili. Non hai ancora un sito? Descrivi il brand e te ne scrive uno."
+      },
+      {
+        "title": "Ricevi analisi e piano",
+        "desc": "Lo Stratega studia il mercato e i tuoi canali, trova i punti deboli e scrive il piano del mese: sito, social, email, eventi. Per tutto il resto, basta chiedere a parole tue."
+      },
+      {
+        "title": "Approva da dove vuoi",
+        "desc": "Le bozze arrivano nella tua inbox e sul telefono. Approva, oppure chiedi «più incisivo, più corto, più caldo». Ogni spesa mostra prima il suo costo in crediti."
+      },
+      {
+        "title": "L'autopilota fa il resto",
+        "desc": "I post escono, gli articoli tengono il sito fresco per i motori di ricerca, i percorsi seguono ogni contatto, e il piano della settimana dopo ti aspetta quando accedi."
+      }
+    ]
+  },
+  "makes": {
+    "eyebrow": "Cosa crea strada facendo",
+    "title": "Tutto quello che ti consegna un'agenzia, in linea con il brand per default",
+    "social": {
+      "title": "Post social e caroselli",
+      "desc": "Prime slide con ganci collaudati, impaginazione automatica, i tuoi font e colori su ogni slide. Formattati per ogni piattaforma, con testo e hashtag."
+    },
+    "video": {
+      "title": "Video brevi",
+      "desc": "Reel, TikTok e Shorts da uno storyboard o dalle tue foto. Con copione, voce e sottotitoli."
+    },
+    "print": {
+      "title": "Volantini, brochure e stampa",
+      "desc": "Grafiche pronte per la stampa con testo modificabile, anche in tutti i formati social."
+    },
+    "decks": {
+      "title": "Video esplicativi e presentazioni",
+      "desc": "Video in motion graphics con presentatori AI, più pitch deck e presentazioni commerciali."
+    },
+    "copy": {
+      "title": "Testi, newsletter e SEO",
+      "desc": "Bozze addestrate sulla tua voce: articoli, sequenze email, testi per landing page e meta description."
+    },
+    "ads": {
+      "title": "Ads, podcast, voci fuori campo e analisi di mercato",
+      "desc": "Varianti di annunci per Meta, Google e TikTok. Episodi di podcast a più voci. Analisi della concorrenza consegnata come report o presentazione."
+    },
+    "pills": [
+      "Creatività per ads",
+      "Podcast",
+      "Voci fuori campo",
+      "Analisi del brand"
+    ]
+  },
+  "ecosystem": {
+    "eyebrow": "L'ecosistema",
+    "title": "Non solo i post. Tutta la macchina che c'è dietro.",
+    "body": "I contenuti sono la parte che si vede. Sotto, The Agentcy gestisce il sito e la sua SEO, i percorsi email, gli eventi e il CRM che trasformano un visitatore in cliente, come un unico sistema che si alimenta da solo.",
+    "blocks": [
+      {
+        "title": "Sito e SEO",
+        "desc": "Un sito di più pagine scritto a partire dal tuo Brand DNA, sul tuo dominio, tenuto fresco con articoli pensati per portare traffico dai motori di ricerca.",
+        "bullets": [
+          "Tre proposte di design, modifica drag-and-drop",
+          "Articoli e meta description con la tua voce",
+          "iltuobrand.it o un sottodominio gratuito"
+        ]
+      },
+      {
+        "title": "Contenuti social",
+        "desc": "Caroselli, reel, volantini e post per ogni canale, scritti secondo il piano e programmati dal Postino quando ogni pubblico è sveglio.",
+        "bullets": [
+          "Un calendario che riempie da solo i suoi vuoti",
+          "Formato, didascalia e hashtag giusti per ogni canale",
+          "Prime slide con ganci collaudati"
+        ]
+      },
+      {
+        "title": "Email marketing",
+        "desc": "Newsletter e percorsi automatici da un editor in linea con il brand, inviati dal tuo dominio con protezioni per la consegna.",
+        "bullets": [
+          "Flussi di benvenuto, offerta e recensione",
+          "Invio dal tuo dominio",
+          "NPS e risposte che tornano nel CRM"
+        ]
+      },
+      {
+        "title": "CRM",
+        "desc": "Ogni visitatore, iscritto e partecipante finisce in un'unica base contatti, profilata ogni notte, con pubblici suggeriti in base a ciò che le persone fanno davvero.",
+        "bullets": [
+          "Fasi del ciclo di vita e segmenti",
+          "Pubblici suggeriti dai comportamenti",
+          "Profili che gli agenti leggono prima di scrivere"
+        ]
+      },
+      {
+        "title": "Eventi",
+        "desc": "Dalla scelta dell'evento giusto all'email di follow-up: piano, ricerca della location, microsite, biglietti, check-in con QR.",
+        "bullets": [
+          "Pagine per agenda, speaker e sponsor",
+          "Tipologie di biglietto e sconti",
+          "I partecipanti finiscono nel CRM"
+        ]
+      },
+      {
+        "title": "Market intelligence",
+        "desc": "Lo Stratega osserva ogni giorno il tuo mercato e i concorrenti e trasforma ciò che è cambiato nelle prossime mosse, non nell'ennesima dashboard.",
+        "bullets": [
+          "Brief quotidiano con ricerca web in tempo reale",
+          "Lacune e opportunità di contenuto",
+          "Prossime mosse ordinate per impatto"
+        ]
+      }
+    ],
+    "weekEyebrow": "Una settimana col pilota automatico",
+    "weekNote": "Ogni settimana è così. Il piano cambia, il ritmo no.",
+    "week": [
+      {
+        "day": "Lun",
+        "who": "Lo Stratega",
+        "what": "Studia il mercato, scrive il piano della settimana."
+      },
+      {
+        "day": "Mar",
+        "who": "Il Pittore e Lo Scrittore",
+        "what": "Carosello, reel e un articolo SEO pronti in bozza."
+      },
+      {
+        "day": "Mer",
+        "who": "Il Postino",
+        "what": "Escono i post. L'articolo va online sul tuo sito."
+      },
+      {
+        "day": "Gio",
+        "who": "Lo Scrittore",
+        "what": "Newsletter inviata. I percorsi seguono i nuovi contatti."
+      },
+      {
+        "day": "Ven",
+        "who": "Il Sommelier",
+        "what": "Verifica cosa ha funzionato e alimenta la settimana dopo."
+      },
+      {
+        "day": "Tu",
+        "who": "Dal telefono",
+        "what": "Tocchi «approva». È tutto qui il tuo lavoro."
+      }
+    ]
+  },
+  "bottega": {
+    "eyebrow": "La Bottega",
+    "title1": "Sette maestri. Una bottega.",
+    "title2": "Il tuo brand, ogni giorno.",
+    "p1": "Nella Firenze del Rinascimento la <em>bottega</em> era il laboratorio di un maestro: artigiani specializzati sotto lo stesso tetto, che realizzavano opere su commissione, su misura per ogni cliente. Fu la bottega del Verrocchio a formare Leonardo.",
+    "p2": "The Agentcy funziona allo stesso modo. Sette agenti specializzati condividono una bottega e il tuo Brand DNA, fanno avanzare il tuo marketing ogni giorno, e niente esce dalla bottega senza la tua approvazione. <strong>Su misura</strong>, mai da un template.",
+    "imageAlt": "{name}, {role}",
+    "maestri": {
+      "sarto": {
+        "role": "Direttore creativo",
+        "line": "Legge il tuo brand e taglia su misura il piano del mese. È Puntino, quello con il metro al collo."
+      },
+      "stratega": {
+        "role": "Stratega delle campagne",
+        "line": "Studia il mercato, i concorrenti e il momento, poi sceglie l'angolazione."
+      },
+      "pittore": {
+        "role": "Produttore visivo",
+        "line": "Immagini, caroselli, volantini e storyboard, sempre con la tua palette."
+      },
+      "tenore": {
+        "role": "Produttore audio",
+        "line": "Voci fuori campo, podcast e la voce dei tuoi video."
+      },
+      "scrittore": {
+        "role": "Editor",
+        "line": "Testi, didascalie, newsletter e articoli, scritti con il tuo tono."
+      },
+      "sommelier": {
+        "role": "Controllo qualità",
+        "line": "Assaggia ogni pezzo confrontandolo con il tuo Brand DNA prima che lasci la bottega."
+      },
+      "postino": {
+        "role": "Social media manager",
+        "line": "Programma e consegna su ogni canale. In Vespa, naturalmente."
+      }
+    },
+    "beadEyebrow": "La perla",
+    "beadBody": "Ogni maestro porta una perla di vetro di Murano. Nello studio è una spia di stato: sai cosa sta facendo la bottega prima ancora di leggere una parola.",
+    "beadStates": {
+      "idle": {
+        "name": "Rosa",
+        "what": "pronto, niente che aspetta te"
+      },
+      "working": {
+        "name": "Viola",
+        "what": "ci sta lavorando"
+      },
+      "done": {
+        "name": "Smeraldo",
+        "what": "fatto, a regola d'arte"
+      },
+      "ask": {
+        "name": "Ambra",
+        "what": "serve la tua approvazione"
+      }
+    }
+  },
+  "why": {
+    "eyebrow": "Perché i team cambiano",
+    "title": "Il lavoro di un reparto marketing. Il prezzo di un abbonamento.",
+    "body": "L'agenzia media chiede 5–25.000 € al mese e impiega due settimane per ogni giro di revisioni. The Agentcy gestisce il tuo marketing ogni giorno, risponde in pochi minuti, si corregge a parole tue e non finisce mai le ore.",
+    "cta": "Inizia gratis",
+    "items": [
+      [
+        "Un link, non un brief",
+        "Incolla il tuo sito. Analisi, piano e bozze arrivano da te."
+      ],
+      [
+        "Niente giocoleria tra strumenti",
+        "Sito, SEO, social, email, eventi e CRM in un'unica bottega."
+      ],
+      [
+        "Ogni piattaforma, in modo nativo",
+        "Formato, didascalia e hashtag giusti per ogni canale."
+      ],
+      [
+        "Correggi a parole tue",
+        "«Più incisivo, più corto, più caldo.» Fatto."
+      ],
+      [
+        "Il controllo resta a te",
+        "Prima le bozze. Spese confermate. Niente si pubblica da solo."
+      ],
+      [
+        "Cresci senza assumere",
+        "Dieci contenuti o diecimila, stesso team."
+      ]
+    ]
+  },
+  "testimonials": [
+    {
+      "q": "Come founder da sola non potevo permettermi un'agenzia. The Agentcy mi ha dato un team creativo completo senza quel prezzo. Pubblico ogni giorno su tre piattaforme e mi costa meno di un abbonamento a Netflix.",
+      "role": "Head of Marketing"
+    },
+    {
+      "q": "Abbiamo offerto The Agentcy in white-label ai nostri clienti e ha trasformato il nostro modello di agenzia. Ora consegniamo in 48 ore campagne che prima richiedevano tre settimane.",
+      "role": "Founder"
+    },
+    {
+      "q": "Mi ha convinta la funzione sulla voce del brand. Ogni contenuto suona davvero come noi. Il nostro pubblico non nota la differenza. E il nostro team finalmente respira.",
+      "role": "Direttrice creativa"
+    }
+  ],
+  "pricing": {
+    "eyebrow": "Prezzi",
+    "title": "Un'unica valuta: i crediti",
+    "body": "Ogni azione, da una didascalia a un intero video da storyboard, costa crediti. Scegli il piano mensile più adatto e ricarica quando vuoi.",
+    "billingPeriod": "Periodo di fatturazione",
+    "monthly": "Mensile",
+    "annual": "Annuale · risparmi il 20%",
+    "mostPopular": "Il più scelto",
+    "custom": "Su misura",
+    "perMonth": "/ mese",
+    "billedYearly": ", fatturato annualmente",
+    "topUps": "Pacchetti di ricarica: 1.000 crediti 15 € · 5.000 crediti 65 €. I crediti non usati restano validi per un altro mese.",
+    "plans": {
+      "starter": {
+        "desc": "Prova la piattaforma. Senza carta.",
+        "credits": "300 crediti / mese",
+        "features": [
+          "Strumenti per creare testi e immagini",
+          "1 workspace di brand",
+          "Supporto della community"
+        ],
+        "cta": "Inizia gratis"
+      },
+      "growth": {
+        "desc": "Per brand attivi che gestiscono i social.",
+        "credits": "2.400 crediti / mese",
+        "features": [
+          "Social con testi e immagini, video leggeri",
+          "Brand illimitati",
+          "Connettori ai canali: Instagram, LinkedIn, Telegram",
+          "Sito del brand ed eventi",
+          "Generazione prioritaria"
+        ],
+        "cta": "Inizia gratis"
+      },
+      "pro": {
+        "desc": "Tutta la potenza creativa.",
+        "credits": "9.000 crediti / mese",
+        "features": [
+          "Video, storyboard e presentatori sintetici",
+          "Market intelligence quotidiana",
+          "Domini personalizzati",
+          "Accesso alle API per sviluppatori",
+          "Supporto prioritario"
+        ],
+        "cta": "Inizia gratis"
+      },
+      "enterprise": {
+        "desc": "White-label e servizio gestito.",
+        "credits": "Volumi su misura",
+        "features": [
+          "White-label e SSO",
+          "Connettori e fine-tuning su misura",
+          "Success manager dedicato",
+          "SLA e onboarding"
+        ],
+        "cta": "Parla con le vendite"
+      }
+    }
+  },
+  "demo": {
+    "title": "Cosa deve creare per prima la tua agenzia?",
+    "body": "Inizia gratis con 300 crediti al mese. Oppure prenota una demo di 20 minuti e proveremo il tuo brand dal vivo.",
+    "bookDemo": "Prenota una demo",
+    "watchAgain": "Rivedi il film",
+    "name": "Il tuo nome",
+    "email": "tu@azienda.it",
+    "company": "Azienda (facoltativo)",
+    "message": "Cosa ti piacerebbe vedere? (facoltativo)",
+    "sending": "Invio in corso…",
+    "submit": "Richiedi la demo",
+    "error": "Qualcosa è andato storto. Riprova o scrivi a hello@the-agentcy.ai.",
+    "doneTitle": "Richiesta ricevuta",
+    "doneBody": "Ti contatteremo entro un giorno per fissare la demo.",
+    "jumpIn": "Oppure parti subito e <link>crea un account gratuito</link>."
+  },
+  "footer": {
+    "tagline": "L'agenzia nativa AI. Incolla il tuo sito, approva il piano e il tuo marketing va col pilota automatico.",
+    "product": "Prodotto",
+    "company": "Azienda",
+    "getStarted": "Inizia",
+    "ecosystem": "L'ecosistema",
+    "makes": "Cosa crea",
+    "pricing": "Prezzi",
+    "docs": "Docs e API",
+    "bookDemo": "Prenota una demo",
+    "privacy": "Privacy",
+    "dataDeletion": "Cancellazione dei dati",
+    "login": "Accedi",
+    "startFree": "Inizia gratis",
+    "rights": "© 2026 The Agentcy. Tutti i diritti riservati."
+  },
+  "cookies": {
+    "bannerTitle": "Due parole sui cookie",
+    "bannerBody": "Usiamo statistiche rispettose della privacy per capire quali pagine sono utili, e nient'altro senza il tuo consenso. Puoi cambiare idea quando vuoi dal footer.",
+    "privacyPolicy": "Informativa sulla privacy",
+    "acceptAll": "Accetta tutti",
+    "onlyNecessary": "Solo necessari",
+    "settings": "Impostazioni",
+    "settingsTitle": "Impostazioni cookie",
+    "settingsBody": "Scegli cosa può usare il sito. La tua scelta resta solo su questo dispositivo.",
+    "close": "Chiudi",
+    "save": "Salva le scelte",
+    "alwaysOn": "sempre attivi",
+    "link": "Impostazioni cookie",
+    "categories": {
+      "necessary": {
+        "title": "Necessari",
+        "desc": "Ricordano questa scelta e portano il tuo brief nell'app quando ti registri. Sempre attivi."
+      },
+      "analytics": {
+        "title": "Statistiche",
+        "desc": "Statistiche delle pagine rispettose della privacy (Plausible in self-hosting). Nessun cookie, nessun tracciamento tra siti: scopriamo solo quali pagine e pulsanti funzionano."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "desc": "Permettono alle piattaforme pubblicitarie di misurare se una campagna ti ha portato qui. Oggi non è attivo nulla in questa categoria."
+      }
+    }
+  },
+  "docs": {
+    "back": "← The Agentcy",
+    "rest": "API REST",
+    "mcp": "Server MCP",
+    "metaTitle": "Docs e API · The Agentcy",
+    "metaDescription": "Riferimento dell'API REST pubblica e del server MCP di The Agentcy."
+  },
+  "legal": {
+    "back": "← Indietro",
+    "privacyTitle": "Informativa sulla privacy · The Agentcy",
+    "privacyDescription": "Come The Agentcy raccoglie, usa e protegge i tuoi dati.",
+    "deletionTitle": "Cancellazione dei dati · The Agentcy",
+    "deletionDescription": "Come richiedere la cancellazione dei tuoi dati da The Agentcy, compresi i dati ottenuti dalle piattaforme social collegate.",
+    "privacyHeading": "Informativa sulla privacy",
+    "lastUpdated": "Ultimo aggiornamento: 16 ottobre 2026",
+    "deletionHeading": "Cancellazione dei dati",
+    "deletionSubtitle": "Come rimuovere i tuoi dati da The Agentcy"
+  },
+  "detail": {
+    "logoAlt": "Logo di The Agentcy",
+    "backHome": "← Torna alla home",
+    "bookDemo": "Prenota una demo",
+    "startFree": "Inizia gratis: 7 giorni li offriamo noi →",
+    "seeHow": "Scopri come funziona",
+    "aiNative": "L'agenzia nativa AI",
+    "explore": "Esplora la piattaforma",
+    "ctaTitle": "La tua agenzia.",
+    "ctaAccent": "All'1% del costo.",
+    "step": "Passo {n}",
+    "home": "Home",
+    "privacy": "Privacy",
+    "dataDeletion": "Cancellazione dei dati",
+    "autopilotSteps": [
+      {
+        "emoji": "🔗",
+        "title": "Incolla il tuo sito",
+        "desc": "Il Brand DNA legge il tuo sito — palette, tono, offerta, pubblico — in un minuto. Non hai ancora un sito? Descrivi il brand."
+      },
+      {
+        "emoji": "🧭",
+        "title": "Ricevi analisi e piano",
+        "desc": "Lo Stratega studia il mercato e i tuoi canali, trova i punti deboli e scrive le mosse del mese."
+      },
+      {
+        "emoji": "✅",
+        "title": "Approva da dove vuoi",
+        "desc": "Guarda le bozze, chiedi modifiche a parole tue, approva dal telefono. Ogni spesa mostra prima il suo costo."
+      },
+      {
+        "emoji": "🚀",
+        "title": "L'autopilota fa il resto",
+        "desc": "Post, articoli, percorsi e pagine evento escono nei tempi previsti. Il piano della settimana dopo ti aspetta quando accedi."
+      }
+    ],
+    "solutions": {
+      "fallbackTitle": "Soluzione · The Agentcy",
+      "badge": "Per",
+      "meta1": "Prova gratuita di 7 giorni",
+      "meta2": "Oltre 8 piattaforme supportate",
+      "painEyebrow": "La parte onesta",
+      "painTitle": "{label}: perché i contenuti finiscono per logorarti.",
+      "benefitsEyebrow": "Cosa ottieni",
+      "benefitsTitle": "Pensato su misura per {label}.",
+      "howTitle": "Incolla un link. Approva il piano. Il resto va col pilota automatico.",
+      "howBody": "Lo stesso autopilota che lavora per ogni profilo su The Agentcy: sette agenti AI pianificano e scrivono per sito, social, email ed eventi, e tu approvi prima che qualcosa vada online.",
+      "ctaBody": "Prova The Agentcy gratis per 7 giorni. Senza carta di credito. Senza vincoli. Solo contenuti pronti da pubblicare dal primo giorno."
+    },
+    "features": {
+      "fallbackTitle": "Funzionalità · The Agentcy",
+      "badge": "Funzionalità",
+      "meta1": "Prova gratuita di 7 giorni",
+      "meta2": "Oltre 8 piattaforme supportate",
+      "painEyebrow": "Cosa sostituisce",
+      "painTitle": "La vita prima di {label}.",
+      "benefitsEyebrow": "Cosa ottieni",
+      "benefitsTitle": "Dentro {label}.",
+      "howTitle": "Incolla un link. Approva il piano. Il resto va col pilota automatico.",
+      "howBody": "{label} lavora dentro lo stesso autopilota che muove ogni parte di The Agentcy: sette agenti AI pianificano e scrivono per sito, social, email ed eventi, e tu approvi prima che qualcosa vada online.",
+      "ctaBody": "{label} è una delle decine di funzionalità incluse in ogni piano. Prova The Agentcy gratis per 7 giorni, senza carta di credito e senza vincoli."
+    },
+    "events": {
+      "fallbackTitle": "Eventi · The Agentcy",
+      "badge": "Eventi",
+      "meta1": "Pianifica, gestisci e riempi i tuoi eventi",
+      "meta2": "Tutto in un'unica piattaforma",
+      "painEyebrow": "Cosa sostituisce",
+      "painTitle": "La vita prima di {label}.",
+      "benefitsEyebrow": "Cosa ottieni",
+      "benefitsTitle": "Dentro {label}.",
+      "howTitle": "Dall'idea al tutto esaurito, in un'unica piattaforma.",
+      "howBody": "{label} lavora dentro lo stesso flusso che muove ogni parte di The Agentcy. Scegli o descrivi un evento, gli agenti AI lo pianificano e lo costruiscono, e tu approvi prima che qualcosa vada online.",
+      "ctaBody": "{label} è una delle decine di funzionalità incluse in ogni piano. Prova The Agentcy gratis per 7 giorni, senza carta di credito e senza vincoli.",
+      "steps": [
+        {
+          "emoji": "🔎",
+          "title": "Scegli o pianifica",
+          "desc": "Scegli un evento dal tuo radar, oppure descrivi quello che vuoi organizzare."
+        },
+        {
+          "emoji": "🤖",
+          "title": "Gli agenti lo preparano",
+          "desc": "Piano, budget, scaletta, microsite e comunicazioni vengono generati in parallelo."
+        },
+        {
+          "emoji": "✏️",
+          "title": "Rivedi e rifinisci",
+          "desc": "Cambia qualsiasi cosa a parole: il piano si aggiorna attorno alle tue modifiche."
+        },
+        {
+          "emoji": "🎟️",
+          "title": "Gestisci e coinvolgi",
+          "desc": "Pubblica il sito, vendi i biglietti, fai il check-in e il follow-up in automatico."
+        }
+      ]
+    },
+    "howEyebrow": "Come funziona"
+  },
+  "content": {
+    "solutions": {
+      "groups": {
+        "contentCreators": "Content creator",
+        "companiesAgencies": "Aziende e agenzie",
+        "specializedCreators": "Creator con esigenze specifiche"
+      },
+      "items": {
+        "digital-creators": {
+          "label": "Creator digitali",
+          "desc": "Perfetto per chi crea a tempo pieno e per gli appassionati di social."
+        },
+        "podcast-hosts": {
+          "label": "Podcaster",
+          "desc": "Fai crescere il tuo podcast e coinvolgi il tuo pubblico."
+        },
+        "coach-creators": {
+          "label": "Coach",
+          "desc": "Costruisci il tuo brand da coach e crea un legame con la tua community."
+        },
+        "companies": {
+          "label": "Aziende",
+          "desc": "Fai crescere la presenza social del brand e il business."
+        },
+        "agencies": {
+          "label": "Agenzie",
+          "desc": "Gestisci in modo efficiente gli account di tutti i tuoi clienti."
+        },
+        "influencers": {
+          "label": "Influencer",
+          "desc": "Semplifica i contenuti e fai crescere la tua influenza."
+        },
+        "adhd-creators": {
+          "label": "Creator con ADHD",
+          "desc": "Strumenti pensati per creare contenuti con una mente neurodivergente."
+        },
+        "digital-nomads": {
+          "label": "Nomadi digitali",
+          "desc": "Crea contenuti da qualsiasi parte del mondo."
+        },
+        "thought-leaders": {
+          "label": "Thought leader",
+          "desc": "Condividi la tua esperienza e costruisci la tua autorevolezza."
+        },
+        "neurodivergent-creators": {
+          "label": "Creator neurodivergenti",
+          "desc": "Soluzioni su misura per menti creative uniche."
+        }
+      },
+      "pages": {
+        "digital-creators": {
+          "tagline": "Il motore di contenuti completo per chi crea a tempo pieno.",
+          "intro": "Basta destreggiarti tra mille strumenti. Gestisci tutta la produzione di contenuti — idee, realizzazione, programmazione e analisi — da un unico spazio di lavoro pensato per velocità e costanza.",
+          "benefits": [
+            {
+              "title": "Pubblicazione multipiattaforma",
+              "desc": "Varianti ottimizzate per Instagram, TikTok, YouTube e X, tutte da un solo brief."
+            },
+            {
+              "title": "Idee sempre fresche",
+              "desc": "Uno stratega AI ti propone idee per i post in base a ciò che è di tendenza nella tua nicchia in questo momento."
+            },
+            {
+              "title": "Una voce di brand che scala",
+              "desc": "Addestra The Agentcy sui tuoi contenuti passati: ogni output suona come te, non come un'AI generica."
+            }
+          ],
+          "painPoints": [
+            "Passi più tempo a montare che a creare, e l'algoritmo intanto va avanti senza di te.",
+            "Cinque strumenti, quattro password e una board Notion che nessuno aggiorna: ogni post è una caccia al tesoro.",
+            "Pubblicare con costanza sembra un secondo lavoro che non hai mai scelto."
+          ],
+          "proofQuote": {
+            "quote": "Sono passata da due post a settimana a sette giorni di fila. Sempre io, ma con sette agenti a coprirmi le spalle.",
+            "author": "Marisol K.",
+            "role": "Creator a tempo pieno, 320K follower"
+          }
+        },
+        "podcast-hosts": {
+          "tagline": "Trasforma ogni episodio in una settimana di contenuti social.",
+          "intro": "Il tuo podcast produce già ore di contenuti di valore. Lascia che The Agentcy li tagli, li riadatti e li pubblichi su ogni piattaforma, così puoi concentrarti sulla registrazione del prossimo.",
+          "benefits": [
+            {
+              "title": "Dall'episodio ai social, in automatico",
+              "desc": "Card con citazioni, audiogrammi e clip brevi generati da ogni episodio."
+            },
+            {
+              "title": "Show notes che convertono",
+              "desc": "Riassunti scritti dall'AI e ottimizzati per la SEO e per trattenere gli ascoltatori."
+            },
+            {
+              "title": "Promozione cross-platform",
+              "desc": "Lanci coordinati su Instagram, TikTok, LinkedIn e X, con il tempismo giusto."
+            }
+          ],
+          "painPoints": [
+            "Ogni episodio muore il giorno in cui esce, perché nessuno ha tempo di tagliarlo e promuoverlo.",
+            "Il montatore si fa pagare a clip, l'assistente a post, e la tua reach resta ferma.",
+            "Registri un'ora d'oro e la vedi sparire nel feed dodici ore dopo."
+          ],
+          "proofQuote": {
+            "quote": "Abbiamo trasformato un episodio in 24 post su cinque piattaforme, senza assumere nessuno.",
+            "author": "Diego R.",
+            "role": "Host, The Compounding Podcast"
+          }
+        },
+        "coach-creators": {
+          "tagline": "Costruisci autorevolezza e fai crescere la tua attività di coaching.",
+          "intro": "I coach non hanno tempo per il teatrino dei contenuti. Ricevi un flusso costante di post autorevoli e ad alta conversione che portano contatti qualificati nei tuoi DM.",
+          "benefits": [
+            {
+              "title": "Contenuti lead magnet",
+              "desc": "Framework, casi studio e storie di trasformazione, formattati per la piattaforma che preferisci."
+            },
+            {
+              "title": "Autorevolezza che cresce nel tempo",
+              "desc": "Serie di contenuti pilastro che costruiscono riconoscibilità e fissano call conoscitive in automatico."
+            },
+            {
+              "title": "Engagement con la community",
+              "desc": "Risposte automatiche intelligenti che tengono vive le conversazioni senza sembrare robotiche."
+            }
+          ],
+          "painPoints": [
+            "La tua agenda è piena di clienti, e quindi vuota di contenuti.",
+            "I post AI generici suonano come quelli di tutti gli altri coach, e convertono altrettanto poco.",
+            "I DM si accumulano, i contatti si raffreddano, e ti chiedi come facciano coach con meno follower ad avere l'agenda piena."
+          ],
+          "proofQuote": {
+            "quote": "Le mie call conoscitive sono raddoppiate nel primo mese. Con The Agentcy sembrava che avessi un team marketing.",
+            "author": "Priya S.",
+            "role": "Executive coach, fondatrice di Northform"
+          }
+        },
+        "companies": {
+          "tagline": "Fai crescere la presenza del tuo brand su ogni canale.",
+          "intro": "Che tu sia una startup di dieci persone o un team di mille, The Agentcy dà al marketing la forza di un'agenzia creativa completa, senza i tempi né i budget di un'agenzia.",
+          "benefits": [
+            {
+              "title": "Gestione multi-account",
+              "desc": "Gestisci ogni brand e linea di prodotto da un unico spazio di lavoro."
+            },
+            {
+              "title": "Voce di brand coerente",
+              "desc": "Fissa tono, lessico e regole visive: ogni output resta fedele al brand."
+            },
+            {
+              "title": "Un ROI che puoi dimostrare",
+              "desc": "Le analisi integrate collegano i contenuti a engagement, lead e pipeline."
+            }
+          ],
+          "painPoints": [
+            "La tua agenzia impiega due settimane per una campagna e la fattura come se ci avesse messo due mesi.",
+            "La voce del brand cambia da una linea di prodotto all'altra, perché ogni canale lo gestisce un freelance diverso.",
+            "Chi guida il marketing non sa dire quali contenuti muovono davvero la pipeline."
+          ],
+          "proofQuote": {
+            "quote": "Abbiamo sostituito due retainer e un'assunzione interna con The Agentcy. Più output, meno costi, e il management se n'è accorto.",
+            "author": "Hannah L.",
+            "role": "Head of Brand, SaaS Series B"
+          }
+        },
+        "agencies": {
+          "tagline": "Gestisci tutti i clienti, senza il caos.",
+          "intro": "Basta affogare tra thread di approvazione e notifiche Slack. The Agentcy è il sistema operativo multi-cliente che le agenzie usano per consegnare di più ai clienti in meno tempo.",
+          "benefits": [
+            {
+              "title": "Workspace white-label",
+              "desc": "Ogni cliente ha un ambiente con il suo brand, e il tuo nome sulla porta."
+            },
+            {
+              "title": "Dashboard multi-cliente",
+              "desc": "Ogni account, ogni scadenza e ogni approvazione in un'unica vista."
+            },
+            {
+              "title": "Approvazioni semplificate",
+              "desc": "Flussi di revisione e feedback integrati al posto di infinite catene di email."
+            }
+          ],
+          "painPoints": [
+            "I margini sono schiacciati, perché ogni nuovo cliente porta nuovi strumenti, persone e canali Slack.",
+            "Le approvazioni sono sparse tra email, Loom, Notion e un gruppo WhatsApp che nessuno ammette di controllare.",
+            "I creativi junior passano la giornata in attività ripetitive invece che sulla strategia per cui i clienti pagano davvero."
+          ],
+          "proofQuote": {
+            "quote": "Abbiamo acquisito quattro nuovi clienti senza assumere. The Agentcy è la leva che inseriamo nei preventivi da anni.",
+            "author": "Tomás A.",
+            "role": "Fondatore, Lighthouse Studio"
+          }
+        },
+        "influencers": {
+          "tagline": "Meno tempo a creare, più tempo a interagire.",
+          "intro": "Il brand sei tu. Il tuo pubblico si aspetta te, non una fabbrica di contenuti. The Agentcy si occupa dei volumi, così la tua voce resta al centro.",
+          "benefits": [
+            {
+              "title": "Contenuti al passo con i trend",
+              "desc": "Segnali in tempo reale ti dicono cosa funziona nella tua nicchia prima che se ne accorgano tutti."
+            },
+            {
+              "title": "Engagement automatizzato",
+              "desc": "Risposte intelligenti che suonano come te e non si perdono un commento importante."
+            },
+            {
+              "title": "Pronto per le sponsorizzazioni",
+              "desc": "Listini e presentazioni di campagna puliti che chiudono gli accordi con i brand più in fretta."
+            }
+          ],
+          "painPoints": [
+            "Gli accordi con i brand si bloccano perché non riesci a preparare una presentazione in 24 ore.",
+            "Commenti e DM si accumulano più velocemente di quanto riesci a rispondere, e l'engagement cala in silenzio.",
+            "Bruci i weekend a scrivere i copioni dei Reel invece di esserci per il pubblico che ti paga le bollette."
+          ],
+          "proofQuote": {
+            "quote": "Il mese scorso ho chiuso tre accordi con brand grazie a presentazioni che The Agentcy ha creato in meno di cinque minuti ciascuna.",
+            "author": "Aria N.",
+            "role": "Beauty creator, 1,1M follower"
+          }
+        },
+        "adhd-creators": {
+          "tagline": "Creare contenuti senza attriti, per menti con ADHD.",
+          "intro": "Costruito attorno a come funziona davvero una mente con ADHD: cattura l'ispirazione nel momento in cui arriva, raggruppa le attività quando sei in iperfocus e lascia a The Agentcy il peso delle funzioni esecutive.",
+          "benefits": [
+            {
+              "title": "Un flusso senza distrazioni",
+              "desc": "Un'interfaccia calma e focalizzata su una cosa alla volta. Cambi contesto solo quando lo scegli tu."
+            },
+            {
+              "title": "Programmazione visiva",
+              "desc": "Tutto il mese con un colpo d'occhio: niente fogli di calcolo, niente calcoli a mente."
+            },
+            {
+              "title": "Uno stratega AI che lavora al tuo fianco",
+              "desc": "Un compagno sempre presente che spezza le attività in passi fattibili e ti tiene in movimento."
+            }
+          ],
+          "painPoints": [
+            "Hai 47 idee geniali nell'app delle note e nessuna è mai stata pubblicata.",
+            "Ogni strumento esistente è un muro di pulsanti che ti paralizza prima ancora di iniziare.",
+            "L'iperfocus arriva all'una di notte e va sprecato perché il flusso di lavoro ha troppi passaggi."
+          ],
+          "proofQuote": {
+            "quote": "Per la prima volta da anni finisco quello che inizio. The Agentcy tiene i passaggi, così il mio cervello resta nel flow.",
+            "author": "Jordan M.",
+            "role": "Creator ed educatore con ADHD"
+          }
+        },
+        "digital-nomads": {
+          "tagline": "Crea ovunque. Pubblica dappertutto.",
+          "intro": "Che tu stia postando da un coworking a Lisbona o da una spiaggia a Bali, The Agentcy tiene vivo il tuo pubblico secondo i suoi orari, non i tuoi.",
+          "benefits": [
+            {
+              "title": "Un flusso di lavoro nativo cloud",
+              "desc": "Riprendi esattamente da dove avevi lasciato, su qualsiasi dispositivo e qualsiasi rete."
+            },
+            {
+              "title": "Programmazione che tiene conto dei fusi orari",
+              "desc": "I post escono quando il tuo pubblico è sveglio, non quando lo sei tu."
+            },
+            {
+              "title": "Bozze offline",
+              "desc": "Annota le idee anche senza campo e sincronizza quando torni online."
+            }
+          ],
+          "painPoints": [
+            "Il tuo pubblico dorme quando tu sei sveglio, e il tuo engagement lo dimostra.",
+            "Ogni laptop che compri finisce con una versione diversa dello stesso documento Notion.",
+            "Con un wifi ballerino, il post lasciato a metà martedì diventa un post mai finito entro domenica."
+          ],
+          "proofQuote": {
+            "quote": "Il mese scorso ho pubblicato da tre continenti e il mio pubblico non si è accorto che ero in viaggio. Era proprio l'obiettivo.",
+            "author": "Lina T.",
+            "role": "Travel creator e founder da remoto"
+          }
+        },
+        "thought-leaders": {
+          "tagline": "Trasforma la tua esperienza in un motore editoriale.",
+          "intro": "Le tue idee meritano più di un tweet isolato. The Agentcy trasforma il pensiero long-form — keynote, articoli, interviste — in una presenza costante che costruisce la tua autorevolezza.",
+          "benefits": [
+            {
+              "title": "Dal long-form ai social",
+              "desc": "Un keynote diventa in automatico una settimana di post, thread e clip."
+            },
+            {
+              "title": "Framework di autorevolezza",
+              "desc": "Strategie pilastro-e-cluster che ti affermano come la voce di riferimento nel tuo settore."
+            },
+            {
+              "title": "Supporto per i tuoi interventi",
+              "desc": "Contenuti di recap degli eventi che trasformano ogni intervento in un volano."
+            }
+          ],
+          "painPoints": [
+            "Tieni un keynote di 60 minuti che tre settimane dopo vive in un link YouTube dimenticato.",
+            "Ogni articolo richiede sei ore di scrittura e riceve una sola condivisione su LinkedIn: la tua.",
+            "Colleghi con metà della tua esperienza ricevono il doppio delle richieste, perché pubblicano."
+          ],
+          "proofQuote": {
+            "quote": "Un solo talk ora produce sei settimane di contenuti. Gli inviti a parlare sono triplicati in un trimestre.",
+            "author": "Dr. Eli Wren",
+            "role": "Autore e keynote speaker"
+          }
+        },
+        "neurodivergent-creators": {
+          "tagline": "Strumenti che si adattano a come funziona il tuo cervello.",
+          "intro": "Ogni cervello è diverso. The Agentcy è la prima piattaforma di contenuti progettata da zero per creator neurodivergenti: autismo, dislessia, disprassia, ADHD e oltre.",
+          "benefits": [
+            {
+              "title": "Interfaccia personalizzabile",
+              "desc": "Regola densità, animazioni, contrasto e font su ciò che ti aiuta a concentrarti."
+            },
+            {
+              "title": "Meno carico cognitivo",
+              "desc": "Impostazioni predefinite intelligenti prendono le decisioni, così resti nel flusso creativo."
+            },
+            {
+              "title": "Aiuto nel riconoscere gli schemi",
+              "desc": "Un'AI che coglie le incongruenze e le lacune che al tuo cervello potrebbero sfuggire."
+            }
+          ],
+          "painPoints": [
+            "Gli strumenti di contenuto tradizionali presuppongono un cervello che lavora per passi lineari e neurotipici. Il tuo no.",
+            "Il sovraccarico sensoriale delle interfacce affollate ti toglie l'energia che ti serviva per creare.",
+            "Gli accorgimenti di cui hai bisogno stanno in estensioni del browser e trucchi personali, non nel prodotto."
+          ],
+          "proofQuote": {
+            "quote": "È il primo strumento per contenuti che non mi è sembrato di dover combattere. Interfaccia calma, risultati veri.",
+            "author": "Sam O.",
+            "role": "Scrittore ed educatore autistico"
+          }
+        }
+      }
+    },
+    "features": {
+      "groups": {
+        "contentCreation": "Creazione di contenuti",
+        "publishingScheduling": "Pubblicazione e programmazione",
+        "aiIntelligence": "AI e intelligence",
+        "managementCollaboration": "Gestione e collaborazione",
+        "creativeStudio": "Studio creativo"
+      },
+      "items": {
+        "ai-content-calendar": {
+          "label": "Calendario editoriale AI",
+          "desc": "Pianifica, programma e crea settimane di contenuti in pochi minuti."
+        },
+        "content-generator": {
+          "label": "Generatore di contenuti",
+          "desc": "Contenuti social coinvolgenti e in linea con il brand, in pochi secondi."
+        },
+        "threadsshot": {
+          "label": "ThreadsShot",
+          "desc": "Trasforma i tuoi post di Threads in immagini belle da condividere."
+        },
+        "carousel-generator": {
+          "label": "Generatore di caroselli",
+          "desc": "Caroselli professionali e coinvolgenti per i social."
+        },
+        "post-enhancer": {
+          "label": "Post Enhancer",
+          "desc": "Migliora automaticamente i tuoi post per avere più engagement."
+        },
+        "cross-posting": {
+          "label": "Cross-posting",
+          "desc": "Crea una volta, pubblica ovunque, senza saltare da una scheda all'altra."
+        },
+        "optimal-time": {
+          "label": "Orario ottimale",
+          "desc": "Pubblica nel momento perfetto per il massimo engagement."
+        },
+        "bulk-scheduling": {
+          "label": "Programmazione in blocco",
+          "desc": "Programma più post insieme e risparmia ore."
+        },
+        "recurring-posts": {
+          "label": "Post ricorrenti",
+          "desc": "Automatizza i contenuti periodici con una programmazione intelligente."
+        },
+        "auto-scheduling": {
+          "label": "Programmazione automatica",
+          "desc": "Lascia che l'AI scelga gli orari migliori per i tuoi post."
+        },
+        "ask-the-agentcy": {
+          "label": "Chiedi a The Agentcy",
+          "desc": "Il tuo content strategist sempre attivo, ossessionato dalla crescita."
+        },
+        "ai-insights": {
+          "label": "Insight e analisi AI",
+          "desc": "Capisci a fondo come rendono i tuoi contenuti."
+        },
+        "smart-tag": {
+          "label": "Smart Tag",
+          "desc": "Categorizza in automatico e aumenta la reach con tag basati sull'AI."
+        },
+        "trend-signals": {
+          "label": "Trend Signals",
+          "desc": "Resta un passo avanti con insight in tempo reale sui temi di tendenza."
+        },
+        "capture-essence": {
+          "label": "Capture Essence",
+          "desc": "Estrai il messaggio chiave da qualsiasi contenuto per i post social."
+        },
+        "media-library": {
+          "label": "Libreria media",
+          "desc": "Organizza e ritrova tutti i tuoi contenuti visivi in un unico posto."
+        },
+        "post-templates": {
+          "label": "Template di post",
+          "desc": "Crea contenuti coerenti con template personalizzabili."
+        },
+        "post-review": {
+          "label": "Revisione dei post",
+          "desc": "Semplifica l'approvazione dei contenuti con flussi di revisione intelligenti."
+        },
+        "auto-replies": {
+          "label": "Risposte automatiche",
+          "desc": "Non far mai aspettare il tuo pubblico, con risposte automatiche intelligenti."
+        },
+        "post-suggestions": {
+          "label": "Suggerimenti di post",
+          "desc": "Non restare mai senza idee, con suggerimenti basati sull'AI."
+        },
+        "video-storyboards": {
+          "label": "Video e storyboard",
+          "desc": "Dal copione al video finito: più scene, con voce e musica."
+        },
+        "synthetic-influencers": {
+          "label": "Influencer sintetici",
+          "desc": "I tuoi creator AI in linea con il brand, per contenuti sempre attivi."
+        },
+        "market-intelligence": {
+          "label": "Market intelligence",
+          "desc": "Un brief quotidiano sul tuo mercato, con ricerca web in tempo reale."
+        },
+        "interactive-prototypes": {
+          "label": "Prototipi interattivi",
+          "desc": "Prototipi cliccabili e video demo partendo da una frase."
+        },
+        "brand-websites": {
+          "label": "Siti di brand e articoli",
+          "desc": "Un sito di brand vivo che si aggiorna da solo."
+        }
+      },
+      "pages": {
+        "ai-content-calendar": {
+          "tagline": "Un calendario che si riempie da solo.",
+          "intro": "Indica i tuoi obiettivi, la tua voce e le tue piattaforme. The Agentcy pianifica, scrive e mette in coda settimane di contenuti in automatico: tu approvi e basta.",
+          "benefits": [
+            {
+              "title": "Vista mensile drag-and-drop",
+              "desc": "Ogni brand, canale e post in un unico posto. Riordini con un gesto."
+            },
+            {
+              "title": "L'AI riempie i vuoti",
+              "desc": "Gli slot vuoti si riempiono di bozze in linea con il brand, basate sulla tua strategia."
+            },
+            {
+              "title": "Blocca e dimentica",
+              "desc": "I post approvati restano bloccati. Tutto il resto è modificabile fino alla pubblicazione."
+            }
+          ],
+          "painPoints": [
+            "Arriva domenica sera e il calendario è ancora vuoto.",
+            "Avevi promesso tre post a settimana e ne hai pubblicato uno.",
+            "Ogni piattaforma ha il suo programmatore, e nessuno parla con gli altri."
+          ],
+          "proofQuote": {
+            "quote": "Sono passata da un calendario vuoto ogni domenica a un mese di post pronti da pubblicare già il venerdì.",
+            "author": "Renata B.",
+            "role": "Creator indipendente, nicchia fitness"
+          }
+        },
+        "content-generator": {
+          "tagline": "Testi in linea con il brand in pochi secondi, non in ore.",
+          "intro": "Descrivi cosa ti serve, oppure incolla un link, una trascrizione o un articolo. Ottieni bozze in linea con il brand per ogni piattaforma, senza riscrivere da zero.",
+          "benefits": [
+            {
+              "title": "Bozze addestrate sulla tua voce",
+              "desc": "Addestrato sui tuoi post passati: ogni output suona come te, non come un'AI generica."
+            },
+            {
+              "title": "Varianti per ogni piattaforma",
+              "desc": "Un brief, varianti ottimizzate per X, Instagram, LinkedIn, TikTok e altro."
+            },
+            {
+              "title": "Rigenera con un clic",
+              "desc": "Non ti convince? Cambia angolazione, tono o lunghezza e rigenera all'istante."
+            }
+          ],
+          "painPoints": [
+            "I testi di ChatGPT sembrano comunicati stampa che nessuno ha chiesto.",
+            "Riscrivere le bozze dell'AI richiede più tempo che scrivere il post da zero.",
+            "La voce del brand si sposta un po' di più a ogni freelance o strumento nuovo."
+          ],
+          "proofQuote": {
+            "quote": "È il primo generatore AI che suona davvero come me. Prima di pubblicare riscrivo sì e no il 10%.",
+            "author": "Felix O.",
+            "role": "Founder indipendente"
+          }
+        },
+        "threadsshot": {
+          "tagline": "Trasforma i post di Threads in immagini da condividere.",
+          "intro": "I tuoi migliori Threads meritano una vita più lunga. Genera in automatico screenshot dei post impaginati con cura, pronti da condividere su Instagram, X e LinkedIn.",
+          "benefits": [
+            {
+              "title": "Template curati al pixel",
+              "desc": "Disegnati da persone, generati dall'AI: mai più screenshot sgranati."
+            },
+            {
+              "title": "Palette del brand preimpostate",
+              "desc": "Scegli la tua palette una volta sola. Ogni export rispetta la tua identità visiva."
+            },
+            {
+              "title": "Cross-post con un clic",
+              "desc": "Invia direttamente a Instagram, X o LinkedIn senza uscire dalla coda."
+            }
+          ],
+          "painPoints": [
+            "I tuoi migliori Threads muoiono dodici ore dopo la pubblicazione.",
+            "Gli screenshot fatti a mano sembrano amatoriali accanto ai post curati.",
+            "Non c'è un modo semplice per dare una seconda vita a un ottimo post di Threads."
+          ],
+          "proofQuote": {
+            "quote": "I miei migliori Threads ora diventano virali su Instagram una settimana dopo. Stesso contenuto, tre piattaforme.",
+            "author": "Cassie P.",
+            "role": "Creator, 180K follower"
+          }
+        },
+        "carousel-generator": {
+          "tagline": "Caroselli che si fanno davvero scorrere.",
+          "intro": "Scrivi un argomento e ottieni un carosello di più slide già impaginato — gancio, corpo, chiusura — pensato per convertire. Modifica qualsiasi slide prima di pubblicare.",
+          "benefits": [
+            {
+              "title": "Template con ganci collaudati",
+              "desc": "La prima slide è costruita su ganci collaudati che si guadagnano il secondo swipe."
+            },
+            {
+              "title": "Impaginazione automatica",
+              "desc": "Testo, immagini e ritmo li gestiamo noi. Niente lotte con le griglie."
+            },
+            {
+              "title": "Stile del brand all'istante",
+              "desc": "Font e colori del brand applicati a ogni slide, senza ritocchi a mano."
+            }
+          ],
+          "painPoints": [
+            "Costruire un solo carosello su Canva ti mangia un'ora.",
+            "La seconda slide ha il tasso di abbandono più alto, e non sai perché.",
+            "Salti del tutto i caroselli perché la rifinitura grafica richiede troppo tempo."
+          ],
+          "proofQuote": {
+            "quote": "I caroselli erano il mio principale collo di bottiglia. Ora ne pubblico tre a settimana senza pensarci.",
+            "author": "Marcus T.",
+            "role": "Creator B2B, LinkedIn"
+          }
+        },
+        "post-enhancer": {
+          "tagline": "Un clic. Un post migliore. Più reach.",
+          "intro": "La tua bozza è buona. Lascia che The Agentcy la renda più incisiva — ganci migliori, testo più asciutto, call to action più efficaci — senza perdere la tua voce.",
+          "benefits": [
+            {
+              "title": "Suggerimenti A/B per il gancio",
+              "desc": "Tre aperture riscritte, ordinate per engagement previsto."
+            },
+            {
+              "title": "Più asciutto, non più piatto",
+              "desc": "Toglie il superfluo mantenendo ritmo e tono della tua voce."
+            },
+            {
+              "title": "Ottimizzatore di CTA",
+              "desc": "Suggerisce richieste più forti in base a ciò che funziona nella tua nicchia questa settimana."
+            }
+          ],
+          "painPoints": [
+            "Le bozze escono senza rifinitura perché hai finito il tempo.",
+            "Ganci deboli seppelliscono le tue idee migliori dopo un solo scroll.",
+            "L'engagement oscilla parecchio da un post all'altro e non capisci perché."
+          ],
+          "proofQuote": {
+            "quote": "Engagement medio dei post +38% in due settimane. Stessi post, più affilati.",
+            "author": "Idris K.",
+            "role": "Autore di newsletter"
+          }
+        },
+        "cross-posting": {
+          "tagline": "Scrivi una volta. Pubblica ovunque.",
+          "intro": "Un post si adatta in automatico a ogni piattaforma: limiti di caratteri, stile degli hashtag, formati delle immagini, anteprime dei link. Niente salti tra schede. Niente copia-incolla.",
+          "benefits": [
+            {
+              "title": "Varianti per piattaforma",
+              "desc": "Ogni piattaforma riceve il formato, la lunghezza e il tono giusti, in automatico."
+            },
+            {
+              "title": "Ridimensionamento automatico",
+              "desc": "Verticale, quadrato, orizzontale: tutto generato da un'unica risorsa."
+            },
+            {
+              "title": "Anteprima dei link",
+              "desc": "Vedi esattamente come apparirà ogni link prima di pubblicare."
+            }
+          ],
+          "painPoints": [
+            "Cinque schede, cinque strumenti, lo stesso post incollato cinque volte.",
+            "Gli hashtag si rompono sulle piattaforme che li gestiscono in modo diverso.",
+            "Le immagini vengono tagliate in modi che noti solo dopo aver pubblicato."
+          ],
+          "proofQuote": {
+            "quote": "Pubblico su sette piattaforme nel tempo che prima mi serviva per una.",
+            "author": "Sara M.",
+            "role": "Marketing lead, startup Series A"
+          }
+        },
+        "optimal-time": {
+          "tagline": "Pubblica quando il tuo pubblico è davvero sveglio.",
+          "intro": "The Agentcy impara quando i tuoi follower interagiscono e mette in coda ogni post nel momento di massimo impatto: in automatico, per piattaforma e per pubblico.",
+          "benefits": [
+            {
+              "title": "Orari per pubblico",
+              "desc": "Pubblici diversi, finestre di picco diverse, gestite separatamente."
+            },
+            {
+              "title": "Ottimizzazione per piattaforma",
+              "desc": "Il tuo pubblico su X e quello su LinkedIn non sono le stesse persone."
+            },
+            {
+              "title": "Rimessa in coda automatica",
+              "desc": "Hai perso uno slot? Il miglior orario successivo viene fissato in automatico."
+            }
+          ],
+          "painPoints": [
+            "Pubblichi quando hai tempo, cioè quando il tuo pubblico dorme.",
+            "La reach varia dell'80% da un post all'altro e non sai spiegarlo.",
+            "Le finestre di picco passano mentre stai ancora scegliendo la foto giusta."
+          ],
+          "proofQuote": {
+            "quote": "Stesso contenuto, reach raddoppiata. L'unica cosa cambiata è l'orario di pubblicazione.",
+            "author": "Kenji A.",
+            "role": "Divulgatore tech"
+          }
+        },
+        "bulk-scheduling": {
+          "tagline": "Un mese di post in coda in quindici minuti.",
+          "intro": "Carica, incolla o genera decine di post in una volta. Distribuiscili sul calendario con un solo trascinamento e lascia che The Agentcy li pubblichi al momento giusto.",
+          "benefits": [
+            {
+              "title": "Import da CSV e incolla",
+              "desc": "Trascina un foglio, un documento o un muro di testo: al resto pensiamo noi."
+            },
+            {
+              "title": "Programmazione a griglia",
+              "desc": "Distribuisci i post su giorni e piattaforme con un solo gesto."
+            },
+            {
+              "title": "Salva come sequenza ricorrente",
+              "desc": "Trasforma un ottimo blocco di post in un template mensile riutilizzabile."
+            }
+          ],
+          "painPoints": [
+            "Programmare un post alla volta ti brucia ore ogni settimana.",
+            "Ogni venerdì il calendario ha dei buchi perché hai finito le energie.",
+            "Le giornate dedicate alla produzione in blocco non arrivano mai: c'è sempre qualcosa di più urgente."
+          ],
+          "proofQuote": {
+            "quote": "Le domeniche sono tornate mie. Preparo un mese in una sola sessione.",
+            "author": "Naomi V.",
+            "role": "Coach e creator"
+          }
+        },
+        "recurring-posts": {
+          "tagline": "Contenuti evergreen in automatico.",
+          "intro": "I tuoi post migliori meritano una seconda vita, e anche una terza. Falli tornare con una programmazione intelligente che rispetta il pubblico ed evita le ripetizioni.",
+          "benefits": [
+            {
+              "title": "Cadenza per piattaforma",
+              "desc": "Ripubblica ogni mese su LinkedIn e ogni settimana su X, senza scrivere tu le regole."
+            },
+            {
+              "title": "Riscrittura automatica per variare",
+              "desc": "Ogni riproposta ha un gancio nuovo, così non sembra una ripubblicazione."
+            },
+            {
+              "title": "Pausa durante i lanci",
+              "desc": "Le code ricorrenti si fermano da sole quando hai una campagna in corso."
+            }
+          ],
+          "painPoints": [
+            "I tuoi post migliori hanno una sola occasione di reach, poi spariscono.",
+            "Ripubblicare a mano sembra pigro, e il tuo pubblico se ne accorge.",
+            "Non c'è un sistema per sapere quali contenuti evergreen hai già riusato e quando."
+          ],
+          "proofQuote": {
+            "quote": "Metà delle mie impression ora arriva da post che ho scritto sei mesi fa.",
+            "author": "Theo R.",
+            "role": "Founder SaaS indipendente"
+          }
+        },
+        "auto-scheduling": {
+          "tagline": "L'AI sceglie lo slot. Tu resti nel flow.",
+          "intro": "Salta il balletto del calendario. Segna un post come pronto e la programmazione automatica lo colloca nel prossimo slot ad alto impatto, bilanciando piattaforme e orari.",
+          "benefits": [
+            {
+              "title": "Riempimento intelligente degli slot",
+              "desc": "I vuoti nel calendario si riempiono in automatico con i contenuti più adatti."
+            },
+            {
+              "title": "Equilibrio tra piattaforme",
+              "desc": "Niente più tre Reel ammassati nello stesso pomeriggio per sbaglio."
+            },
+            {
+              "title": "Attento ai fusi orari",
+              "desc": "Se il tuo pubblico è in tre regioni, la tua coda le rispetta."
+            }
+          ],
+          "painPoints": [
+            "Passi più tempo a scegliere gli orari che a scrivere i post.",
+            "I lanci si sovrappongono ai contenuti regolari e li indeboliscono entrambi.",
+            "La stanchezza da Tetris del calendario è reale e uccide lo slancio creativo."
+          ],
+          "proofQuote": {
+            "quote": "Ho smesso di pensare alla programmazione. The Agentcy ha azzeccato ogni volta.",
+            "author": "Vera L.",
+            "role": "Direttrice marketing, cliente di un'agenzia"
+          }
+        },
+        "ask-the-agentcy": {
+          "tagline": "Il tuo content strategist sempre attivo.",
+          "intro": "Uno stratega AI addestrato sul tuo account, sul tuo pubblico e sulla tua nicchia. Chiedigli qualsiasi cosa: cosa pubblicare, perché un post è andato male, come raggiungere il prossimo traguardo.",
+          "benefits": [
+            {
+              "title": "Domande e risposte sulle performance",
+              "desc": "Chiedi perché un post ha funzionato o cosa pubblicare dopo: ricevi risposte precise e motivate."
+            },
+            {
+              "title": "Consigli calati sulla tua nicchia",
+              "desc": "Conosce il tuo settore, i tuoi concorrenti e ciò che funziona questa settimana."
+            },
+            {
+              "title": "Spinte proattive alla crescita",
+              "desc": "Ti segnala le opportunità prima ancora che tu pensi di chiederle."
+            }
+          ],
+          "painPoints": [
+            "Le decisioni sui contenuti si prendono a istinto, perché non c'è nessuno a cui chiedere.",
+            "È mezzanotte e hai una domanda a cui solo uno stratega saprebbe rispondere.",
+            "Non c'è una strada chiara da dove sei oggi al tuo prossimo traguardo."
+          ],
+          "proofQuote": {
+            "quote": "È come avere un head of content su Slack 24 ore su 24. Senza lo stipendio.",
+            "author": "Damon H.",
+            "role": "Fondatore di una newsletter indipendente"
+          }
+        },
+        "ai-insights": {
+          "tagline": "Analisi che ti dicono cosa fare dopo.",
+          "intro": "I numeri senza azioni sono solo rumore. The Agentcy legge le tue performance e ti dice esattamente quali formati, orari e argomenti meritano più attenzione.",
+          "benefits": [
+            {
+              "title": "Vista unificata tra piattaforme",
+              "desc": "Ogni account e ogni metrica in un'unica dashboard, senza più saltare tra le schede."
+            },
+            {
+              "title": "Riconoscimento degli schemi",
+              "desc": "Fa emergere ciò che sposta davvero i risultati, non solo ciò che fa rumore."
+            },
+            {
+              "title": "Brief d'azione settimanali",
+              "desc": "Tre mosse concrete per questa settimana, ordinate per impatto previsto."
+            }
+          ],
+          "painPoints": [
+            "La tua dashboard è piena di numeri e vuota di direzione.",
+            "Le metriche vivono in cinque strumenti diversi, e nessuno concorda con gli altri.",
+            "Leggi le analisi ogni settimana e il tuo modo di lavorare non cambia mai."
+          ],
+          "proofQuote": {
+            "quote": "Il primo strumento di analisi che apro davvero più di una volta a settimana.",
+            "author": "Rita C.",
+            "role": "Brand marketer"
+          }
+        },
+        "smart-tag": {
+          "tagline": "Tag che fanno crescere la reach, non i tentativi a vuoto.",
+          "intro": "The Agentcy tagga in automatico ogni post con gli hashtag, le parole chiave e gli argomenti che hanno più probabilità di farlo emergere. Basta con le liste stantie del 2022.",
+          "benefits": [
+            {
+              "title": "Ottimizzazione per piattaforma",
+              "desc": "Strategie di tag diverse per X, Instagram, LinkedIn e TikTok."
+            },
+            {
+              "title": "Rilevamento dei tag esauriti",
+              "desc": "Ti avvisa quando un tag ha smesso di portare reach, così puoi rinnovarlo."
+            },
+            {
+              "title": "Scoperta guidata dai concorrenti",
+              "desc": "Fa emergere i tag degli account che vincono nella tua nicchia questo mese."
+            }
+          ],
+          "painPoints": [
+            "Copi e incolli la stessa lista di hashtag che hai salvato nel 2022.",
+            "Non hai idea di quali di quei tag servano davvero a qualcosa.",
+            "La reach si è fermata e i tag sono una scatola nera."
+          ],
+          "proofQuote": {
+            "quote": "Visibilità +60%. Non scelgo un hashtag a mano da mesi.",
+            "author": "Nuria F.",
+            "role": "Lifestyle creator"
+          }
+        },
+        "trend-signals": {
+          "tagline": "Cogli i trend prima che raggiungano il picco.",
+          "intro": "Segnali in tempo reale dalla tua nicchia, prima che l'argomento si saturi. Ricevi angolazioni già scritte con la tua voce, pronte da pubblicare in pochi minuti.",
+          "benefits": [
+            {
+              "title": "Rilevamento specifico per nicchia",
+              "desc": "I trend che contano nel tuo settore, non il feed globale generico."
+            },
+            {
+              "title": "Angolazioni scritte dall'AI",
+              "desc": "Tre spunti per ogni trend, ognuno con la tua voce, pronti da rifinire."
+            },
+            {
+              "title": "Avvisi di saturazione",
+              "desc": "Ti avvisiamo prima che tutti pubblichino la stessa opinione del momento."
+            }
+          ],
+          "painPoints": [
+            "Cogli i trend con tre giorni di ritardo, quando il post avrebbe funzionato al meglio il primo giorno.",
+            "Tutti nella tua nicchia pubblicano la stessa identica opinione e la tua finisce sepolta.",
+            "Cercare i trend a mano ti mangia la mattinata prima di scrivere una sola parola."
+          ],
+          "proofQuote": {
+            "quote": "Tre dei miei post migliori di questo trimestre sono nati direttamente da un avviso di Trend Signals.",
+            "author": "Pablo S.",
+            "role": "Creator crypto e tech"
+          }
+        },
+        "capture-essence": {
+          "tagline": "Da qualsiasi fonte a contenuti social, all'istante.",
+          "intro": "Inserisci un link, una trascrizione, un PDF o un video. The Agentcy estrae le idee chiave e le trasforma in una settimana di post, thread e clip.",
+          "benefits": [
+            {
+              "title": "Funziona con qualsiasi fonte",
+              "desc": "Articoli, podcast, video, PDF, persino appunti grezzi: li elaboriamo tutti."
+            },
+            {
+              "title": "Output in più formati",
+              "desc": "Una fonte diventa post, thread, caroselli e clip brevi."
+            },
+            {
+              "title": "La tua voce resta intatta",
+              "desc": "I risultati suonano come te, non come l'autore del materiale di partenza."
+            }
+          ],
+          "painPoints": [
+            "I contenuti long-form muoiono dopo un post social e un link dimenticato.",
+            "Tagliare a mano un podcast per i social richiede ore per ogni episodio.",
+            "Le intuizioni migliori restano sepolte in trascrizioni che nessuno rilegge."
+          ],
+          "proofQuote": {
+            "quote": "Un podcast diventa 24 post in cinque minuti. Registro di più, scrivo di meno.",
+            "author": "Gigi A.",
+            "role": "Host di un podcast"
+          }
+        },
+        "media-library": {
+          "tagline": "Ogni risorsa, finalmente reperibile.",
+          "intro": "Tutte le tue foto, i video, i loghi e le risorse del brand in un unico archivio ricercabile: taggati in automatico, con cronologia delle versioni e pronti da usare in qualsiasi post.",
+          "benefits": [
+            {
+              "title": "Tag automatici con l'AI",
+              "desc": "Cerca per chi c'è nella foto, cosa succede o a quale campagna appartiene."
+            },
+            {
+              "title": "Blocchi riutilizzabili",
+              "desc": "Salva loghi, intro, outro e sticker come blocchi da inserire con un clic."
+            },
+            {
+              "title": "Cronologia delle versioni",
+              "desc": "Vedi ogni modifica, ripristina qualsiasi versione e condividi un link pulito con chi deve vederlo."
+            }
+          ],
+          "painPoints": [
+            "Le risorse sono sparse tra Drive, Dropbox, Figma e i DM di qualcuno.",
+            "Non trovi quel file del logo quando la scadenza è tra 30 minuti.",
+            "La stessa foto viene usata due volte in una settimana perché nessuno aveva visto la prima."
+          ],
+          "proofQuote": {
+            "quote": "Sono tre mesi che non mi chiedo più dove ho salvato qualcosa.",
+            "author": "Owen J.",
+            "role": "Brand designer interno"
+          }
+        },
+        "post-templates": {
+          "tagline": "Il tuo post migliore, sempre a portata di mano.",
+          "intro": "Salva come template qualsiasi post vincente. Riusa la struttura, cambia il contenuto e mantieni la tua voce, senza ripartire ogni volta da zero.",
+          "benefits": [
+            {
+              "title": "Riutilizzo con un clic",
+              "desc": "Apri un template, inserisci la nuova angolazione e pubblica: tre minuti in tutto."
+            },
+            {
+              "title": "Voce del brand inclusa",
+              "desc": "I template rispettano in automatico il tuo tono, il tuo lessico e il tuo stile di CTA."
+            },
+            {
+              "title": "Libreria condivisa con il team",
+              "desc": "Standardizza ciò che funziona in tutto il team o per tutti i clienti."
+            }
+          ],
+          "painPoints": [
+            "Ogni lunedì ricostruisci da zero lo stesso layout di post.",
+            "Le persone del team scrivono in stili leggermente diversi e il brand si sfilaccia.",
+            "La libreria di template che avevi iniziato su Notion è vecchia di due mesi."
+          ],
+          "proofQuote": {
+            "quote": "Ci siamo standardizzati su 12 template. L'output è triplicato e il brand finalmente sembra coerente.",
+            "author": "Imani D.",
+            "role": "Head of social, brand DTC"
+          }
+        },
+        "post-review": {
+          "tagline": "Approvazioni senza catene di email.",
+          "intro": "Un flusso di revisione pulito, con commenti, feedback in thread e approvazioni con un clic. Chi deve approvare vede esattamente cosa andrà online, su ogni piattaforma.",
+          "benefits": [
+            {
+              "title": "Anteprime per piattaforma",
+              "desc": "Quello che vede il cliente è quello che viene pubblicato: niente più «aspetta, non era così»."
+            },
+            {
+              "title": "Commenti in thread",
+              "desc": "Il feedback resta sul post, non in un thread Slack che poi non ritrovi."
+            },
+            {
+              "title": "Link da condividere con i clienti",
+              "desc": "Condividi un'anteprima pulita senza dare l'accesso all'account."
+            }
+          ],
+          "painPoints": [
+            "I thread di approvazione sono sparsi tra email, Loom, Notion e un gruppo WhatsApp.",
+            "I clienti rispondono con screenshot, emoji e «puoi farlo risaltare di più?».",
+            "Le revisioni si perdono e va online la versione sbagliata."
+          ],
+          "proofQuote": {
+            "quote": "I cicli di revisione sono passati da tre giorni a tre ore.",
+            "author": "Léa M.",
+            "role": "Account manager, agenzia di contenuti"
+          }
+        },
+        "auto-replies": {
+          "tagline": "Non lasciare mai un commento senza risposta.",
+          "intro": "Risposte generate dall'AI che suonano come te, pronte da inviare con un tocco. Mantieni lo slancio su ogni post senza vivere nella scheda dei commenti.",
+          "benefits": [
+            {
+              "title": "Risposte addestrate sulla tua voce",
+              "desc": "Le risposte suggerite rispecchiano il tuo tono: mai più «Grazie!» generici in serie."
+            },
+            {
+              "title": "Invio con un tocco",
+              "desc": "Approvi e pubblichi in un secondo. Smaltisci 50 commenti in meno di cinque minuti."
+            },
+            {
+              "title": "Filtro di spam e troll",
+              "desc": "Il rumore viene filtrato in automatico, così vedi solo ciò che merita il tuo tempo."
+            }
+          ],
+          "painPoints": [
+            "I commenti migliori restano senza risposta per ore e lo slancio si spegne.",
+            "I primi 60 minuti dopo la pubblicazione sono i più importanti, e tu sei in riunione.",
+            "L'obbligo di interagire logora chi crea più in fretta dei contenuti stessi."
+          ],
+          "proofQuote": {
+            "quote": "L'engagement nei commenti è raddoppiato. Rispondo senza bruciarmi le serate.",
+            "author": "Yara N.",
+            "role": "Creator lifestyle e food"
+          }
+        },
+        "post-suggestions": {
+          "tagline": "Mai più davanti a un cursore che lampeggia.",
+          "intro": "Idee per i post personalizzate ogni mattina, basate sulla tua nicchia, sulla tua voce, sul tuo pubblico e su ciò che funziona adesso. Scegli, modifica, pubblica.",
+          "benefits": [
+            {
+              "title": "Digest di idee del mattino",
+              "desc": "Cinque idee fresche e in linea con il brand ti aspettano nella inbox entro le 8."
+            },
+            {
+              "title": "Attento ai trend",
+              "desc": "Suggerimenti legati a ciò che si muove davvero nel tuo settore questa settimana."
+            },
+            {
+              "title": "Sviluppo con un clic",
+              "desc": "Scegli un'idea e ottieni una bozza completa, pronta da rifinire e pubblicare."
+            }
+          ],
+          "painPoints": [
+            "Le idee si esauriscono a metà settimana e la costanza di pubblicazione salta.",
+            "Finisci per pubblicare sempre gli stessi argomenti, e il tuo pubblico se ne accorge.",
+            "Pubblicare per forza uccide la tua voce: ogni post comincia a sembrare una recita."
+          ],
+          "proofQuote": {
+            "quote": "Apro l'app, scelgo tre idee e pubblico entro pranzo. Pubblicare è tornato a essere un'abitudine.",
+            "author": "Reza T.",
+            "role": "Operatore e creator B2B"
+          }
+        },
+        "video-storyboards": {
+          "tagline": "Dal copione al video finito, in automatico.",
+          "intro": "Trasforma un'idea in uno storyboard di più scene, e poi in un video completo con voce fuori campo e musica. Modifica qualsiasi scena a parole prima del rendering.",
+          "benefits": [
+            {
+              "title": "Storyboard scena per scena",
+              "desc": "Struttura il video in scene che puoi riordinare, riscrivere e reinquadrare."
+            },
+            {
+              "title": "Voce, musica e mixaggio",
+              "desc": "Rendering con narrazione e base musicale: un risultato pronto da pubblicare."
+            },
+            {
+              "title": "Modifica prima del rendering",
+              "desc": "Cambia una scena, una battuta o il ritmo senza ricominciare da capo."
+            }
+          ],
+          "painPoints": [
+            "Un solo video breve significa un brief, un montatore e una settimana di botta e risposta.",
+            "Gli storyboard vivono in slide che nessuno aggiorna una volta iniziata la produzione.",
+            "Ottimi copioni muoiono perché la produzione è troppo lenta e troppo costosa."
+          ],
+          "proofQuote": {
+            "quote": "Abbiamo prodotto un mese di contenuti video in un pomeriggio, voce fuori campo compresa.",
+            "author": "Cleo M.",
+            "role": "Content lead, brand DTC"
+          }
+        },
+        "synthetic-influencers": {
+          "tagline": "I tuoi creator AI, in linea con il brand.",
+          "intro": "Genera influencer sintetici coerenti e in linea con il brand — un personaggio principale e infinite varianti — per contenuti sempre attivi che sembrano fatti da un vero creator.",
+          "benefits": [
+            {
+              "title": "Personaggi coerenti",
+              "desc": "Un personaggio principale più varianti che restano riconoscibili e fedeli al brand."
+            },
+            {
+              "title": "Contenuti sempre attivi",
+              "desc": "Post in stile UGC e scene con portavoce senza shooting né contratti."
+            },
+            {
+              "title": "Addestrati sul tuo brand",
+              "desc": "Costruiti su un modello calibrato sul tuo stile, così ogni output è coerente."
+            }
+          ],
+          "painPoints": [
+            "Gli shooting con i creator sono costosi, lenti e impossibili da mantenere coerenti.",
+            "Ogni video UGC sembra fatto da un brand diverso.",
+            "Ti servono contenuti sempre attivi e i creator non possono muoversi così in fretta."
+          ],
+          "proofQuote": {
+            "quote": "I post del nostro creator sintetico rendono più di metà dei nostri UGC a pagamento, a una frazione del costo.",
+            "author": "Bruno T.",
+            "role": "Performance marketer"
+          }
+        },
+        "market-intelligence": {
+          "tagline": "Un brief quotidiano sul tuo mercato, mentre dormi.",
+          "intro": "Intelligence su concorrenti e mercato quando ti serve, con ricerca web in tempo reale, consegnata come un brief incisivo su cui agire, non come l'ennesimo muro di dashboard.",
+          "benefits": [
+            {
+              "title": "Ricerca web in tempo reale",
+              "desc": "Segnali freschi su concorrenti, categoria e pubblico, raccolti per te."
+            },
+            {
+              "title": "Decisioni, non dashboard",
+              "desc": "Un brief conciso con cosa è cambiato e cosa fare al riguardo."
+            },
+            {
+              "title": "Quando vuoi, o ogni giorno",
+              "desc": "Lancia un brief quando ti serve, o ricevine uno ogni mattina."
+            }
+          ],
+          "painPoints": [
+            "L'analisi della concorrenza è un browser con quaranta schede aperte e nessuna conclusione.",
+            "Quando ti accorgi della mossa di un concorrente, è già vecchia.",
+            "Le tue analisi sono piene di numeri e vuote di «e quindi?»."
+          ],
+          "proofQuote": {
+            "quote": "È la prima cosa che leggo ogni mattina: arrivo sempre sapendo cosa si è mosso.",
+            "author": "Aisha R.",
+            "role": "Founder"
+          }
+        },
+        "interactive-prototypes": {
+          "tagline": "Prototipi cliccabili partendo da una frase.",
+          "intro": "Descrivi un prodotto, una landing page o l'idea di un'app e ottieni un prototipo HTML navigabile da condividere e mostrare, con in più un video demo curato.",
+          "benefits": [
+            {
+              "title": "Navigabili, non statici",
+              "desc": "Veri flussi cliccabili da mettere davanti agli stakeholder."
+            },
+            {
+              "title": "Video demo incluso",
+              "desc": "Trasforma il prototipo in un video demo narrato con un clic."
+            },
+            {
+              "title": "Dall'idea a qualcosa da condividere",
+              "desc": "Da una frase a un link da inviare, in pochi minuti."
+            }
+          ],
+          "painPoints": [
+            "Presentare un'idea significa slide vaghe oppure settimane di design e sviluppo.",
+            "I mockup statici non trasmettono come ci si sente davvero a usare il prodotto.",
+            "Registrare una demo di prodotto decente è un progetto da mezza giornata."
+          ],
+          "proofQuote": {
+            "quote": "Ho preparato una demo cliccabile completa per un pitch nel tempo in cui si raffredda un caffè.",
+            "author": "Noah P.",
+            "role": "Product marketer"
+          }
+        },
+        "brand-websites": {
+          "tagline": "Un sito di brand vivo che si scrive da solo.",
+          "intro": "Crea un sito in linea con il brand e tienilo aggiornato con articoli scritti dall'AI, pubblicato sul tuo sottodominio e con insight su come rende ogni pagina.",
+          "benefits": [
+            {
+              "title": "Un sito in linea con il brand in pochi minuti",
+              "desc": "Sezioni scritte e impaginate secondo il tuo brand, online sul tuo URL."
+            },
+            {
+              "title": "Articoli in automatico",
+              "desc": "Scrivi e pubblica articoli in linea con il brand, e attiva l'autopilota per tenerlo fresco."
+            },
+            {
+              "title": "Scopri cosa funziona",
+              "desc": "Gli insight integrati mostrano quali pagine e articoli fanno davvero la loro parte."
+            }
+          ],
+          "painPoints": [
+            "Il tuo «blog» non viene toccato dal lancio, perché scrivere è una fatica.",
+            "Anche una semplice landing page richiede uno sviluppatore e due settimane di attesa.",
+            "Nessuno sa quali pagine portano davvero risultati."
+          ],
+          "proofQuote": {
+            "quote": "Finalmente il nostro sito si aggiorna da solo: pubblichiamo in una settimana più di quanto facevamo in un trimestre.",
+            "author": "Ivy C.",
+            "role": "Marketing manager"
+          }
+        }
+      }
+    },
+    "events": {
+      "groups": {
+        "discoverPlan": "Scopri e pianifica",
+        "runTheEvent": "Gestisci l'evento",
+        "engageAttendees": "Coinvolgi i partecipanti"
+      },
+      "items": {
+        "event-radar": {
+          "label": "Radar eventi",
+          "desc": "Trova gli eventi a cui vale la pena esserci, scelti per il tuo brand."
+        },
+        "event-plan": {
+          "label": "Piano evento AI",
+          "desc": "Un piano di produzione completo — formato, staff, budget — in pochi minuti."
+        },
+        "production-management": {
+          "label": "Gestione della produzione",
+          "desc": "Location, staff, noleggi e catering, tutto in un unico posto."
+        },
+        "ticketing": {
+          "label": "Biglietti e iscrizioni",
+          "desc": "Tipologie di biglietto, iscrizioni e check-in, direttamente nel tuo CRM."
+        },
+        "event-microsites": {
+          "label": "Microsite per eventi",
+          "desc": "Una pagina evento bella e in linea con il brand, scritta e online in pochi minuti."
+        },
+        "attendee-comms": {
+          "label": "Comunicazioni ai partecipanti",
+          "desc": "Conferme, promemoria e follow-up, segmentati e in linea con il brand."
+        }
+      },
+      "pages": {
+        "event-radar": {
+          "tagline": "Non perderti mai l'evento che fa crescere il tuo brand.",
+          "intro": "The Agentcy cerca le conferenze, i lanci e i momenti a cui vale la pena esserci — in linea con brand, pubblico e obiettivi — e ti consegna una shortlist con le motivazioni.",
+          "benefits": [
+            {
+              "title": "Suggerimenti su misura per il brand",
+              "desc": "Eventi ordinati per affinità con il tuo posizionamento e il tuo pubblico, non un elenco generico."
+            },
+            {
+              "title": "Il «perché» subito",
+              "desc": "Ogni proposta arriva con l'angolazione e l'opportunità, così decidi in fretta."
+            },
+            {
+              "title": "Dal radar al piano con un clic",
+              "desc": "Ti piace? Trasformalo subito in un piano di produzione completo."
+            }
+          ],
+          "painPoints": [
+            "Scopri l'evento perfetto la settimana dopo che è andato sold out.",
+            "Cercare eventi a mano ti mangia una mattinata e ti fa comunque perdere quelli buoni.",
+            "Nessuno si occupa della domanda «a cosa partecipiamo questo trimestre?»."
+          ],
+          "proofQuote": {
+            "quote": "Lo scorso trimestre abbiamo prenotato due eventi che da soli non avremmo mai trovato, ed entrambi hanno portato pipeline.",
+            "author": "Marta L.",
+            "role": "Brand lead, SaaS B2B"
+          }
+        },
+        "event-plan": {
+          "tagline": "Un piano evento completo, scritto in pochi minuti.",
+          "intro": "Descrivi l'evento che vuoi organizzare. The Agentcy propone l'intera produzione — formato, scaletta, staff, voci di budget e tipologie di biglietto — pronta da modificare e approvare.",
+          "benefits": [
+            {
+              "title": "Proposta dall'inizio alla fine",
+              "desc": "Formato, agenda, ruoli, noleggi e catering: una prima bozza completa, non una pagina bianca."
+            },
+            {
+              "title": "Attento al budget",
+              "desc": "Ogni voce arriva con il suo costo, così vedi subito come si distribuisce la spesa."
+            },
+            {
+              "title": "Modificabile, non rigido",
+              "desc": "Cambia qualsiasi cosa a parole: il piano si aggiorna attorno alle tue modifiche."
+            }
+          ],
+          "painPoints": [
+            "Organizzare un evento inizia con un foglio di calcolo terribilmente vuoto.",
+            "Il primo budget realistico richiede una settimana di botta e risposta.",
+            "Metà delle attività di produzione emerge solo quando è troppo tardi per pianificarle."
+          ],
+          "proofQuote": {
+            "quote": "Ha trasformato un vago «facciamo un evento di lancio» in un piano vero che potevamo approvare.",
+            "author": "Devon R.",
+            "role": "Events manager"
+          }
+        },
+        "production-management": {
+          "tagline": "Tutto ciò che si muove nel tuo evento, in un unico posto.",
+          "intro": "Location, staff, noleggi, catering e programma gestiti insieme, così niente si perde tra fogli di calcolo, thread e la memoria di qualcuno.",
+          "benefits": [
+            {
+              "title": "Un'unica fonte di verità",
+              "desc": "Location, fornitori, staff e orari vivono in un'unica produzione, non in cinque documenti."
+            },
+            {
+              "title": "Ruoli e logistica",
+              "desc": "Assegna lo staff, tieni traccia di noleggi e catering e mantieni aggiornata la scaletta."
+            },
+            {
+              "title": "Pronto quando lo sei tu",
+              "desc": "Tutto ciò che serve al team per eseguire, visibile a chi deve vederlo."
+            }
+          ],
+          "painPoints": [
+            "Il numero di coperti è in una email, la lista dello staff in un DM, il programma nella testa di qualcuno.",
+            "Due persone prenotano lo stesso fornitore perché nessuno aveva il quadro completo.",
+            "Il giorno dell'evento si va avanti ad adrenalina, perché il piano non è mai uscito dagli appunti di una persona."
+          ],
+          "proofQuote": {
+            "quote": "Il nostro ultimo evento è stato il primo che dietro le quinte non è sembrato un caos.",
+            "author": "Priya N.",
+            "role": "Head of experiential"
+          }
+        },
+        "ticketing": {
+          "tagline": "Vendi biglietti e gestisci la lista ospiti, in modo nativo.",
+          "intro": "Crea le tipologie di biglietto, raccogli le iscrizioni e fai il check-in dei partecipanti, tutto all'interno dello stesso evento, con i dati che arrivano direttamente nel tuo CRM.",
+          "benefits": [
+            {
+              "title": "Biglietti flessibili",
+              "desc": "Early bird, VIP, omaggi: imposta le tipologie e le regole adatte al tuo evento."
+            },
+            {
+              "title": "Iscrizioni e check-in",
+              "desc": "Sai chi viene e fai il check-in il giorno stesso, senza uno strumento separato."
+            },
+            {
+              "title": "Direttamente nel tuo CRM",
+              "desc": "Ogni partecipante diventa un contatto da segmentare e ricontattare."
+            }
+          ],
+          "painPoints": [
+            "Le iscrizioni stanno in uno strumento, i dati del pubblico in un altro, e non si sincronizzano mai.",
+            "Il check-in del giorno è un laptop, un foglio di calcolo e le dita incrociate.",
+            "Dopo l'evento, la lista dei partecipanti sparisce in un export che nessuno apre."
+          ],
+          "proofQuote": {
+            "quote": "I partecipanti finiscono nei nostri contatti in automatico: prima il follow-up richiedeva giorni.",
+            "author": "Sam K.",
+            "role": "Growth marketer"
+          }
+        },
+        "event-microsites": {
+          "tagline": "Una bella pagina evento, scritta per te.",
+          "intro": "Ogni evento ha il suo microsite pubblico — agenda, speaker, location, iscrizioni — scritto dall'AI in linea con il brand e online in pochi minuti, senza bisogno di un team web.",
+          "benefits": [
+            {
+              "title": "Scritto dall'AI, in linea con il brand",
+              "desc": "Testi e layout generati dai dettagli dell'evento e dal tuo brand, pronti da ritoccare."
+            },
+            {
+              "title": "Tutto ciò che serve ai partecipanti",
+              "desc": "Agenda, luogo, speaker e un flusso di iscrizione in un unico posto."
+            },
+            {
+              "title": "Online in pochi minuti",
+              "desc": "Pubblica su un URL da condividere senza aspettare un designer o uno sviluppatore."
+            }
+          ],
+          "painPoints": [
+            "Mettere online una pagina evento significa aprire un ticket al team web e aspettare due settimane.",
+            "I dettagli dell'evento sono in sei posti diversi e nessuno concorda.",
+            "Quando la pagina è pronta, l'early bird è già finito."
+          ],
+          "proofQuote": {
+            "quote": "Avevamo un sito evento curato online lo stesso pomeriggio in cui abbiamo deciso di organizzarlo.",
+            "author": "Lena F.",
+            "role": "Community lead"
+          }
+        },
+        "attendee-comms": {
+          "tagline": "Tieni aggiornato ogni partecipante, in automatico.",
+          "intro": "Invia conferme, promemoria e follow-up ai segmenti giusti — con inviti in calendario e testi in linea con il brand — senza mai uscire dall'evento.",
+          "benefits": [
+            {
+              "title": "Comunicazioni segmentate",
+              "desc": "Scrivi a tutti i partecipanti, solo ai VIP o solo a chi non si è presentato: mirato, non a pioggia."
+            },
+            {
+              "title": "Promemoria e inviti in calendario",
+              "desc": "Conferme automatiche e inviti ICS, così le persone si presentano davvero."
+            },
+            {
+              "title": "Follow-up in linea con il brand",
+              "desc": "Ringraziamenti post-evento e prossimi passi, scritti con la tua voce."
+            }
+          ],
+          "painPoints": [
+            "Le email di promemoria si scrivono la sera prima, se va bene.",
+            "Chi non si presenta non riceve mai un follow-up, perché estrarre la lista è troppo lavoro.",
+            "Le comunicazioni ai partecipanti non somigliano per niente al resto del tuo brand."
+          ],
+          "proofQuote": {
+            "quote": "Il tasso di presenza è salito da quando promemoria e inviti in calendario partono da soli.",
+            "author": "Tariq B.",
+            "role": "Event producer"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import SceneVideo from "./SceneVideo";
 
 /**
@@ -22,18 +23,16 @@ const BEADS = [
   { key: "postino", x: 85.3, y: 28.6, c: "#22d3ee", d: 2.9 },
 ];
 
-/** A card hangs off an anchor point; the leader runs anchor → bead. */
+/** A card hangs off an anchor point; the leader runs anchor → bead. Its
+ *  text is `hero.cards.<bead>` in the messages. */
 const CARDS: {
-  bead: string;
+  bead: "pittore" | "postino" | "scrittore" | "stratega";
   ax: number;
   ay: number;
   side: "above" | "below";
   tilt: string;
   delay: string;
-  title: string;
-  line: string;
-  pill?: string;
-  pillTone?: string;
+  pillTone: string;
 }[] = [
   {
     bead: "pittore",
@@ -42,9 +41,6 @@ const CARDS: {
     side: "above",
     tilt: "-2deg",
     delay: "0s",
-    title: "Carousel",
-    line: "Il Pittore · 6 slides, your palette",
-    pill: "Ready",
     pillTone: "bg-emerald-500/18 text-emerald-300",
   },
   {
@@ -54,9 +50,6 @@ const CARDS: {
     side: "above",
     tilt: "2deg",
     delay: "-2.4s",
-    title: "Social posts",
-    line: "Il Postino · 3 scheduled this week",
-    pill: "Queued",
     pillTone: "bg-cyan-500/18 text-cyan-200",
   },
   {
@@ -66,9 +59,6 @@ const CARDS: {
     side: "below",
     tilt: "2deg",
     delay: "-4.6s",
-    title: "SEO article",
-    line: "Lo Scrittore · live on your site",
-    pill: "Published",
     pillTone: "bg-emerald-500/18 text-emerald-300",
   },
   {
@@ -78,9 +68,6 @@ const CARDS: {
     side: "below",
     tilt: "-2deg",
     delay: "-1.2s",
-    title: "This week's plan",
-    line: "Lo Stratega · 3 moves, 1 tap each",
-    pill: "Approve",
     pillTone: "bg-amber-400/20 text-amber-200",
   },
 ];
@@ -88,13 +75,14 @@ const CARDS: {
 const beadOf = (key: string) => BEADS.find((b) => b.key === key)!;
 
 export default function HeroScene() {
+  const t = useTranslations("hero");
   return (
     <div className="relative aspect-video w-full">
       {/* Only the picture is feathered; cards and leaders stay crisp. */}
       <div className="scene-bleed absolute inset-0">
         <Image
           src="/mascot/bottega-hero-poster.webp"
-          alt="La Bottega: the seven Agentcy maestri at work in a Renaissance workshop, each with a glowing bead on its head"
+          alt={t("sceneAlt")}
           fill
           priority
           sizes="(max-width: 1024px) 100vw, 60vw"
@@ -142,7 +130,7 @@ export default function HeroScene() {
       {/* product cards (lg+) */}
       {CARDS.map((c) => (
         <div
-          key={c.title}
+          key={c.bead}
           aria-hidden="true"
           className="absolute hidden w-[196px] lg:block"
           style={{
@@ -153,10 +141,10 @@ export default function HeroScene() {
         >
           <div className="glass floaty rounded-2xl px-3.5 py-3" style={{ "--tilt": c.tilt, animationDelay: c.delay } as React.CSSProperties}>
             <div className="flex items-center justify-between gap-2">
-              <span className="text-[13px] font-bold text-white">{c.title}</span>
-              {c.pill && <span className={`rounded-full px-2 py-0.5 text-[10.5px] font-semibold ${c.pillTone}`}>{c.pill}</span>}
+              <span className="text-[13px] font-bold text-white">{t(`cards.${c.bead}.title`)}</span>
+              <span className={`rounded-full px-2 py-0.5 text-[10.5px] font-semibold ${c.pillTone}`}>{t(`cards.${c.bead}.pill`)}</span>
             </div>
-            <div className="mt-1 text-[12px] leading-snug text-white/65">{c.line}</div>
+            <div className="mt-1 text-[12px] leading-snug text-white/65">{t(`cards.${c.bead}.line`)}</div>
           </div>
         </div>
       ))}

@@ -1,18 +1,20 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 /** The bead, live: Puntino's mark cycling through the four states the
  *  studio shows, so the legend is a demo rather than a list. Pauses on
  *  reduced motion (stays on "ready"). */
 const STATES = [
-  { key: "idle", c: "#ec4899", name: "Pink", what: "ready, nothing waiting on you", pulse: false },
-  { key: "working", c: "#a78bfa", name: "Purple", what: "working on it", pulse: true },
-  { key: "done", c: "#34d399", name: "Emerald", what: "done, chef's kiss", pulse: false },
-  { key: "ask", c: "#fbbf24", name: "Amber", what: "needs your approval", pulse: true },
-];
+  { key: "idle", c: "#ec4899", pulse: false },
+  { key: "working", c: "#a78bfa", pulse: true },
+  { key: "done", c: "#34d399", pulse: false },
+  { key: "ask", c: "#fbbf24", pulse: true },
+] as const;
 
 export default function BeadDemo() {
+  const t = useTranslations("bottega.beadStates");
   const [i, setI] = useState(0);
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -45,9 +47,9 @@ export default function BeadDemo() {
       <div className="min-w-0" aria-live="polite">
         <div className="flex items-center gap-2">
           <span className="h-2.5 w-2.5 rounded-full" style={{ background: s.c, boxShadow: `0 0 12px ${s.c}`, transition: "background .5s" }} />
-          <strong className="text-[15px] font-semibold text-white">{s.name}</strong>
+          <strong className="text-[15px] font-semibold text-white">{t(`${s.key}.name`)}</strong>
         </div>
-        <p className="m-0 mt-1 text-[13.5px] text-white/65">{s.what}</p>
+        <p className="m-0 mt-1 text-[13.5px] text-white/65">{t(`${s.key}.what`)}</p>
         <div className="mt-3 flex gap-1.5">
           {STATES.map((x, k) => (
             <span key={x.key} className="h-1 w-6 rounded-full transition-colors" style={{ background: k === i ? x.c : "rgba(255,255,255,.14)" }} />

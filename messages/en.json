@@ -1,0 +1,1961 @@
+{
+  "meta": {
+    "title": "The Agentcy — Marketing on autopilot",
+    "description": "Paste your website. Seven specialist AI agents, run like a Renaissance bottega, learn your brand and then plan, make and ship your whole marketing: website and SEO, social, email journeys, events and CRM. Every day, on autopilot. You just approve.",
+    "ogDescription": "Paste your website. The AI-native agency plans, makes and ships your marketing across site, social, email and events. You just approve."
+  },
+  "language": {
+    "label": "Language",
+    "switchTo": "Switch language to {name}"
+  },
+  "nav": {
+    "aria": "Main",
+    "solutions": "Solutions",
+    "features": "Features",
+    "events": "Events",
+    "how": "How it works",
+    "ecosystem": "Ecosystem",
+    "pricing": "Pricing",
+    "docs": "Docs",
+    "login": "Log in",
+    "bookDemo": "Book a demo",
+    "startFree": "Start free",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "Starts free · no card · 300 credits a month",
+    "line1": "Paste your website.",
+    "line2": "Marketing on autopilot.",
+    "body": "It reads your site and learns your brand. Then seven specialist agents, run like a Renaissance bottega, plan, make and ship your whole marketing: website and SEO, social, email journeys, events and the CRM behind them.",
+    "bodyStrong": "Every day. You just approve.",
+    "note": "Sign up in a minute. The workshop opens with your Brand DNA read and the first week drafted.",
+    "meetMaestri": "Meet the maestri",
+    "sceneAlt": "La Bottega: the seven Agentcy maestri at work in a Renaissance workshop, each with a glowing bead on its head",
+    "cards": {
+      "pittore": {
+        "title": "Carousel",
+        "line": "Il Pittore · 6 slides, your palette",
+        "pill": "Ready"
+      },
+      "postino": {
+        "title": "Social posts",
+        "line": "Il Postino · 3 scheduled this week",
+        "pill": "Queued"
+      },
+      "scrittore": {
+        "title": "SEO article",
+        "line": "Lo Scrittore · live on your site",
+        "pill": "Published"
+      },
+      "stratega": {
+        "title": "This week's plan",
+        "line": "Lo Stratega · 3 moves, 1 tap each",
+        "pill": "Approve"
+      }
+    }
+  },
+  "chat": {
+    "label": "Paste your website or tell The Agentcy what you want",
+    "placeholder": "Paste your website — or tell The Agentcy what you want more of: customers, bookings, sign-ups, a launch that lands…",
+    "hintSite": "It reads your site, builds your Brand DNA and drafts the month",
+    "hintDefault": "Free account · your link or brief carries over",
+    "startAutopilot": "Start autopilot",
+    "startFree": "Start free",
+    "suggestions": [
+      "Put my social on autopilot",
+      "Site with SEO articles on my domain",
+      "Welcome journey for new leads",
+      "Event page with tickets",
+      "Audit my marketing"
+    ],
+    "compactLabel": "Paste your website or describe your brand",
+    "compactPlaceholder": "Paste your website or describe your brand…",
+    "autopilotPrompt": "My website is {url}. Build my Brand DNA from it, audit what my marketing is missing, and plan this month across the site, social, email and events. Draft the first week so I can approve it."
+  },
+  "channels": {
+    "aria": "Channels The Agentcy publishes to",
+    "eyebrow": "Il Postino delivers to",
+    "names": {
+      "youtubeShorts": "YouTube Shorts",
+      "emailJourneys": "Email journeys",
+      "brandWebsite": "Brand website",
+      "eventPages": "Event pages"
+    }
+  },
+  "stats": [
+    {
+      "value": "1 link",
+      "label": "Teaches it your brand"
+    },
+    {
+      "value": "5 min",
+      "label": "To an audit and this month's plan"
+    },
+    {
+      "value": "7",
+      "label": "Specialist agents, one workshop"
+    },
+    {
+      "value": "10+",
+      "label": "Hours a week handed back"
+    }
+  ],
+  "explainer": {
+    "eyebrow": "The 100-second film",
+    "title": "See The Agentcy run a brand",
+    "body": "One link becomes a plan. The plan becomes a carousel, a flyer and a video. The posts point to a site it built, every visitor lands in the CRM, and the journeys take it from there. Week after week.",
+    "steps": [
+      "Website",
+      "Brand DNA",
+      "Plan",
+      "Create",
+      "Publish",
+      "Grow"
+    ],
+    "captions": "Captions burned in · 1 min 41 s"
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "Paste a link. Approve the plan. The rest runs itself.",
+    "body": "Agents plan and draft. You approve. Nothing renders, publishes or spends without your say-so, and every cost shows in credits first.",
+    "steps": [
+      {
+        "title": "Paste your website",
+        "desc": "Brand DNA reads your site: palette, type, tone, offer and audience, into cards you can edit. No site yet? Describe the brand and it drafts one."
+      },
+      {
+        "title": "Get your audit and plan",
+        "desc": "Lo Stratega checks the market and your channels, finds the gaps, and drafts this month: site, social, email, events. Ask for anything else in plain English."
+      },
+      {
+        "title": "Approve from anywhere",
+        "desc": "Drafts land in your inbox and on your phone. Approve, or say “punchier, shorter, warmer”. Every spend shows its credit cost first."
+      },
+      {
+        "title": "Autopilot runs the rest",
+        "desc": "Posts go out, articles keep the site fresh for search, journeys follow up every lead, and next week's plan is waiting when you log in."
+      }
+    ]
+  },
+  "makes": {
+    "eyebrow": "What it makes along the way",
+    "title": "Everything an agency hands you, on-brand by default",
+    "social": {
+      "title": "Social posts & carousels",
+      "desc": "Hook-tested first slides, auto layout, your fonts and colours on every slide. Formatted per platform with copy and hashtags."
+    },
+    "video": {
+      "title": "Short-form video",
+      "desc": "Reels, TikToks and Shorts from a storyboard or your own photos. Scripted, voiced, captioned."
+    },
+    "print": {
+      "title": "Flyers, brochures & print",
+      "desc": "Print-ready designs with editable text, in every social size too."
+    },
+    "decks": {
+      "title": "Explainers & decks",
+      "desc": "Motion-graphics explainers with AI presenters, plus pitch and sales decks."
+    },
+    "copy": {
+      "title": "Copy, newsletters & SEO",
+      "desc": "Voice-trained drafts: articles, email sequences, landing copy and meta descriptions."
+    },
+    "ads": {
+      "title": "Ads, podcasts, voiceovers & market analysis",
+      "desc": "Ad variants for Meta, Google and TikTok. Multi-voice podcast episodes. Competitor research delivered as a report or a deck."
+    },
+    "pills": [
+      "Ad creatives",
+      "Podcasts",
+      "Voiceovers",
+      "Brand audit"
+    ]
+  },
+  "ecosystem": {
+    "eyebrow": "The ecosystem",
+    "title": "Not just the posts. The whole machine behind them.",
+    "body": "Content is the loud part. Underneath it The Agentcy runs the website and its SEO, the email journeys, the events and the CRM that turn a visitor into a customer, as one system that feeds itself.",
+    "blocks": [
+      {
+        "title": "Website & SEO",
+        "desc": "A multi-page site drafted from your Brand DNA, on your own domain, kept fresh with articles written to bring in search traffic.",
+        "bullets": [
+          "Three design proposals, drag-and-drop editing",
+          "Articles and meta copy in your voice",
+          "yourbrand.com or a free subdomain"
+        ]
+      },
+      {
+        "title": "Social content",
+        "desc": "Carousels, reels, flyers and posts for every channel, drafted to the plan and scheduled by Il Postino when each audience is awake.",
+        "bullets": [
+          "A calendar that fills its own gaps",
+          "Right spec, caption and hashtags per channel",
+          "Hook-tested first slides"
+        ]
+      },
+      {
+        "title": "Email marketing",
+        "desc": "Newsletters and automated journeys from an on-brand builder, sent from your own domain with deliverability guardrails.",
+        "bullets": [
+          "Welcome, offer and review flows",
+          "Send from your own domain",
+          "NPS and replies back into the CRM"
+        ]
+      },
+      {
+        "title": "CRM",
+        "desc": "Every visitor, subscriber and attendee lands in one contact base, profiled nightly, with audiences suggested from what people actually do.",
+        "bullets": [
+          "Lifecycle stages and segments",
+          "Suggested audiences from behaviour",
+          "Profiles the agents read before they write"
+        ]
+      },
+      {
+        "title": "Events",
+        "desc": "From finding the right event to the follow-up email: plan, venue scouting, microsite, tickets, QR check-in.",
+        "bullets": [
+          "Agenda, speakers and sponsors pages",
+          "Ticket tiers and discounts",
+          "Attendees land in the CRM"
+        ]
+      },
+      {
+        "title": "Market intelligence",
+        "desc": "Lo Stratega watches your market and competitors daily and turns what changed into next moves, not another dashboard.",
+        "bullets": [
+          "Daily brief with live web research",
+          "Content gaps and opportunities",
+          "Next moves ranked by impact"
+        ]
+      }
+    ],
+    "weekEyebrow": "One week on autopilot",
+    "weekNote": "Every week looks like this. The plan changes, the rhythm does not.",
+    "week": [
+      {
+        "day": "Mon",
+        "who": "Lo Stratega",
+        "what": "Scans the market, drafts the week's plan."
+      },
+      {
+        "day": "Tue",
+        "who": "Il Pittore & Lo Scrittore",
+        "what": "Carousel, reel and an SEO article drafted."
+      },
+      {
+        "day": "Wed",
+        "who": "Il Postino",
+        "what": "Posts go out. The article goes live on your site."
+      },
+      {
+        "day": "Thu",
+        "who": "Lo Scrittore",
+        "what": "Newsletter sent. Journeys follow up new leads."
+      },
+      {
+        "day": "Fri",
+        "who": "Il Sommelier",
+        "what": "Checks what moved and feeds next week."
+      },
+      {
+        "day": "You",
+        "who": "On your phone",
+        "what": "Tap approve. That is the whole job."
+      }
+    ]
+  },
+  "bottega": {
+    "eyebrow": "La Bottega",
+    "title1": "Seven maestri. One workshop.",
+    "title2": "Your brand, every day.",
+    "p1": "In Renaissance Florence a <em>bottega</em> was a master's workshop: specialist artisans under one roof, making commissioned work to measure for each client. Verrocchio's bottega trained Leonardo.",
+    "p2": "The Agentcy runs the same way. Seven specialist agents share one workshop and your Brand DNA, keep your marketing moving every day, and nothing leaves the workshop without your approval. <strong>Su misura</strong>: made to measure, never from a template.",
+    "imageAlt": "{name}, the {role}",
+    "maestri": {
+      "sarto": {
+        "role": "Creative Director",
+        "line": "Reads your brand and cuts the month's plan to measure. That is Puntino, and he wears the tape."
+      },
+      "stratega": {
+        "role": "Campaign Strategist",
+        "line": "Studies the market, the competitors and the moment, then picks the angle."
+      },
+      "pittore": {
+        "role": "Visual Producer",
+        "line": "Images, carousels, flyers and storyboards, in your palette every time."
+      },
+      "tenore": {
+        "role": "Voice Producer",
+        "line": "Voiceovers, podcasts and the voice of your videos."
+      },
+      "scrittore": {
+        "role": "Editor",
+        "line": "Copy, captions, newsletters and articles, typed in your tone."
+      },
+      "sommelier": {
+        "role": "QA Reviewer",
+        "line": "Tastes every piece against your Brand DNA before it leaves the workshop."
+      },
+      "postino": {
+        "role": "Social Media Manager",
+        "line": "Schedules and delivers to every channel. On a Vespa, naturally."
+      }
+    },
+    "beadEyebrow": "The bead",
+    "beadBody": "Every maestro carries a Murano glass bead. In the studio it is a status light, so you know what the workshop is doing before you read a word.",
+    "beadStates": {
+      "idle": {
+        "name": "Pink",
+        "what": "ready, nothing waiting on you"
+      },
+      "working": {
+        "name": "Purple",
+        "what": "working on it"
+      },
+      "done": {
+        "name": "Emerald",
+        "what": "done, chef's kiss"
+      },
+      "ask": {
+        "name": "Amber",
+        "what": "needs your approval"
+      }
+    }
+  },
+  "why": {
+    "eyebrow": "Why teams switch",
+    "title": "A marketing department's output. A subscription's price.",
+    "body": "The average agency charges €5–25K a month and takes two weeks per round. The Agentcy runs your marketing every day, answers in minutes, iterates in plain English and never runs out of hours.",
+    "cta": "Start free",
+    "items": [
+      [
+        "A link, not a brief",
+        "Paste your site. The audit, the plan and the drafts come to you."
+      ],
+      [
+        "No tool juggling",
+        "Site, SEO, social, email, events and CRM in one workshop."
+      ],
+      [
+        "Every platform, natively",
+        "Right spec, caption and hashtags for each channel."
+      ],
+      [
+        "Iterate in plain English",
+        "“Punchier, shorter, warmer.” Done."
+      ],
+      [
+        "You stay in control",
+        "Drafts first. Spend confirmed. Nothing publishes alone."
+      ],
+      [
+        "Scale without hiring",
+        "Ten pieces or ten thousand, same team."
+      ]
+    ]
+  },
+  "testimonials": [
+    {
+      "q": "As a solo founder I couldn't afford an agency. The Agentcy gave me a full creative team without the price tag. I'm posting daily on three platforms and it costs me less than a Netflix subscription.",
+      "role": "Head of Marketing"
+    },
+    {
+      "q": "We white-labelled The Agentcy for our clients and it's transformed our agency model. We now deliver campaigns in 48 hours that used to take three weeks.",
+      "role": "Founder"
+    },
+    {
+      "q": "The brand voice feature is what sold me. Every piece of content actually sounds like us. Our audience can't tell the difference. Our team can finally breathe.",
+      "role": "Creative Director"
+    }
+  ],
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "One currency: credits",
+    "body": "Every action, from a caption to a full storyboard video, costs credits. Pick the monthly plan that fits and top up anytime.",
+    "billingPeriod": "Billing period",
+    "monthly": "Monthly",
+    "annual": "Annual · save 20%",
+    "mostPopular": "Most popular",
+    "custom": "Custom",
+    "perMonth": "/ month",
+    "billedYearly": ", billed yearly",
+    "topUps": "Top-up packs: 1,000 credits €15 · 5,000 credits €65. Unused credits roll over one month.",
+    "plans": {
+      "starter": {
+        "desc": "Try the platform. No card needed.",
+        "credits": "300 credits / month",
+        "features": [
+          "Text and image creation tools",
+          "1 brand workspace",
+          "Community support"
+        ],
+        "cta": "Start free"
+      },
+      "growth": {
+        "desc": "For active brands running social.",
+        "credits": "2,400 credits / month",
+        "features": [
+          "Text and image social, light video",
+          "Unlimited brands",
+          "Channel connectors: Instagram, LinkedIn, Telegram",
+          "Brand website and events",
+          "Priority generation"
+        ],
+        "cta": "Start free"
+      },
+      "pro": {
+        "desc": "Full creative firepower.",
+        "credits": "9,000 credits / month",
+        "features": [
+          "Video, storyboards and synthetic presenters",
+          "Daily market intelligence",
+          "Custom domains",
+          "Developer API access",
+          "Priority support"
+        ],
+        "cta": "Start free"
+      },
+      "enterprise": {
+        "desc": "White-label and managed service.",
+        "credits": "Custom volume",
+        "features": [
+          "White-label and SSO",
+          "Custom connectors and fine-tuning",
+          "Dedicated success manager",
+          "SLA and onboarding"
+        ],
+        "cta": "Talk to sales"
+      }
+    }
+  },
+  "demo": {
+    "title": "What should your agency make first?",
+    "body": "Start free with 300 credits a month. Or book a 20-minute demo and we will run your brand through it live.",
+    "bookDemo": "Book a demo",
+    "watchAgain": "Watch the film again",
+    "name": "Your name",
+    "email": "you@company.com",
+    "company": "Company (optional)",
+    "message": "What would you like to see? (optional)",
+    "sending": "Sending…",
+    "submit": "Request the demo",
+    "error": "Something went wrong. Please try again or email hello@the-agentcy.ai.",
+    "doneTitle": "Request received",
+    "doneBody": "We will reach out within a day to schedule your demo.",
+    "jumpIn": "Or jump straight in and <link>create a free account</link>."
+  },
+  "footer": {
+    "tagline": "The AI-native agency. Paste your website, approve the plan, and your marketing runs on autopilot.",
+    "product": "Product",
+    "company": "Company",
+    "getStarted": "Get started",
+    "ecosystem": "The ecosystem",
+    "makes": "What it makes",
+    "pricing": "Pricing",
+    "docs": "Docs & API",
+    "bookDemo": "Book a demo",
+    "privacy": "Privacy",
+    "dataDeletion": "Data deletion",
+    "login": "Log in",
+    "startFree": "Start free",
+    "rights": "© 2026 The Agentcy. All rights reserved."
+  },
+  "cookies": {
+    "bannerTitle": "A word about cookies",
+    "bannerBody": "We use privacy-friendly analytics to see which pages help, and nothing else unless you say so. You can change your mind any time from the footer.",
+    "privacyPolicy": "Privacy policy",
+    "acceptAll": "Accept all",
+    "onlyNecessary": "Only necessary",
+    "settings": "Settings",
+    "settingsTitle": "Cookie settings",
+    "settingsBody": "Choose what the site may use. Your choice is kept on this device only.",
+    "close": "Close",
+    "save": "Save choices",
+    "alwaysOn": "always on",
+    "link": "Cookie settings",
+    "categories": {
+      "necessary": {
+        "title": "Necessary",
+        "desc": "Remembers this choice and carries your brief into the app when you sign up. Always on."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "desc": "Privacy-friendly page statistics (self-hosted Plausible). No cookies, no cross-site tracking — we only learn which pages and buttons work."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "desc": "Lets ad platforms measure whether a campaign brought you here. Nothing is loaded in this category today."
+      }
+    }
+  },
+  "docs": {
+    "back": "← The Agentcy",
+    "rest": "REST API",
+    "mcp": "MCP server",
+    "metaTitle": "Docs & API · The Agentcy",
+    "metaDescription": "The Agentcy's public REST API and MCP server reference."
+  },
+  "legal": {
+    "back": "← Back",
+    "privacyTitle": "Privacy Policy · The Agentcy",
+    "privacyDescription": "How The Agentcy collects, uses, and protects your data.",
+    "deletionTitle": "Data Deletion · The Agentcy",
+    "deletionDescription": "How to request deletion of your data from The Agentcy, including data retrieved from connected social platforms.",
+    "privacyHeading": "Privacy Policy",
+    "lastUpdated": "Last updated: 16 October 2026",
+    "deletionHeading": "Data Deletion",
+    "deletionSubtitle": "How to remove your data from The Agentcy"
+  },
+  "detail": {
+    "logoAlt": "The Agentcy logo",
+    "backHome": "← Back to home",
+    "bookDemo": "Book a Demo",
+    "startFree": "Start Free — 7 Days on Us →",
+    "seeHow": "See How It Works",
+    "aiNative": "The AI-Native Agency",
+    "explore": "Explore the platform",
+    "ctaTitle": "Your agency.",
+    "ctaAccent": "At 1% of the cost.",
+    "step": "Step {n}",
+    "home": "Home",
+    "privacy": "Privacy",
+    "dataDeletion": "Data deletion",
+    "autopilotSteps": [
+      {
+        "emoji": "🔗",
+        "title": "Paste your website",
+        "desc": "Brand DNA reads your site — palette, tone, offer, audience — in a minute. No site yet? Describe the brand."
+      },
+      {
+        "emoji": "🧭",
+        "title": "Get your audit and plan",
+        "desc": "Lo Stratega checks the market and your channels, finds the gaps and drafts this month's moves."
+      },
+      {
+        "emoji": "✅",
+        "title": "Approve from anywhere",
+        "desc": "Preview the drafts, ask for changes in plain language, approve from your phone. Every spend shows its cost first."
+      },
+      {
+        "emoji": "🚀",
+        "title": "Autopilot runs the rest",
+        "desc": "Posts, articles, journeys and event pages ship on schedule. Next week's plan is waiting when you log in."
+      }
+    ],
+    "solutions": {
+      "fallbackTitle": "Solution · The Agentcy",
+      "badge": "For",
+      "meta1": "Free 7-day trial",
+      "meta2": "8+ platforms supported",
+      "painEyebrow": "The honest part",
+      "painTitle": "Why most {label} burn out on content.",
+      "benefitsEyebrow": "What you get",
+      "benefitsTitle": "Built around how {label} actually work.",
+      "howTitle": "Paste a link. Approve the plan. The rest runs on autopilot.",
+      "howBody": "Same autopilot that powers every persona on The Agentcy: seven AI agents plan and draft across site, social, email and events, and you approve before anything goes live.",
+      "ctaBody": "Try The Agentcy free for 7 days. No credit card. No commitment. Just publish-ready content from day one."
+    },
+    "features": {
+      "fallbackTitle": "Feature · The Agentcy",
+      "badge": "Feature",
+      "meta1": "Free 7-day trial",
+      "meta2": "8+ platforms supported",
+      "painEyebrow": "What it replaces",
+      "painTitle": "Life before {label}.",
+      "benefitsEyebrow": "What you get",
+      "benefitsTitle": "Inside {label}.",
+      "howTitle": "Paste a link. Approve the plan. The rest runs on autopilot.",
+      "howBody": "{label} runs inside the same autopilot that powers every part of The Agentcy: seven AI agents plan and draft across site, social, email and events, and you approve before anything goes live.",
+      "ctaBody": "{label} is one of dozens of capabilities included in every plan. Try The Agentcy free for 7 days — no credit card, no commitment."
+    },
+    "events": {
+      "fallbackTitle": "Events · The Agentcy",
+      "badge": "Events",
+      "meta1": "Plan, run & fill events",
+      "meta2": "All in one platform",
+      "painEyebrow": "What it replaces",
+      "painTitle": "Life before {label}.",
+      "benefitsEyebrow": "What you get",
+      "benefitsTitle": "Inside {label}.",
+      "howTitle": "From idea to a full house — inside one platform.",
+      "howBody": "{label} runs inside the same flow that powers every part of The Agentcy. Pick or brief an event, the AI agents plan and build it, and you approve before anything goes live.",
+      "ctaBody": "{label} is one of dozens of capabilities included in every plan. Try The Agentcy free for 7 days — no credit card, no commitment.",
+      "steps": [
+        {
+          "emoji": "🔎",
+          "title": "Pick or plan",
+          "desc": "Choose an event from your radar, or describe the one you want to run."
+        },
+        {
+          "emoji": "🤖",
+          "title": "Agents draft it",
+          "desc": "Plan, budget, run-of-show, microsite and comms are generated in parallel."
+        },
+        {
+          "emoji": "✏️",
+          "title": "Review & refine",
+          "desc": "Adjust anything in plain language — the plan updates around your changes."
+        },
+        {
+          "emoji": "🎟️",
+          "title": "Run & engage",
+          "desc": "Publish the site, sell tickets, check attendees in and follow up automatically."
+        }
+      ]
+    },
+    "howEyebrow": "How it works"
+  },
+  "content": {
+    "solutions": {
+      "groups": {
+        "contentCreators": "Content Creators",
+        "companiesAgencies": "Companies & Agencies",
+        "specializedCreators": "Specialized Creators"
+      },
+      "items": {
+        "digital-creators": {
+          "label": "Digital Creators",
+          "desc": "Perfect for full-time creators and social media enthusiasts."
+        },
+        "podcast-hosts": {
+          "label": "Podcast Hosts",
+          "desc": "Grow your podcast and engage with your audience."
+        },
+        "coach-creators": {
+          "label": "Coach Creators",
+          "desc": "Build your coaching brand and connect with your community."
+        },
+        "companies": {
+          "label": "Companies",
+          "desc": "Scale your social media presence and drive growth."
+        },
+        "agencies": {
+          "label": "Agencies",
+          "desc": "Efficiently manage accounts for multiple clients."
+        },
+        "influencers": {
+          "label": "Influencers",
+          "desc": "Streamline your content and grow your influence."
+        },
+        "adhd-creators": {
+          "label": "ADHD Creators",
+          "desc": "Tools designed for neurodivergent content creation."
+        },
+        "digital-nomads": {
+          "label": "Digital Nomads",
+          "desc": "Create content from anywhere in the world."
+        },
+        "thought-leaders": {
+          "label": "Thought Leaders",
+          "desc": "Share your expertise and build your authority."
+        },
+        "neurodivergent-creators": {
+          "label": "Neurodivergent Creators",
+          "desc": "Tailored solutions for unique creative minds."
+        }
+      },
+      "pages": {
+        "digital-creators": {
+          "tagline": "The complete content engine for full-time creators.",
+          "intro": "Stop juggling tools. Run your entire content operation — ideation, production, scheduling, and analytics — from a single workspace built for speed and consistency.",
+          "benefits": [
+            {
+              "title": "Multi-platform publishing",
+              "desc": "Push optimized variants to Instagram, TikTok, YouTube, and X — all from one brief."
+            },
+            {
+              "title": "Always-on ideation",
+              "desc": "An AI strategist surfaces post ideas based on what is trending in your niche right now."
+            },
+            {
+              "title": "Brand voice that scales",
+              "desc": "Train The Agentcy on your past content so every output sounds like you, not generic AI."
+            }
+          ],
+          "painPoints": [
+            "You spend more time editing than creating, and the algorithm still moves on without you.",
+            "Five tools, four passwords, and a Notion board nobody updates — every post is its own scavenger hunt.",
+            "Posting consistently feels like a second job you never signed up for."
+          ],
+          "proofQuote": {
+            "quote": "I went from posting twice a week to seven days straight. Same me, just with seven agents covering my back.",
+            "author": "Marisol K.",
+            "role": "Full-time creator, 320K followers"
+          }
+        },
+        "podcast-hosts": {
+          "tagline": "Turn every episode into a week of social content.",
+          "intro": "Your podcast already produces hours of valuable content. Let The Agentcy slice, repurpose, and publish it across every platform — so you can focus on recording the next one.",
+          "benefits": [
+            {
+              "title": "Episode-to-social automation",
+              "desc": "Auto-generate quote cards, audiograms, and short clips from each episode."
+            },
+            {
+              "title": "Show notes that convert",
+              "desc": "AI-written summaries optimized for SEO and listener retention."
+            },
+            {
+              "title": "Cross-platform promotion",
+              "desc": "Coordinated rollouts across Instagram, TikTok, LinkedIn, and X — timed for impact."
+            }
+          ],
+          "painPoints": [
+            "Each episode dies the day it drops because nobody has time to clip and promote it.",
+            "Your editor charges per clip, your VA charges per post, and your reach barely budges.",
+            "You record gold for an hour, then watch it disappear into the feed twelve hours later."
+          ],
+          "proofQuote": {
+            "quote": "We turned one episode into 24 posts across five platforms — without hiring a single new person on the team.",
+            "author": "Diego R.",
+            "role": "Host, The Compounding Podcast"
+          }
+        },
+        "coach-creators": {
+          "tagline": "Build authority and grow your coaching practice.",
+          "intro": "Coaches do not have time for content theater. Get a steady stream of high-trust, high-converting posts that bring qualified leads to your DMs.",
+          "benefits": [
+            {
+              "title": "Lead-magnet content",
+              "desc": "Frameworks, case studies, and transformation stories — formatted for the platform of your choice."
+            },
+            {
+              "title": "Authority that compounds",
+              "desc": "Pillar content series that build recognition and book discovery calls on autopilot."
+            },
+            {
+              "title": "Community engagement",
+              "desc": "Smart auto-replies that keep conversations alive without sounding robotic."
+            }
+          ],
+          "painPoints": [
+            "Your calendar is full of clients, which means it is empty of content.",
+            "Generic AI posts sound like every other coach on the timeline — and convert like it too.",
+            "DMs pile up, leads get cold, and you wonder how the coaches with smaller followings keep booking out."
+          ],
+          "proofQuote": {
+            "quote": "My discovery calls doubled in the first month. The Agentcy made me look like I had a marketing team.",
+            "author": "Priya S.",
+            "role": "Executive coach, founder of Northform"
+          }
+        },
+        "companies": {
+          "tagline": "Scale your brand presence across every channel.",
+          "intro": "Whether you are a ten-person startup or a one-thousand-person team, The Agentcy gives marketing teams the leverage of a full creative agency — without the agency timeline or budget.",
+          "benefits": [
+            {
+              "title": "Multi-account management",
+              "desc": "Manage every brand and product line from a unified workspace."
+            },
+            {
+              "title": "Brand voice consistency",
+              "desc": "Lock in tone, vocabulary, and visual rules so every output stays on-brand."
+            },
+            {
+              "title": "ROI you can prove",
+              "desc": "Built-in analytics tie content directly to engagement, leads, and pipeline."
+            }
+          ],
+          "painPoints": [
+            "Your agency takes two weeks for a campaign and bills like it took two months.",
+            "Brand voice drifts across product lines because every channel is run by a different freelancer.",
+            "Marketing leadership cannot tell which content is actually moving pipeline."
+          ],
+          "proofQuote": {
+            "quote": "We replaced two retainers and an internal hire with The Agentcy. Output went up, costs went down, leadership noticed.",
+            "author": "Hannah L.",
+            "role": "Head of Brand, Series B SaaS"
+          }
+        },
+        "agencies": {
+          "tagline": "Manage every client account without the chaos.",
+          "intro": "Stop drowning in approval threads and Slack pings. The Agentcy is the multi-client operating system agencies use to deliver more for clients in less time.",
+          "benefits": [
+            {
+              "title": "White-label workspaces",
+              "desc": "Each client gets a branded environment — your name on the door."
+            },
+            {
+              "title": "Multi-client dashboard",
+              "desc": "See every account, every deadline, and every approval in one view."
+            },
+            {
+              "title": "Streamlined approvals",
+              "desc": "Built-in review and feedback flows replace endless email chains."
+            }
+          ],
+          "painPoints": [
+            "Margins are crushed because every new client adds tools, headcount, and Slack channels.",
+            "Approvals live across email, Loom, Notion, and a WhatsApp group nobody admits to checking.",
+            "Junior creatives spend their day on busywork instead of the strategy clients actually pay for."
+          ],
+          "proofQuote": {
+            "quote": "We onboarded four new clients without hiring. The Agentcy is the leverage we have been pricing in for years.",
+            "author": "Tomás A.",
+            "role": "Founder, Lighthouse Studio"
+          }
+        },
+        "influencers": {
+          "tagline": "Less time creating, more time engaging.",
+          "intro": "You are the brand. Your audience expects you, not a content factory. The Agentcy handles the volume so your voice stays front and center.",
+          "benefits": [
+            {
+              "title": "Trend-aware content",
+              "desc": "Real-time signals tell you what is working in your niche before everyone else catches on."
+            },
+            {
+              "title": "Engagement automation",
+              "desc": "Smart replies that sound like you and never miss a comment that matters."
+            },
+            {
+              "title": "Sponsorship-ready",
+              "desc": "Generate clean rate sheets and campaign decks that close brand deals faster."
+            }
+          ],
+          "painPoints": [
+            "Brand deals stall because you cannot turn around a campaign deck in 24 hours.",
+            "Comments and DMs pile up faster than you can answer — and engagement quietly drops.",
+            "You burn weekends scripting Reels instead of being present for the audience that pays your bills."
+          ],
+          "proofQuote": {
+            "quote": "I closed three brand deals last month from decks The Agentcy generated in under five minutes each.",
+            "author": "Aria N.",
+            "role": "Beauty creator, 1.1M followers"
+          }
+        },
+        "adhd-creators": {
+          "tagline": "Frictionless content creation for ADHD brains.",
+          "intro": "Built around how ADHD minds actually work — capture inspiration the moment it hits, batch tasks when you are hyperfocused, and let The Agentcy carry the executive-function burden.",
+          "benefits": [
+            {
+              "title": "Distraction-free flow",
+              "desc": "A calm, single-focus interface that does not overwhelm. Switch contexts only when you choose."
+            },
+            {
+              "title": "Visual scheduling",
+              "desc": "See the whole month at a glance — no spreadsheets, no mental math."
+            },
+            {
+              "title": "Body-double AI strategist",
+              "desc": "An always-on companion that breaks tasks into doable chunks and keeps you moving."
+            }
+          ],
+          "painPoints": [
+            "You have 47 brilliant ideas in your notes app and zero of them have been published.",
+            "Every existing tool is a wall of buttons that triggers task paralysis before you even start.",
+            "Hyperfocus shows up at 1am and is wasted because the workflow takes too many steps."
+          ],
+          "proofQuote": {
+            "quote": "For the first time in years, I actually finish what I start. The Agentcy holds the steps so my brain can stay in flow.",
+            "author": "Jordan M.",
+            "role": "ADHD creator and educator"
+          }
+        },
+        "digital-nomads": {
+          "tagline": "Create from anywhere. Publish everywhere.",
+          "intro": "Whether you are posting from a coworking space in Lisbon or a beach in Bali, The Agentcy keeps your audience engaged on their schedule — not yours.",
+          "benefits": [
+            {
+              "title": "Cloud-native workflow",
+              "desc": "Pick up exactly where you left off on any device, on any network."
+            },
+            {
+              "title": "Timezone-aware scheduling",
+              "desc": "Posts go live when your audience is awake, not when you happen to be."
+            },
+            {
+              "title": "Offline drafts",
+              "desc": "Capture ideas without signal and sync when you are back online."
+            }
+          ],
+          "painPoints": [
+            "Your audience is asleep when you are awake — and your engagement looks like it.",
+            "Every laptop you buy ends up with a different version of the same Notion doc.",
+            "Patchy wifi means a half-finished post on Tuesday becomes a never-finished post by Sunday."
+          ],
+          "proofQuote": {
+            "quote": "I posted from three continents last month and my audience never noticed I was traveling. That was the goal.",
+            "author": "Lina T.",
+            "role": "Travel creator and remote founder"
+          }
+        },
+        "thought-leaders": {
+          "tagline": "Turn your expertise into a publishing engine.",
+          "intro": "Your insights deserve more than a stray tweet. The Agentcy turns long-form thinking — keynotes, articles, interviews — into a sustained content presence that builds your authority.",
+          "benefits": [
+            {
+              "title": "Long-form to social",
+              "desc": "One keynote becomes a week of posts, threads, and clips automatically."
+            },
+            {
+              "title": "Authority frameworks",
+              "desc": "Pillar-and-cluster strategies that establish you as the go-to voice in your space."
+            },
+            {
+              "title": "Speaker engagement support",
+              "desc": "Generate event recap content that turns each appearance into a flywheel."
+            }
+          ],
+          "painPoints": [
+            "You give a 60-minute keynote that lives on a forgotten YouTube link three weeks later.",
+            "Every article takes six hours to write and gets one LinkedIn share, which was you.",
+            "The peers with half your expertise are getting twice the inbound — because they post."
+          ],
+          "proofQuote": {
+            "quote": "One talk now produces six weeks of content. Inbound speaking offers tripled in a quarter.",
+            "author": "Dr. Eli Wren",
+            "role": "Author and keynote speaker"
+          }
+        },
+        "neurodivergent-creators": {
+          "tagline": "Tools that adapt to how your brain works.",
+          "intro": "Every brain is different. The Agentcy is the first content platform designed from the ground up for neurodivergent creators — autism, dyslexia, dyspraxia, ADHD, and beyond.",
+          "benefits": [
+            {
+              "title": "Customizable interface",
+              "desc": "Adjust density, motion, contrast, and font to whatever lets you focus."
+            },
+            {
+              "title": "Cognitive load reduction",
+              "desc": "Smart defaults handle decisions so you can stay in creative flow."
+            },
+            {
+              "title": "Pattern-matching assistance",
+              "desc": "AI that catches inconsistencies and gaps your brain might gloss over."
+            }
+          ],
+          "painPoints": [
+            "Mainstream content tools assume a brain that works in linear, neurotypical steps. Yours does not.",
+            "Sensory overload from busy interfaces costs you the energy you needed to actually create.",
+            "Accommodations live in browser extensions and personal hacks, not in the product itself."
+          ],
+          "proofQuote": {
+            "quote": "It is the first content tool that did not feel like it was fighting me. Calm interface, real outputs.",
+            "author": "Sam O.",
+            "role": "Autistic writer and educator"
+          }
+        }
+      }
+    },
+    "features": {
+      "groups": {
+        "contentCreation": "Content Creation",
+        "publishingScheduling": "Publishing & Scheduling",
+        "aiIntelligence": "AI & Intelligence",
+        "managementCollaboration": "Management & Collaboration",
+        "creativeStudio": "Creative Studio"
+      },
+      "items": {
+        "ai-content-calendar": {
+          "label": "AI Content Calendar",
+          "desc": "Plan, schedule and create weeks of content in minutes."
+        },
+        "content-generator": {
+          "label": "Content Generator",
+          "desc": "Engaging, on-brand social content in seconds."
+        },
+        "threadsshot": {
+          "label": "ThreadsShot",
+          "desc": "Turn your Threads posts into beautiful shareable images."
+        },
+        "carousel-generator": {
+          "label": "Carousel Generator",
+          "desc": "Professional, engaging carousels for social media."
+        },
+        "post-enhancer": {
+          "label": "Post Enhancer",
+          "desc": "Automatically improve your posts for higher engagement."
+        },
+        "cross-posting": {
+          "label": "Cross Posting",
+          "desc": "Create once, publish everywhere — no tab-switching."
+        },
+        "optimal-time": {
+          "label": "Optimal Time",
+          "desc": "Publish at the perfect moment for maximum engagement."
+        },
+        "bulk-scheduling": {
+          "label": "Bulk Scheduling",
+          "desc": "Schedule multiple posts at once and save hours."
+        },
+        "recurring-posts": {
+          "label": "Recurring Posts",
+          "desc": "Automate regular content with smart scheduling."
+        },
+        "auto-scheduling": {
+          "label": "Auto Scheduling",
+          "desc": "Let AI pick the best publishing times for your posts."
+        },
+        "ask-the-agentcy": {
+          "label": "Ask The Agentcy",
+          "desc": "Your always-on content strategist obsessed with growth."
+        },
+        "ai-insights": {
+          "label": "AI Insights & Analytics",
+          "desc": "Deep understanding of how your content performs."
+        },
+        "smart-tag": {
+          "label": "Smart Tag",
+          "desc": "Auto-categorize and boost reach with AI-powered tags."
+        },
+        "trend-signals": {
+          "label": "Trend Signals",
+          "desc": "Stay ahead with real-time insights on trending topics."
+        },
+        "capture-essence": {
+          "label": "Capture Essence",
+          "desc": "Extract the core message from any content for social posts."
+        },
+        "media-library": {
+          "label": "Media Library",
+          "desc": "Organize and access all your visual content in one place."
+        },
+        "post-templates": {
+          "label": "Post Templates",
+          "desc": "Create consistent content with customizable templates."
+        },
+        "post-review": {
+          "label": "Post Review",
+          "desc": "Streamline content approval with smart review flows."
+        },
+        "auto-replies": {
+          "label": "Auto Replies",
+          "desc": "Never keep your audience waiting with smart auto-replies."
+        },
+        "post-suggestions": {
+          "label": "Post Suggestions",
+          "desc": "Never run out of ideas with AI-powered suggestions."
+        },
+        "video-storyboards": {
+          "label": "Video & Storyboards",
+          "desc": "Script to finished video — multi-scene, with voice & music."
+        },
+        "synthetic-influencers": {
+          "label": "Synthetic Influencers",
+          "desc": "Your own on-brand AI creators for always-on content."
+        },
+        "market-intelligence": {
+          "label": "Market Intelligence",
+          "desc": "A daily brief on your market, with live web research."
+        },
+        "interactive-prototypes": {
+          "label": "Interactive Prototypes",
+          "desc": "Click-through prototypes and demo videos from a sentence."
+        },
+        "brand-websites": {
+          "label": "Brand Websites & Articles",
+          "desc": "A living brand site that keeps itself fresh."
+        }
+      },
+      "pages": {
+        "ai-content-calendar": {
+          "tagline": "A calendar that fills itself.",
+          "intro": "Drop your goals, your voice, and your platforms. The Agentcy plans, drafts, and queues weeks of content automatically — you just approve.",
+          "benefits": [
+            {
+              "title": "Drag-and-drop month view",
+              "desc": "See every brand, channel, and post in one place. Reorder with a flick."
+            },
+            {
+              "title": "AI fills the gaps",
+              "desc": "Empty slots auto-populate with on-brand drafts based on your strategy."
+            },
+            {
+              "title": "Lock and forget",
+              "desc": "Approved posts lock in. Everything else stays editable until publish."
+            }
+          ],
+          "painPoints": [
+            "Sunday night arrives and the calendar is still blank.",
+            "You promised three posts a week and shipped one.",
+            "Every platform has its own scheduler, and none of them talk to each other."
+          ],
+          "proofQuote": {
+            "quote": "I went from a blank calendar every Sunday to a month of posts ready to ship by Friday.",
+            "author": "Renata B.",
+            "role": "Solo creator, fitness niche"
+          }
+        },
+        "content-generator": {
+          "tagline": "Brand-on copy in seconds, not hours.",
+          "intro": "Describe what you want — or paste a link, transcript, or article. Get on-brand drafts across every platform without rewriting from scratch.",
+          "benefits": [
+            {
+              "title": "Voice-trained drafts",
+              "desc": "Trained on your past posts so every output sounds like you, not generic AI."
+            },
+            {
+              "title": "Multi-platform variants",
+              "desc": "One brief, optimized variants for X, Instagram, LinkedIn, TikTok, and more."
+            },
+            {
+              "title": "One-click regenerate",
+              "desc": "Don't love it? Tweak the angle, tone, or length and regenerate instantly."
+            }
+          ],
+          "painPoints": [
+            "ChatGPT outputs sound like a press release nobody asked for.",
+            "Rewriting AI drafts takes longer than writing the post yourself.",
+            "Brand voice drifts a little more with every freelancer or tool."
+          ],
+          "proofQuote": {
+            "quote": "It is the first AI generator that actually sounds like me. I rewrite maybe 10% before publishing.",
+            "author": "Felix O.",
+            "role": "Indie founder"
+          }
+        },
+        "threadsshot": {
+          "tagline": "Turn Threads posts into shareable images.",
+          "intro": "Your best Threads deserve a longer shelf life. Auto-generate beautifully formatted post screenshots ready to share on Instagram, X, and LinkedIn.",
+          "benefits": [
+            {
+              "title": "Pixel-perfect templates",
+              "desc": "Designed by humans, generated by AI — never another grainy screenshot."
+            },
+            {
+              "title": "Brand color presets",
+              "desc": "Pick your palette once. Every export matches your visual identity."
+            },
+            {
+              "title": "One-click cross-post",
+              "desc": "Send straight to Instagram, X, or LinkedIn without leaving the queue."
+            }
+          ],
+          "painPoints": [
+            "Your best Threads die twelve hours after they post.",
+            "Manual screenshots look amateur next to designed posts.",
+            "There is no easy way to give a great Threads post a second life."
+          ],
+          "proofQuote": {
+            "quote": "My best Threads now go viral on Instagram a week later. Same content, three platforms.",
+            "author": "Cassie P.",
+            "role": "Creator, 180K followers"
+          }
+        },
+        "carousel-generator": {
+          "tagline": "Carousels that actually get swipes.",
+          "intro": "Type a topic and get a fully designed multi-slide carousel — hook, body, closer — built to convert. Edit any slide before publishing.",
+          "benefits": [
+            {
+              "title": "Hook-tested templates",
+              "desc": "First slide built around proven hooks that earn the second swipe."
+            },
+            {
+              "title": "Auto layout",
+              "desc": "Text, images, and pacing handled for you. No fighting with grid systems."
+            },
+            {
+              "title": "Instant on-brand styling",
+              "desc": "Brand fonts and colors applied to every slide — no manual cleanup."
+            }
+          ],
+          "painPoints": [
+            "Building a single carousel in Canva eats an hour.",
+            "Slide two has the highest drop-off — and you do not know why.",
+            "You skip carousels entirely because the design polish takes too long."
+          ],
+          "proofQuote": {
+            "quote": "Carousels used to be my biggest content bottleneck. Now I publish three a week without thinking.",
+            "author": "Marcus T.",
+            "role": "B2B creator, LinkedIn"
+          }
+        },
+        "post-enhancer": {
+          "tagline": "One click. Better post. Higher reach.",
+          "intro": "Your draft is good. Let The Agentcy make it sharper — better hooks, tighter copy, smarter CTAs — without losing your voice.",
+          "benefits": [
+            {
+              "title": "Hook A/B suggestions",
+              "desc": "Three rewritten openers ranked by predicted engagement."
+            },
+            {
+              "title": "Tighten without flattening",
+              "desc": "Cuts filler while preserving the rhythm and tone of your voice."
+            },
+            {
+              "title": "CTA optimizer",
+              "desc": "Suggests stronger asks based on what is working in your niche this week."
+            }
+          ],
+          "painPoints": [
+            "Drafts go live without polish because you ran out of time.",
+            "Weak hooks bury your best ideas after one scroll.",
+            "Engagement swings wildly between posts and you cannot tell why."
+          ],
+          "proofQuote": {
+            "quote": "Average post engagement up 38% in two weeks. Same posts, sharper edges.",
+            "author": "Idris K.",
+            "role": "Newsletter operator"
+          }
+        },
+        "cross-posting": {
+          "tagline": "Write once. Publish everywhere.",
+          "intro": "One post auto-adapts to every platform — character limits, hashtag styles, image ratios, link previews. No tab-switching. No copy-paste.",
+          "benefits": [
+            {
+              "title": "Platform-aware variants",
+              "desc": "Each platform gets the right format, length, and tone — automatically."
+            },
+            {
+              "title": "Image auto-resize",
+              "desc": "Vertical, square, landscape — generated from one source asset."
+            },
+            {
+              "title": "Link unfurl preview",
+              "desc": "See exactly how each link will render before you ship."
+            }
+          ],
+          "painPoints": [
+            "Five tabs, five tools, the same post pasted five times.",
+            "Hashtags break on platforms that handle them differently.",
+            "Images get cropped in ways you only notice after publishing."
+          ],
+          "proofQuote": {
+            "quote": "I post to seven platforms in the time it used to take me to post to one.",
+            "author": "Sara M.",
+            "role": "Marketing lead, Series A startup"
+          }
+        },
+        "optimal-time": {
+          "tagline": "Publish when your audience is actually awake.",
+          "intro": "The Agentcy learns when your followers engage and queues every post for its highest-impact moment — automatically, per platform, per audience.",
+          "benefits": [
+            {
+              "title": "Per-audience timing",
+              "desc": "Different audiences, different peak windows — handled separately."
+            },
+            {
+              "title": "Per-platform optimization",
+              "desc": "Your X audience and your LinkedIn audience are not the same people."
+            },
+            {
+              "title": "Auto re-queue",
+              "desc": "Missed a slot? The next-best time is locked in automatically."
+            }
+          ],
+          "painPoints": [
+            "You post when you have time — which is when your audience is asleep.",
+            "Reach swings 80% between posts and you cannot explain it.",
+            "Peak windows pass while you are still picking the right photo."
+          ],
+          "proofQuote": {
+            "quote": "Same content, double the reach. The only thing that changed was when it went live.",
+            "author": "Kenji A.",
+            "role": "Tech educator"
+          }
+        },
+        "bulk-scheduling": {
+          "tagline": "A month of posts, queued in fifteen minutes.",
+          "intro": "Upload, paste, or generate dozens of posts at once. Map them to a calendar in one drag, and let The Agentcy publish them when the time is right.",
+          "benefits": [
+            {
+              "title": "CSV and paste import",
+              "desc": "Drop a sheet, a doc, or a wall of text — we parse the rest."
+            },
+            {
+              "title": "Drag-grid scheduling",
+              "desc": "Spread posts across days and platforms with a single gesture."
+            },
+            {
+              "title": "Save as recurring sequence",
+              "desc": "Turn a great batch into a reusable monthly template."
+            }
+          ],
+          "painPoints": [
+            "Scheduling one post at a time burns hours every week.",
+            "Calendar gaps appear every Friday because you ran out of steam.",
+            "Batch days never actually happen — there is always something more urgent."
+          ],
+          "proofQuote": {
+            "quote": "Sundays are mine again. I batch a month in one sitting.",
+            "author": "Naomi V.",
+            "role": "Coach and creator"
+          }
+        },
+        "recurring-posts": {
+          "tagline": "Evergreen content on autopilot.",
+          "intro": "Your best-performing posts deserve a second life — and a third. Set them to recur on a smart schedule that respects your audience and avoids repetition.",
+          "benefits": [
+            {
+              "title": "Per-platform cadence",
+              "desc": "Repost monthly on LinkedIn, weekly on X — without writing the rules yourself."
+            },
+            {
+              "title": "Auto-rewrite for variety",
+              "desc": "Each rerun gets a fresh hook so it does not feel like a repost."
+            },
+            {
+              "title": "Pause around launches",
+              "desc": "Recurring queues automatically yield when you are running a campaign."
+            }
+          ],
+          "painPoints": [
+            "Your best posts get a single shot at reach, then disappear.",
+            "Manual reposting feels lazy and your audience notices.",
+            "There is no system to track what evergreen content has been reused when."
+          ],
+          "proofQuote": {
+            "quote": "Half my impressions now come from posts I wrote six months ago.",
+            "author": "Theo R.",
+            "role": "Solo SaaS founder"
+          }
+        },
+        "auto-scheduling": {
+          "tagline": "AI picks the slot. You stay in flow.",
+          "intro": "Skip the calendar dance. Mark a post as ready and Auto Scheduling drops it into the next high-impact slot — balanced across platforms and time of day.",
+          "benefits": [
+            {
+              "title": "Smart slot fill",
+              "desc": "Empty calendar gaps get filled automatically with your best-fit content."
+            },
+            {
+              "title": "Per-platform balance",
+              "desc": "No accidental cluster of three Reels in one afternoon."
+            },
+            {
+              "title": "Timezone aware",
+              "desc": "If your audience is in three regions, your queue respects them."
+            }
+          ],
+          "painPoints": [
+            "You spend more time picking publish times than writing posts.",
+            "Launches overlap with regular content and dilute both.",
+            "Calendar Tetris fatigue is real and it kills creative momentum."
+          ],
+          "proofQuote": {
+            "quote": "I stopped thinking about scheduling. The Agentcy got it right every time.",
+            "author": "Vera L.",
+            "role": "Director of marketing, agency client"
+          }
+        },
+        "ask-the-agentcy": {
+          "tagline": "Your always-on content strategist.",
+          "intro": "An AI strategist trained on your account, audience, and niche. Ask it anything — what to post, why a post flopped, how to hit your next milestone.",
+          "benefits": [
+            {
+              "title": "Live performance Q&A",
+              "desc": "Ask why a post worked or what to ship next — get specific, accountable answers."
+            },
+            {
+              "title": "Niche-aware advice",
+              "desc": "Knows your space, your competitors, and what is performing this week."
+            },
+            {
+              "title": "Proactive growth nudges",
+              "desc": "Surfaces opportunities before you think to ask for them."
+            }
+          ],
+          "painPoints": [
+            "Content decisions are made on gut feeling because there is no one to ask.",
+            "It is midnight and you have a question only a strategist could answer.",
+            "There is no clear path from where you are to your next milestone."
+          ],
+          "proofQuote": {
+            "quote": "It is like having a head of content on Slack 24/7. Without the salary.",
+            "author": "Damon H.",
+            "role": "Indie newsletter founder"
+          }
+        },
+        "ai-insights": {
+          "tagline": "Analytics that tell you what to do next.",
+          "intro": "Numbers without action are noise. The Agentcy reads your performance and tells you exactly which post types, times, and topics deserve more attention.",
+          "benefits": [
+            {
+              "title": "Cross-platform unified view",
+              "desc": "Every account, every metric, in one dashboard — no more tab juggling."
+            },
+            {
+              "title": "Pattern detection",
+              "desc": "Surfaces what is actually moving the needle, not just what is loud."
+            },
+            {
+              "title": "Weekly action briefs",
+              "desc": "Three concrete moves to make this week, ranked by predicted impact."
+            }
+          ],
+          "painPoints": [
+            "Your dashboard is full of numbers and empty of direction.",
+            "Metrics live in five different tools, none of which agree.",
+            "You read your analytics weekly and your behavior never changes."
+          ],
+          "proofQuote": {
+            "quote": "First analytics tool I actually open more than once a week.",
+            "author": "Rita C.",
+            "role": "Brand marketer"
+          }
+        },
+        "smart-tag": {
+          "tagline": "Tags that grow your reach, not your guesswork.",
+          "intro": "The Agentcy auto-tags every post with the hashtags, keywords, and topics most likely to surface it. No more stale lists from 2022.",
+          "benefits": [
+            {
+              "title": "Per-platform optimization",
+              "desc": "Different tag strategies for X, Instagram, LinkedIn, and TikTok."
+            },
+            {
+              "title": "Stale-tag detection",
+              "desc": "Warns when a tag has stopped pulling reach so you can refresh."
+            },
+            {
+              "title": "Competitor-driven discovery",
+              "desc": "Surfaces tags from accounts winning in your niche this month."
+            }
+          ],
+          "painPoints": [
+            "You copy-paste the same hashtag list you saved in 2022.",
+            "You have no idea which of those tags actually do anything.",
+            "Reach has plateaued and tags are a black box."
+          ],
+          "proofQuote": {
+            "quote": "Discoverability up 60%. I have not manually picked a hashtag in months.",
+            "author": "Nuria F.",
+            "role": "Lifestyle creator"
+          }
+        },
+        "trend-signals": {
+          "tagline": "Catch trends before they peak.",
+          "intro": "Real-time signals from your niche, surfaced before the topic saturates. Get drafted angles in your voice — ready to publish in minutes.",
+          "benefits": [
+            {
+              "title": "Niche-specific detection",
+              "desc": "Trends that matter in your space, not the generic global feed."
+            },
+            {
+              "title": "AI-drafted angles",
+              "desc": "Three takes per trend, each in your voice, ready to refine."
+            },
+            {
+              "title": "Saturation warnings",
+              "desc": "Get a heads-up before everyone is posting the same hot take."
+            }
+          ],
+          "painPoints": [
+            "You catch trends three days late, when the post would have hit hardest on day one.",
+            "Everyone in your niche posts the same exact take and yours gets buried.",
+            "Manual trend hunting eats your morning before you write a single word."
+          ],
+          "proofQuote": {
+            "quote": "Three of my top posts this quarter came directly from Trend Signals alerts.",
+            "author": "Pablo S.",
+            "role": "Crypto and tech creator"
+          }
+        },
+        "capture-essence": {
+          "tagline": "From any source to social-ready, instantly.",
+          "intro": "Drop a link, transcript, PDF, or video. The Agentcy extracts the core ideas and turns them into a week of posts, threads, and clips.",
+          "benefits": [
+            {
+              "title": "Works on any source",
+              "desc": "Articles, podcasts, videos, PDFs, even raw notes — we parse it all."
+            },
+            {
+              "title": "Multi-format output",
+              "desc": "One source becomes posts, threads, carousels, and short clips."
+            },
+            {
+              "title": "Voice preserved",
+              "desc": "Outputs sound like you, not the source material's author."
+            }
+          ],
+          "painPoints": [
+            "Long-form content dies after one social post and a forgotten link.",
+            "Manually clipping a podcast for social takes hours per episode.",
+            "Key insights stay buried in transcripts nobody re-reads."
+          ],
+          "proofQuote": {
+            "quote": "One podcast becomes 24 posts in five minutes. I record more, write less.",
+            "author": "Gigi A.",
+            "role": "Podcast host"
+          }
+        },
+        "media-library": {
+          "tagline": "Every asset, finally findable.",
+          "intro": "All your photos, videos, logos, and brand assets in one searchable home — auto-tagged, version-controlled, and ready to use in any post.",
+          "benefits": [
+            {
+              "title": "AI auto-tagging",
+              "desc": "Search by who is in the photo, what is happening, or which campaign it belongs to."
+            },
+            {
+              "title": "Reusable asset blocks",
+              "desc": "Save logos, intros, outros, and stickers as one-click blocks."
+            },
+            {
+              "title": "Version history",
+              "desc": "See every edit, restore any version, share a clean link with stakeholders."
+            }
+          ],
+          "painPoints": [
+            "Assets are scattered across Drive, Dropbox, Figma, and someone's DMs.",
+            "You cannot find that one logo file when a deadline is in 30 minutes.",
+            "The same photo gets used twice in a week because nobody saw the first one."
+          ],
+          "proofQuote": {
+            "quote": "I have not asked 'where did I save that?' in three months.",
+            "author": "Owen J.",
+            "role": "Brand designer in-house"
+          }
+        },
+        "post-templates": {
+          "tagline": "Your best post, on tap.",
+          "intro": "Save any winning post as a template. Reuse the structure, swap the content, keep your voice — without starting from scratch each time.",
+          "benefits": [
+            {
+              "title": "One-click reuse",
+              "desc": "Open a template, fill in the new angle, ship — three minutes end to end."
+            },
+            {
+              "title": "Auto-fill brand voice",
+              "desc": "Templates respect your tone, vocabulary, and CTA style automatically."
+            },
+            {
+              "title": "Team-shared library",
+              "desc": "Standardize what works across your whole team or client roster."
+            }
+          ],
+          "painPoints": [
+            "You rebuild the same post layout from scratch every Monday.",
+            "Team members write in subtly different styles and brand drifts.",
+            "The template library you started in Notion is two months out of date."
+          ],
+          "proofQuote": {
+            "quote": "We standardized on 12 templates. Output tripled and the brand finally feels consistent.",
+            "author": "Imani D.",
+            "role": "Head of social, DTC brand"
+          }
+        },
+        "post-review": {
+          "tagline": "Approvals without the email chain.",
+          "intro": "A clean review flow with comments, threaded feedback, and one-click approvals. Stakeholders see exactly what will go live, on every platform.",
+          "benefits": [
+            {
+              "title": "Per-platform previews",
+              "desc": "What clients see is what publishes — no more 'wait, that is not how it looked'."
+            },
+            {
+              "title": "Threaded comments",
+              "desc": "Feedback lives on the post, not in a Slack thread you cannot find later."
+            },
+            {
+              "title": "Client-ready link sharing",
+              "desc": "Share a clean preview without giving up account access."
+            }
+          ],
+          "painPoints": [
+            "Approval threads live across email, Loom, Notion, and a WhatsApp group.",
+            "Clients reply with screenshots, emojis, and 'can you make it pop more'.",
+            "Revisions get lost and the wrong version goes live."
+          ],
+          "proofQuote": {
+            "quote": "Review cycles dropped from three days to three hours.",
+            "author": "Léa M.",
+            "role": "Account manager, content agency"
+          }
+        },
+        "auto-replies": {
+          "tagline": "Never leave a comment unanswered.",
+          "intro": "AI-generated replies that sound like you, ready to send with one tap. Keep momentum on every post without living in the comments tab.",
+          "benefits": [
+            {
+              "title": "Voice-trained replies",
+              "desc": "Suggested responses match your tone — never generic 'Thanks!' spam."
+            },
+            {
+              "title": "One-tap send",
+              "desc": "Approve and publish in a second. Triage 50 comments in under five minutes."
+            },
+            {
+              "title": "Spam and troll triage",
+              "desc": "Auto-filter low-signal noise so you only see what is worth your time."
+            }
+          ],
+          "painPoints": [
+            "Your best comments go ignored for hours and momentum dies.",
+            "The first 60 minutes after publishing are the most important — and you are in a meeting.",
+            "Engagement obligations burn out the creator faster than the content does."
+          ],
+          "proofQuote": {
+            "quote": "Comment engagement doubled. I am replying without burning my evenings.",
+            "author": "Yara N.",
+            "role": "Lifestyle and food creator"
+          }
+        },
+        "post-suggestions": {
+          "tagline": "Never face a blank cursor again.",
+          "intro": "Personalized post ideas every morning — based on your niche, voice, audience, and what is working right now. Pick, edit, ship.",
+          "benefits": [
+            {
+              "title": "Morning ideas digest",
+              "desc": "Five fresh, on-brand ideas waiting in your inbox by 8am."
+            },
+            {
+              "title": "Trend-aware",
+              "desc": "Suggestions tied to what is actually moving in your space this week."
+            },
+            {
+              "title": "One-click expand",
+              "desc": "Pick an idea and get a full draft, ready to refine and publish."
+            }
+          ],
+          "painPoints": [
+            "The idea well dries up by mid-week, and posting cadence breaks.",
+            "You end up posting the same topics on repeat and your audience notices.",
+            "Forced posting kills your voice — every post starts to sound performative."
+          ],
+          "proofQuote": {
+            "quote": "I open the app, pick three ideas, ship by lunch. Posting is a habit again.",
+            "author": "Reza T.",
+            "role": "Operator and B2B creator"
+          }
+        },
+        "video-storyboards": {
+          "tagline": "From script to finished video — automatically.",
+          "intro": "Turn an idea into a multi-scene storyboard, then a fully rendered video with voiceover and music. Edit any scene in plain language before it renders.",
+          "benefits": [
+            {
+              "title": "Scene-by-scene storyboards",
+              "desc": "Structure your video as scenes you can reorder, rewrite and reframe."
+            },
+            {
+              "title": "Voice, music & mux",
+              "desc": "Rendered with narration and a music bed — output ready to publish."
+            },
+            {
+              "title": "Edit before you render",
+              "desc": "Change a scene, a line or the pacing without starting over."
+            }
+          ],
+          "painPoints": [
+            "A single short video means a brief, an editor, and a week of back-and-forth.",
+            "Storyboards live in slides nobody updates once production starts.",
+            "Great scripts die because production is too slow and too expensive."
+          ],
+          "proofQuote": {
+            "quote": "We shipped a month of video content in an afternoon — voiceover and all.",
+            "author": "Cleo M.",
+            "role": "Content lead, DTC brand"
+          }
+        },
+        "synthetic-influencers": {
+          "tagline": "Your own on-brand AI creators.",
+          "intro": "Generate consistent, on-brand synthetic influencers — a hero character and endless variations — for always-on content that looks like a real creator made it.",
+          "benefits": [
+            {
+              "title": "Consistent characters",
+              "desc": "A hero persona plus variations that stay recognisably on-brand."
+            },
+            {
+              "title": "Always-on content",
+              "desc": "UGC-style posts and spokesperson scenes without a shoot or a contract."
+            },
+            {
+              "title": "Trained to your brand",
+              "desc": "Built on a model tuned to your look, so every output fits."
+            }
+          ],
+          "painPoints": [
+            "Creator shoots are expensive, slow and impossible to keep consistent.",
+            "Every UGC video looks like a different brand made it.",
+            "You need always-on content and creators can't move that fast."
+          ],
+          "proofQuote": {
+            "quote": "Our synthetic creator posts out-perform half our paid UGC — at a fraction of the cost.",
+            "author": "Bruno T.",
+            "role": "Performance marketer"
+          }
+        },
+        "market-intelligence": {
+          "tagline": "A daily brief on your market — while you sleep.",
+          "intro": "On-demand competitor and market intelligence with live web research, delivered as a sharp brief you can act on — not another wall of dashboards.",
+          "benefits": [
+            {
+              "title": "Live web research",
+              "desc": "Fresh signals on competitors, category and audience — gathered for you."
+            },
+            {
+              "title": "Decisions, not dashboards",
+              "desc": "A concise brief with what changed and what to do about it."
+            },
+            {
+              "title": "On tap or daily",
+              "desc": "Run a brief when you need one, or get one every morning."
+            }
+          ],
+          "painPoints": [
+            "Competitive research is a browser with forty tabs and no conclusion.",
+            "By the time you spot a competitor's move, it's old news.",
+            "Your analytics are full of numbers and empty of 'so what.'"
+          ],
+          "proofQuote": {
+            "quote": "It's the first thing I read every morning — I always walk in knowing what moved.",
+            "author": "Aisha R.",
+            "role": "Founder"
+          }
+        },
+        "interactive-prototypes": {
+          "tagline": "Click-through prototypes from a sentence.",
+          "intro": "Describe a product, landing page or app idea and get a navigable HTML prototype you can share and demo — plus a polished demo video to go with it.",
+          "benefits": [
+            {
+              "title": "Navigable, not static",
+              "desc": "Real click-through flows you can put in front of stakeholders."
+            },
+            {
+              "title": "Demo video included",
+              "desc": "Turn the prototype into a narrated demo video in a click."
+            },
+            {
+              "title": "From idea to shareable",
+              "desc": "Go from a sentence to a link you can send in minutes."
+            }
+          ],
+          "painPoints": [
+            "Pitching an idea means either hand-wavy slides or weeks of design and build.",
+            "Static mockups don't convey how the thing actually feels to use.",
+            "Recording a decent product demo is its own half-day project."
+          ],
+          "proofQuote": {
+            "quote": "I mocked a full click-through demo for a pitch in the time a coffee took to go cold.",
+            "author": "Noah P.",
+            "role": "Product marketer"
+          }
+        },
+        "brand-websites": {
+          "tagline": "A living brand site that writes itself.",
+          "intro": "Spin up an on-brand landing site and keep it fresh with AI-drafted articles — published on your own subdomain, with insights on how each page performs.",
+          "benefits": [
+            {
+              "title": "On-brand site in minutes",
+              "desc": "Sections drafted and styled to your brand, live on your own URL."
+            },
+            {
+              "title": "Articles on autopilot",
+              "desc": "Draft and publish on-brand articles — set autopilot to keep it fresh."
+            },
+            {
+              "title": "See what's working",
+              "desc": "Built-in insights show which pages and articles pull their weight."
+            }
+          ],
+          "painPoints": [
+            "Your 'blog' hasn't been touched since launch because writing is a chore.",
+            "A simple landing page still means a developer and a two-week queue.",
+            "Nobody knows which pages actually drive anything."
+          ],
+          "proofQuote": {
+            "quote": "Our site finally updates itself — we publish more in a week than we used to in a quarter.",
+            "author": "Ivy C.",
+            "role": "Marketing manager"
+          }
+        }
+      }
+    },
+    "events": {
+      "groups": {
+        "discoverPlan": "Discover & Plan",
+        "runTheEvent": "Run the Event",
+        "engageAttendees": "Engage Attendees"
+      },
+      "items": {
+        "event-radar": {
+          "label": "Event Radar",
+          "desc": "Find the events worth showing up to — matched to your brand."
+        },
+        "event-plan": {
+          "label": "AI Event Plan",
+          "desc": "A full production plan — format, staffing, budget — in minutes."
+        },
+        "production-management": {
+          "label": "Production Management",
+          "desc": "Venue, staff, rentals and catering — all in one place."
+        },
+        "ticketing": {
+          "label": "Ticketing & Registration",
+          "desc": "Ticket tiers, sign-ups and check-in — straight into your CRM."
+        },
+        "event-microsites": {
+          "label": "Event Microsites",
+          "desc": "A beautiful, on-brand event page — drafted and live in minutes."
+        },
+        "attendee-comms": {
+          "label": "Attendee Communications",
+          "desc": "Confirmations, reminders and follow-ups — segmented and on-brand."
+        }
+      },
+      "pages": {
+        "event-radar": {
+          "tagline": "Never miss the event that moves your brand.",
+          "intro": "The Agentcy scans for the conferences, launches and moments worth showing up to — matched to your brand, audience and goals — and hands you a shortlist with the reasoning.",
+          "benefits": [
+            {
+              "title": "Brand-matched suggestions",
+              "desc": "Events ranked by fit to your positioning and audience, not a generic listings feed."
+            },
+            {
+              "title": "The 'why' up front",
+              "desc": "Each pick comes with the angle and the opportunity, so you can decide fast."
+            },
+            {
+              "title": "Radar to plan in a click",
+              "desc": "Like one? Turn it straight into a full production plan."
+            }
+          ],
+          "painPoints": [
+            "You hear about the perfect event the week after it sold out.",
+            "Scouting events by hand eats a morning and still misses the good ones.",
+            "Nobody owns 'what should we show up to this quarter?'"
+          ],
+          "proofQuote": {
+            "quote": "We booked two events last quarter we'd never have found on our own — both drove pipeline.",
+            "author": "Marta L.",
+            "role": "Brand lead, B2B SaaS"
+          }
+        },
+        "event-plan": {
+          "tagline": "A full event plan, drafted in minutes.",
+          "intro": "Describe the event you want to run. The Agentcy proposes the whole production — format, run-of-show, staffing, budget lines and ticket tiers — ready for you to edit and approve.",
+          "benefits": [
+            {
+              "title": "End-to-end proposal",
+              "desc": "Format, agenda, roles, rentals and catering — a complete first draft, not a blank page."
+            },
+            {
+              "title": "Budget-aware",
+              "desc": "Every line comes costed, so you see the shape of the spend immediately."
+            },
+            {
+              "title": "Editable, not fixed",
+              "desc": "Tweak anything in plain language; the plan updates around your changes."
+            }
+          ],
+          "painPoints": [
+            "Planning an event starts with a terrifyingly blank spreadsheet.",
+            "The first realistic budget takes a week of back-and-forth.",
+            "Half the production tasks only surface once it's too late to plan them."
+          ],
+          "proofQuote": {
+            "quote": "It turned a vague 'let's do a launch event' into a real plan we could actually approve.",
+            "author": "Devon R.",
+            "role": "Events manager"
+          }
+        },
+        "production-management": {
+          "tagline": "Every moving part of your event, in one place.",
+          "intro": "Venue, staff, rentals, catering and schedule — managed together, so nothing slips between spreadsheets, threads and someone's memory.",
+          "benefits": [
+            {
+              "title": "One source of truth",
+              "desc": "Venue, suppliers, staff and timings live in one production, not five docs."
+            },
+            {
+              "title": "Roles & logistics",
+              "desc": "Assign staff, track rentals and catering, and keep the run-of-show current."
+            },
+            {
+              "title": "Ready when you are",
+              "desc": "Everything the team needs to execute, visible to everyone who needs it."
+            }
+          ],
+          "painPoints": [
+            "The catering count lives in an email, the staff list in a DM, the schedule in someone's head.",
+            "Two people book the same supplier because nobody had the full picture.",
+            "The day-of runs on adrenaline because the plan never left one person's notes."
+          ],
+          "proofQuote": {
+            "quote": "Our last event was the first one that didn't feel like chaos behind the scenes.",
+            "author": "Priya N.",
+            "role": "Head of experiential"
+          }
+        },
+        "ticketing": {
+          "tagline": "Sell tickets and manage the guest list — natively.",
+          "intro": "Create ticket tiers, take registrations, and check attendees in — all inside the same event, with the data flowing straight into your CRM.",
+          "benefits": [
+            {
+              "title": "Flexible ticket tiers",
+              "desc": "Early-bird, VIP, comps — set the tiers and rules that fit your event."
+            },
+            {
+              "title": "Registrations & check-in",
+              "desc": "Track who's coming and check them in on the day without a separate tool."
+            },
+            {
+              "title": "Straight into your CRM",
+              "desc": "Every attendee becomes a contact you can segment and follow up with."
+            }
+          ],
+          "painPoints": [
+            "Registrations live in one tool, your audience data in another, and they never sync.",
+            "Check-in on the day is a laptop, a spreadsheet and crossed fingers.",
+            "After the event, the attendee list disappears into an export nobody opens."
+          ],
+          "proofQuote": {
+            "quote": "Attendees flow into our contacts automatically — follow-up used to take days.",
+            "author": "Sam K.",
+            "role": "Growth marketer"
+          }
+        },
+        "event-microsites": {
+          "tagline": "A beautiful event page, drafted for you.",
+          "intro": "Every event gets its own public microsite — agenda, speakers, venue, registration — AI-drafted on-brand and live in minutes, no web team required.",
+          "benefits": [
+            {
+              "title": "AI-drafted, on-brand",
+              "desc": "Copy and layout generated from your event details and brand — ready to tweak."
+            },
+            {
+              "title": "Everything attendees need",
+              "desc": "Agenda, location, speakers and a registration flow in one place."
+            },
+            {
+              "title": "Live in minutes",
+              "desc": "Publish to a shareable URL without waiting on a designer or developer."
+            }
+          ],
+          "painPoints": [
+            "Standing up an event page means a ticket to the web team and a two-week wait.",
+            "The event details live in six places and none of them agree.",
+            "By the time the page is ready, early-bird is already over."
+          ],
+          "proofQuote": {
+            "quote": "We had a polished event site up the same afternoon we decided to run it.",
+            "author": "Lena F.",
+            "role": "Community lead"
+          }
+        },
+        "attendee-comms": {
+          "tagline": "Keep every attendee in the loop, automatically.",
+          "intro": "Send confirmations, reminders and follow-ups to the right segments — with calendar invites and on-brand copy — without ever leaving the event.",
+          "benefits": [
+            {
+              "title": "Segmented broadcasts",
+              "desc": "Message all attendees, only VIPs, or just the no-shows — targeted, not blasted."
+            },
+            {
+              "title": "Reminders & calendar invites",
+              "desc": "Automatic confirmations and ICS invites so people actually show up."
+            },
+            {
+              "title": "On-brand follow-up",
+              "desc": "Post-event thank-yous and next steps, drafted in your voice."
+            }
+          ],
+          "painPoints": [
+            "Reminder emails get written the night before, if at all.",
+            "No-shows never get a follow-up because pulling the list is too much work.",
+            "Attendee comms sound nothing like the rest of your brand."
+          ],
+          "proofQuote": {
+            "quote": "Show-up rates jumped once reminders and calendar invites went out on their own.",
+            "author": "Tariq B.",
+            "role": "Event producer"
+          }
+        }
+      }
+    }
+  }
+}

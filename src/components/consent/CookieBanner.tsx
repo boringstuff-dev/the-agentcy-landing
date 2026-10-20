@@ -1,8 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { useConsent } from "./useConsent";
-import Link from "next/link";
 import {
   CATEGORIES,
   OPEN_SETTINGS_EVENT,
@@ -26,6 +27,7 @@ const BTN_LINK =
  * reopen it via OPEN_SETTINGS_EVENT.
  */
 export default function CookieBanner() {
+  const t = useTranslations("cookies");
   const consent = useConsent();
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [choice, setChoice] = useState<Record<ConsentCategory, boolean>>({
@@ -98,13 +100,12 @@ export default function CookieBanner() {
               </span>
               <div className="flex flex-col gap-1.5">
                 <h2 id="cookie-title" className="font-display text-[17px] font-semibold leading-tight">
-                  A word about cookies
+                  {t("bannerTitle")}
                 </h2>
                 <p id="cookie-desc" className="text-[14px] leading-relaxed text-white/72">
-                  We use privacy-friendly analytics to see which pages help, and nothing else unless you
-                  say so. You can change your mind any time from the footer.{" "}
+                  {t("bannerBody")}{" "}
                   <Link href="/privacy" className="text-brand-200 underline-offset-3 hover:underline">
-                    Privacy policy
+                    {t("privacyPolicy")}
                   </Link>
                 </p>
               </div>
@@ -115,21 +116,21 @@ export default function CookieBanner() {
                 className={BTN_PRIMARY}
                 onClick={() => decide({ analytics: true, marketing: true })}
               >
-                Accept all
+                {t("acceptAll")}
               </button>
               <button
                 type="button"
                 className={BTN_GHOST}
                 onClick={() => decide({ analytics: false, marketing: false })}
               >
-                Only necessary
+                {t("onlyNecessary")}
               </button>
               <button
                 type="button"
                 className={`${BTN_LINK} ml-auto`}
                 onClick={openSettings}
               >
-                Settings
+                {t("settings")}
               </button>
             </div>
           </>
@@ -138,15 +139,15 @@ export default function CookieBanner() {
             <div className="flex items-start justify-between gap-3">
               <div className="flex flex-col gap-1">
                 <h2 id="cookie-title" className="font-display text-[17px] font-semibold leading-tight">
-                  Cookie settings
+                  {t("settingsTitle")}
                 </h2>
                 <p id="cookie-desc" className="text-[13.5px] leading-relaxed text-white/65">
-                  Choose what the site may use. Your choice is kept on this device only.
+                  {t("settingsBody")}
                 </p>
               </div>
               <button
                 type="button"
-                aria-label="Close"
+                aria-label={t("close")}
                 className="-mr-1 -mt-1 flex h-9 w-9 flex-none cursor-pointer items-center justify-center rounded-full text-white/60 transition-colors hover:bg-white/8 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/70"
                 onClick={() => setSettingsOpen(false)}
               >
@@ -158,36 +159,39 @@ export default function CookieBanner() {
 
             <ul className="mt-4 flex flex-col divide-y divide-white/8">
               <CategoryRow
-                title="Necessary"
-                desc="Remembers this choice and carries your brief into the app when you sign up. Always on."
+                id="necessary"
+                title={t("categories.necessary.title")}
+                desc={t("categories.necessary.desc")}
+                alwaysOn={t("alwaysOn")}
                 checked
                 locked
               />
-              {CATEGORIES.map((c, i) => (
+              {CATEGORIES.map((key, i) => (
                 <CategoryRow
-                  key={c.key}
-                  title={c.title}
-                  desc={c.desc}
-                  checked={choice[c.key]}
+                  key={key}
+                  id={key}
+                  title={t(`categories.${key}.title`)}
+                  desc={t(`categories.${key}.desc`)}
+                  checked={choice[key]}
                   autoFocus={i === 0}
-                  onChange={(v) => setChoice((prev) => ({ ...prev, [c.key]: v }))}
+                  onChange={(v) => setChoice((prev) => ({ ...prev, [key]: v }))}
                 />
               ))}
             </ul>
 
             <div className="mt-4 flex flex-wrap items-center gap-2.5">
               <button type="button" className={BTN_PRIMARY} onClick={() => decide(choice)}>
-                Save choices
+                {t("save")}
               </button>
               <button
                 type="button"
                 className={BTN_GHOST}
                 onClick={() => decide({ analytics: true, marketing: true })}
               >
-                Accept all
+                {t("acceptAll")}
               </button>
               <Link href="/privacy" className={`${BTN_LINK} ml-auto`}>
-                Privacy policy
+                {t("privacyPolicy")}
               </Link>
             </div>
           </>
@@ -198,27 +202,31 @@ export default function CookieBanner() {
 }
 
 function CategoryRow({
+  id: key,
   title,
   desc,
+  alwaysOn,
   checked,
   locked = false,
   autoFocus = false,
   onChange,
 }: {
+  id: string;
   title: string;
   desc: string;
+  alwaysOn?: string;
   checked: boolean;
   locked?: boolean;
   autoFocus?: boolean;
   onChange?: (v: boolean) => void;
 }) {
-  const id = `consent-${title.toLowerCase()}`;
+  const id = `consent-${key}`;
   return (
     <li className="flex items-start justify-between gap-4 py-3.5 first:pt-0 last:pb-0">
       <div className="flex flex-col gap-0.5">
         <label htmlFor={id} className="text-[14.5px] font-semibold">
           {title}
-          {locked && <span className="ml-2 text-[11px] font-bold tracking-[.08em] text-white/45 uppercase">always on</span>}
+          {locked && <span className="ml-2 text-[11px] font-bold tracking-[.08em] text-white/45 uppercase">{alwaysOn}</span>}
         </label>
         <p className="text-[13px] leading-snug text-white/60">{desc}</p>
       </div>

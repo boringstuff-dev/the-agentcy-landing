@@ -1,22 +1,21 @@
 "use client";
 
 import { useRef } from "react";
+import { useTranslations } from "next-intl";
 import { EXPLAINER_POSTER, EXPLAINER_VIDEO, track } from "./links";
 import Reveal from "./Reveal";
 
-const STEPS = ["Website", "Brand DNA", "Plan", "Create", "Publish", "Grow"];
-
 export default function Explainer() {
+  const t = useTranslations("explainer");
   const tracked = useRef(false);
 
   return (
     <section id="watch" className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 md:pb-30">
       <Reveal className="mx-auto mb-10 flex max-w-3xl flex-col items-center gap-3.5 text-center">
-        <span className="eyebrow">The 100-second film</span>
-        <h2 className="font-display text-4xl leading-[1.05] font-semibold tracking-tight md:text-[52px]">See The Agentcy run a brand</h2>
+        <span className="eyebrow">{t("eyebrow")}</span>
+        <h2 className="font-display text-4xl leading-[1.05] font-semibold tracking-tight md:text-[52px]">{t("title")}</h2>
         <p className="text-lg leading-relaxed text-white/72">
-          One link becomes a plan. The plan becomes a carousel, a flyer and a video. The posts point to a site it built, every
-          visitor lands in the CRM, and the journeys take it from there. Week after week.
+          {t("body")}
         </p>
       </Reveal>
 
@@ -39,13 +38,13 @@ export default function Explainer() {
           </div>
           <div className="flex flex-wrap items-center justify-between gap-3 px-2.5 pt-3.5 pb-1">
             <div className="flex flex-wrap gap-2">
-              {STEPS.map((s) => (
+              {(t.raw("steps") as string[]).map((s) => (
                 <span key={s} className="glass-soft rounded-full px-3.5 py-2 text-[13px] font-semibold text-white/85">
                   {s}
                 </span>
               ))}
             </div>
-            <span className="text-[13px] text-white/60">Captions burned in · 1 min 41 s</span>
+            <span className="text-[13px] text-white/60">{t("captions")}</span>
           </div>
         </div>
       </Reveal>

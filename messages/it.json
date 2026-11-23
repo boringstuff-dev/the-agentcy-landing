@@ -25,7 +25,7 @@
     "language": "Lingua"
   },
   "hero": {
-    "badge": "Si parte gratis · senza carta · 300 crediti al mese",
+    "badge": "Si parte gratis · senza carta · utilizzo rinnovato ogni mese",
     "line1": "Incolla il tuo sito.",
     "line2": "Il marketing va da solo.",
     "body": "Legge il tuo sito e impara il tuo brand. Poi sette agenti specializzati, organizzati come una bottega rinascimentale, pianificano, creano e pubblicano tutto il tuo marketing: sito e SEO, social, percorsi email, eventi e il CRM che c'è dietro.",
@@ -119,7 +119,7 @@
   "how": {
     "eyebrow": "Come funziona",
     "title": "Incolla un link. Approva il piano. Il resto va da sé.",
-    "body": "Gli agenti pianificano e scrivono. Tu approvi. Niente viene generato, pubblicato o speso senza il tuo via libera, e ogni costo è mostrato prima in crediti.",
+    "body": "Gli agenti pianificano e scrivono. Tu approvi. Niente viene generato, pubblicato o speso senza il tuo via libera, e ogni costo è mostrato prima come quota del tuo utilizzo.",
     "steps": [
       {
         "title": "Incolla il tuo sito",
@@ -131,7 +131,7 @@
       },
       {
         "title": "Approva da dove vuoi",
-        "desc": "Le bozze arrivano nella tua inbox e sul telefono. Approva, oppure chiedi «più incisivo, più corto, più caldo». Ogni spesa mostra prima il suo costo in crediti."
+        "desc": "Le bozze arrivano nella tua inbox e sul telefono. Approva, oppure chiedi «più incisivo, più corto, più caldo». Ogni spesa mostra prima la sua quota del tuo utilizzo."
       },
       {
         "title": "L'autopilota fa il resto",
@@ -374,8 +374,8 @@
   ],
   "pricing": {
     "eyebrow": "Prezzi",
-    "title": "Un'unica valuta: i crediti",
-    "body": "Ogni azione, da una didascalia a un intero video da storyboard, costa crediti. Scegli il piano mensile più adatto e ricarica quando vuoi.",
+    "title": "Un unico indicatore: il tuo utilizzo",
+    "body": "Ogni azione, da una didascalia a un intero video da storyboard, conta sul tuo utilizzo mensile. Vedi la percentuale prima di approvare, scegli il piano più adatto e aggiungine quando vuoi.",
     "billingPeriod": "Periodo di fatturazione",
     "monthly": "Mensile",
     "annual": "Annuale · risparmi il 20%",
@@ -383,11 +383,11 @@
     "custom": "Su misura",
     "perMonth": "/ mese",
     "billedYearly": ", fatturato annualmente",
-    "topUps": "Pacchetti di ricarica: 1.000 crediti 15 € · 5.000 crediti 65 €. I crediti non usati restano validi per un altro mese.",
+    "topUps": "Ti serve di più? Aggiungi utilizzo quando vuoi: 15 € per +42% di un mese Growth, 65 € per +208%. Le ricariche non scadono.",
     "plans": {
       "starter": {
         "desc": "Prova la piattaforma. Senza carta.",
-        "credits": "300 crediti / mese",
+        "credits": "Utilizzo base, rinnovato ogni mese",
         "features": [
           "Strumenti per creare testi e immagini",
           "1 workspace di brand",
@@ -397,7 +397,7 @@
       },
       "growth": {
         "desc": "Per brand attivi che gestiscono i social.",
-        "credits": "2.400 crediti / mese",
+        "credits": "8× l'utilizzo di Starter",
         "features": [
           "Social con testi e immagini, video leggeri",
           "Brand illimitati",
@@ -409,7 +409,7 @@
       },
       "pro": {
         "desc": "Tutta la potenza creativa.",
-        "credits": "9.000 crediti / mese",
+        "credits": "30× l'utilizzo di Starter",
         "features": [
           "Video, storyboard e presentatori sintetici",
           "Market intelligence quotidiana",
@@ -434,7 +434,7 @@
   },
   "demo": {
     "title": "Cosa deve creare per prima la tua agenzia?",
-    "body": "Inizia gratis con 300 crediti al mese. Oppure prenota una demo di 20 minuti e proveremo il tuo brand dal vivo.",
+    "body": "Inizia gratis con un utilizzo che si rinnova ogni mese. Oppure prenota una demo di 20 minuti e proveremo il tuo brand dal vivo.",
     "bookDemo": "Prenota una demo",
     "watchAgain": "Rivedi il film",
     "name": "Il tuo nome",

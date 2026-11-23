@@ -25,7 +25,7 @@
     "language": "Language"
   },
   "hero": {
-    "badge": "Starts free · no card · 300 credits a month",
+    "badge": "Starts free · no card · usage refills monthly",
     "line1": "Paste your website.",
     "line2": "Marketing on autopilot.",
     "body": "It reads your site and learns your brand. Then seven specialist agents, run like a Renaissance bottega, plan, make and ship your whole marketing: website and SEO, social, email journeys, events and the CRM behind them.",
@@ -119,7 +119,7 @@
   "how": {
     "eyebrow": "How it works",
     "title": "Paste a link. Approve the plan. The rest runs itself.",
-    "body": "Agents plan and draft. You approve. Nothing renders, publishes or spends without your say-so, and every cost shows in credits first.",
+    "body": "Agents plan and draft. You approve. Nothing renders, publishes or spends without your say-so, and every cost shows as a share of your usage first.",
     "steps": [
       {
         "title": "Paste your website",
@@ -131,7 +131,7 @@
       },
       {
         "title": "Approve from anywhere",
-        "desc": "Drafts land in your inbox and on your phone. Approve, or say “punchier, shorter, warmer”. Every spend shows its credit cost first."
+        "desc": "Drafts land in your inbox and on your phone. Approve, or say “punchier, shorter, warmer”. Every spend shows its share of your usage first."
       },
       {
         "title": "Autopilot runs the rest",
@@ -374,8 +374,8 @@
   ],
   "pricing": {
     "eyebrow": "Pricing",
-    "title": "One currency: credits",
-    "body": "Every action, from a caption to a full storyboard video, costs credits. Pick the monthly plan that fits and top up anytime.",
+    "title": "One simple meter: your usage",
+    "body": "Every action, from a caption to a full storyboard video, counts toward your monthly usage. See the percentage before you approve, pick the plan that fits, and add more anytime.",
     "billingPeriod": "Billing period",
     "monthly": "Monthly",
     "annual": "Annual · save 20%",
@@ -383,11 +383,11 @@
     "custom": "Custom",
     "perMonth": "/ month",
     "billedYearly": ", billed yearly",
-    "topUps": "Top-up packs: 1,000 credits €15 · 5,000 credits €65. Unused credits roll over one month.",
+    "topUps": "Need more? Add usage anytime: €15 for +42% of a Growth month, €65 for +208%. Top-ups never expire.",
     "plans": {
       "starter": {
         "desc": "Try the platform. No card needed.",
-        "credits": "300 credits / month",
+        "credits": "Base usage, refilled monthly",
         "features": [
           "Text and image creation tools",
           "1 brand workspace",
@@ -397,7 +397,7 @@
       },
       "growth": {
         "desc": "For active brands running social.",
-        "credits": "2,400 credits / month",
+        "credits": "8× Starter usage",
         "features": [
           "Text and image social, light video",
           "Unlimited brands",
@@ -409,7 +409,7 @@
       },
       "pro": {
         "desc": "Full creative firepower.",
-        "credits": "9,000 credits / month",
+        "credits": "30× Starter usage",
         "features": [
           "Video, storyboards and synthetic presenters",
           "Daily market intelligence",
@@ -421,7 +421,7 @@
       },
       "enterprise": {
         "desc": "White-label and managed service.",
-        "credits": "Custom volume",
+        "credits": "Custom usage",
         "features": [
           "White-label and SSO",
           "Custom connectors and fine-tuning",
@@ -434,7 +434,7 @@
   },
   "demo": {
     "title": "What should your agency make first?",
-    "body": "Start free with 300 credits a month. Or book a 20-minute demo and we will run your brand through it live.",
+    "body": "Start free with usage that refills every month. Or book a 20-minute demo and we will run your brand through it live.",
     "bookDemo": "Book a demo",
     "watchAgain": "Watch the film again",
     "name": "Your name",
